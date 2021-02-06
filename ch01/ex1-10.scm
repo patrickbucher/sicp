@@ -127,3 +127,17 @@
 ; (A 0 (A 0 16384))
 ; (A 0 32768)
 ; 65536
+
+(define (f n) (A 0 n))
+; (define (f n) (* n 2))
+
+(define (g n) (A 1 n))
+; (define (g n) (pow 2 n))
+
+(define (h n) (A 2 n))
+; This requires special definitions for h(0)=0 and h(1)=1.
+; Only tested up to (h 4)
+; (define (h n) (pow 2 (h (- n 1))))
+
+(define (k n) (* 5 n n))
+; (define (k n) (* 5 (pow n 2)))
