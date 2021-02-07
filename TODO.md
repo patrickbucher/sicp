@@ -1,1 +1,0 @@
-- [ ] `ch01/ex1-10.scm`: wrong definition for function h?
