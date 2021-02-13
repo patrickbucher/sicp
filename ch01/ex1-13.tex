@@ -1,0 +1,44 @@
+\documentclass[a4paper,11pt]{scrartcl}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+from
+
+$$ \text{fib}(n) = \frac{\phi^n - \psi^n}{\sqrt{5}} $$
+
+and
+
+$$ \text{fib}(n) = \text{fib}(n-1) + \text{fib}(n-2) $$
+
+follows
+
+$$ \frac{\phi^n - \psi^n}{\sqrt{5}} = \frac{\phi^{n-1} - \psi^{n-1}}{\sqrt{5}} + \frac{\phi^{n-2} - \psi^{n-2}}{\sqrt{5}} $$
+
+$ \times \sqrt{5} $
+
+$$ \phi^n - \psi^n = \phi^{n-1} - \psi^{n-1} + \phi^{n-2} - \psi^{n-2} $$
+
+$$ \phi^n - \psi^n = \frac{\phi^n}{\phi} - \frac{\psi^n}{\psi} + \frac{\phi^n}{\phi^2} - \frac{\psi^n}{\psi^2} $$
+
+$$ \phi^n - \psi^n = \phi^n \Big( \frac{1}{\phi} + \frac{1}{\phi^2} \Big) - \psi^n \Big( \frac{1}{\psi} + \frac{1}{\psi^2} \Big) $$
+
+with $ \phi = \frac{1+\sqrt{5}}{2} $ and $ \psi = \frac{1-\sqrt{5}}{2} $
+
+$$ \phi^n - \psi^n = \phi^n \Bigg( \frac{1}{\frac{1+\sqrt{5}}{2}} + \frac{1}{{\Big(\frac{1+\sqrt{5}}{2}\Big)}^2} \Bigg) - \psi^n \Bigg( \frac{1}{\frac{1-\sqrt{5}}{2}} + \frac{1}{{{\Big(\frac{1-\sqrt{5}}{2}}\Big)}^2} \Bigg) $$
+
+$$ \phi^n - \psi^n = \phi^n \Bigg( \frac{2}{1+\sqrt{5}} + \frac{4}{(1+\sqrt{5})^2} \Bigg) - \psi^n \Bigg( \frac{2}{1-\sqrt{5}} + \frac{4}{(1-\sqrt{5})^2} \Bigg) $$
+
+$$ \phi^n - \psi^n = \phi^n \Bigg( \frac{2(1+\sqrt{5})+4}{(1+\sqrt{5})^2} \Bigg) - \psi^n \Bigg( \frac{2(1-\sqrt{5})+4}{(1-\sqrt{5})^2} \Bigg) $$
+
+$$ \phi^n - \psi^n = \phi^n \Bigg( \frac{2+2\sqrt{5}+4}{1+2\sqrt{5}+5} \Bigg) - \psi^n \Bigg( \frac{2-2\sqrt{5}+4}{1-2\sqrt{5}+5} \Bigg) $$
+
+$$ \phi^n - \psi^n = \phi^n \Bigg( \frac{6+2\sqrt{5}}{6+2\sqrt{5}} \Bigg) - \psi^n \Bigg( \frac{6-2\sqrt{5}}{6-2\sqrt{5}} \Bigg) $$
+
+$$ \phi^n - \psi^n = \phi^n - \psi^n $$
+
+q.e.d.
+
+\end{document}
