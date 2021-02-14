@@ -1,3 +1,5 @@
+// estimate: logarithmit growth
+
 digraph CC {
     rankdir="TD";
 
