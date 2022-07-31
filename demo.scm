@@ -1,5 +1,8 @@
-(define (increment x)
-  (+ x 1))
+(define (square x)
+  (* x x))
 
-(define (twice x)
-  (* x 2))
+(define (sum-of-squares x y)
+  (+ (square x) (square y)))
+
+(define (f a)
+  (sum-of-squares (+ a 1) (* a 2)))
