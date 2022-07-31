@@ -14,4 +14,8 @@ setup.
 # 2022-07-31 (Su)
 
 I started reading the book in the morning and then set up this new repository.
-I'm getting acquainted with Geiser again.
+I'm getting acquainted with Geiser again and took some notes about the basic
+usage.
+
+I read until p. 17 about applicative-order and normal-order evaluation, and took
+some notes.
