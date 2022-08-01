@@ -19,3 +19,8 @@ usage.
 
 I read until p. 17 about applicative-order and normal-order evaluation, and took
 some notes.
+
+# 2022-08-01 (Mo)
+
+I read the paragraph about conditionals and predicates, and worked through
+exercises 1.1 to 1.5.
