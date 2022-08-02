@@ -24,3 +24,9 @@ some notes.
 
 I read the paragraph about conditionals and predicates, and worked through
 exercises 1.1 to 1.5.
+
+# 2022-08-02 (Tu)
+
+Today, I only read the section on the iterative computation of square roots
+(using the "Newton method"). I first implemented the algorithm iteratively in
+Python, then typed in the Scheme code. I also worked through exercise 1.6.
