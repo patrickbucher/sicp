@@ -1,6 +1,11 @@
+# 2022-08-04 (Th)
+
+I read about recursion and tail-call optimization up to page 36 and implemented
+the two factorial procedures.
+
 # 2022-08-03 (We)
 
-I worked through exercises 1.7 and 1.8.
+I worked through exercises 1.7 and 1.8. Then I read up to page 31.
 
 # 2022-08-02 (Tu)
 
