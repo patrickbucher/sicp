@@ -1,3 +1,9 @@
+# 2022-08-05 (Fr)
+
+I worked on exercise 1.9, which was quite easy. Exercise 1.10 was more tedious
+and more difficoult. I was unable to figure out the mathematical definition of
+h(n), which was recursive, after all.
+
 # 2022-08-04 (Th)
 
 I read about recursion and tail-call optimization up to page 36 and implemented
