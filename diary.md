@@ -1,3 +1,8 @@
+# 2022-08-06 (Sa)
+
+I worked on exercise 1.11, which took me a long time, but I managed to finish it
+eventually on my own.
+
 # 2022-08-05 (Fr)
 
 I worked on exercise 1.9, which was quite easy. Exercise 1.10 was more tedious
