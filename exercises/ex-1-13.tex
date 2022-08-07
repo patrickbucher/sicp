@@ -1,0 +1,56 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage{amsmath}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+\section*{SICP: Ex. 1.13, p. 42}
+
+\subsection*{Exercise}
+
+Given:
+
+$$
+\phi = \frac{1 + \sqrt{5}}{2},
+\psi = \frac{1 - \sqrt{5}}{2},
+$$
+
+And:
+
+$$
+Fib(n) = 
+\left\{
+    \begin{array}{lll}
+        0 & n = 0 \\
+        1 & n = 1 \\
+        \text{Fib}(n-1) + \text{Fib}(n-2) & n > 1
+    \end{array}
+\right.
+$$
+
+Proof that:
+
+$$ \text{Fib}(n) = \frac{\phi^n-\psi^n}{\sqrt{5}} $$
+
+\subsection*{Proof}
+
+\begin{align}
+    \text{Fib}(2) & = \text{Fib}(1) + \text{Fib}(0) \\
+    \frac{\phi^2-\psi^2}{\sqrt{5}} & = \frac{\phi-\psi}{\sqrt{5}} + \frac{\phi^0-\psi^0}{\sqrt{5}} \\
+    \frac{\phi^2-\psi^2}{\sqrt{5}} & = \frac{\phi-\psi}{\sqrt{5}} \\
+    \phi^2 - \psi^2 & = \phi - \psi \\
+    (\phi - \psi)(\phi + \psi) & = \phi - \psi
+\end{align}
+
+With the definitions of $\psi$ and $\phi$:
+
+\begin{align}
+    \left(\frac{1+\sqrt{5}}{2}\right)^2 - \left(\frac{1-\sqrt{5}}{2}\right)^2 & =  \frac{1+\sqrt{5}}{2} - \frac{1-\sqrt{5}}{2} \\
+    \frac{(1+\sqrt{5})^2 - (1-\sqrt{5})^2}{4} & = \frac{1+\sqrt{5}-1+\sqrt{5}}{2} \\
+    \frac{1+2\sqrt{5}+5-(1-2\sqrt{5}+5)}{4} & = \frac{2\sqrt{5}}{2} \\
+    \frac{6 + 2\sqrt{5} - 6 + 2\sqrt{5}}{4} & = \sqrt{5} \\
+    \frac{4\sqrt{5}}{4} & = \sqrt{5} \\
+    \sqrt{5} & = \sqrt{5} \qquad \text{q.e.d.}
+\end{align}
+
+\end{document}
