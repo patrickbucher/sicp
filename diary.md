@@ -1,3 +1,9 @@
+# 2022-08-07 (Su)
+
+I did exercise 1.12, which was fairly easy. Exercise 1.13 was rather hard, but I
+eventually figured out the proof, which I also wrote down as a nice LaTeX
+formula.
+
 # 2022-08-06 (Sa)
 
 I worked on exercise 1.11, which took me a long time, but I managed to finish it
