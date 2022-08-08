@@ -1,3 +1,7 @@
+# 2022-08-08 (Mo)
+
+I did exercise 1.14, which took me quite long to do.
+
 # 2022-08-07 (Su)
 
 I did exercise 1.12, which was fairly easy. Exercise 1.13 was rather hard, but I
