@@ -1,3 +1,7 @@
+# 2022-08-09 (Tu)
+
+I did exercise 1.15, whose definition I first struggled to understand.
+
 # 2022-08-08 (Mo)
 
 I did exercise 1.14, which took me quite long to do.
