@@ -1,3 +1,8 @@
+# 2022-08-10 (We)
+
+With pen and paper, and some thinking and thinkering, I was able to solve
+exercise 1.16. Now I'm further in SICP then I was at my last attempt.
+
 # 2022-08-09 (Tu)
 
 I did exercise 1.15, whose definition I first struggled to understand.
