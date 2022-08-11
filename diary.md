@@ -1,3 +1,10 @@
+# 2022-08-11 (Th)
+
+In the morning, I struggled with exercise 1.17. In the evening, I finally was
+able to solve it. When working on it on paper, I realized that I need two
+accumulators: one to account for halving b resp. doubling a, and one for sums,
+i.e. decrementing b while summing up the original a.
+
 # 2022-08-10 (We)
 
 With pen and paper, and some thinking and thinkering, I was able to solve

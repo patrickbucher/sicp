@@ -3,13 +3,15 @@
 	((= b 0) 0)
 	((= a 1) b)
 	((= b 1) a)
-	(else (fast-mul a b
-			(if (even? b) a 0))))) ; neutral element depends on first operation
+	(else (fast-mul a a (dec b) a))))
 
-(define (fast-mul a b acc)
-  (cond ((= b 0) acc)
-	((even? b) (fast-mul a (halve b) (double acc)))
-	(else (fast-mul a (- b 1) (+ acc a)))))
+(define (fast-mul a a-acc b sum-acc)
+  (cond ((= b 0) sum-acc)
+	((even? b) (fast-mul a (double a-acc) (halve b) sum-acc))
+	(else (fast-mul a a-acc (dec b) (+ sum-acc a-acc)))))
+
+(define (dec x)
+  (- x 1))
 
 (define (double x)
   (+ x x))
