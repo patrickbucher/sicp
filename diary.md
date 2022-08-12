@@ -1,3 +1,14 @@
+# 2022-08-12 (Fr)
+
+Today, when I wanted to work on exercise 1.18, I figured out that I already
+solved it. So I was able to take a step back to implement it as a recursive
+procedure, which actually is the solution to exercise 1.17.
+
+Having figured out the iterative solution, going back to the recursive approach
+was not easy at first; however, the solution looked very easy afterwards.
+Lesson: First, implement the procedure recursively, and then re-implement it
+using tail calls. The other way seems harder to me.
+
 # 2022-08-11 (Th)
 
 In the morning, I struggled with exercise 1.17. In the evening, I finally was
