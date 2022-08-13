@@ -1,0 +1,84 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{fontspec}
+    \setmonofont{Fantasque Sans Mono}
+
+\lstset{basicstyle=\ttfamily}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+\section*{SICP: Ex. 1.19, p. 47}
+
+\subsection*{Exercise}
+
+Given:
+
+\begin{align}
+T_{pq}(a,b) & = (bq+aq+ap, bp+aq) \\
+T_{p'q'}(a,b) & = T_{pq}(T_{pq}(a,b))
+\end{align}
+
+\subsection*{Solution}
+
+\begin{align}
+a' & = bq + aq + ap \\
+b' & = bq + aq \\
+a'' & = b'q + a'q + a'p \\
+b'' & = b'p  + a'q
+\end{align}
+
+Insert $a'$ and $b'$:
+
+\begin{align}
+a'' & = (bp+aq)q + (bq+aq+ap)q + (bq+aq+ap)p \\
+b'' & = (bp+aq)p + (bq+aq+ap)q
+\end{align}
+
+Expanded:
+
+\begin{align}
+a'' & = bpq + aq^2 + bq^2 + aq^2 + apq + bpq + apq + ap^2 \\
+b'' & = bp^2 + apq + bq^2 + aq^2 + apq
+\end{align}
+
+Added up and sorted:
+
+\begin{align}
+a'' = ap^2 + 2apq + 2aq^2 + 2bpq + bq^2 \\
+b'' = 2apq + aq^2 + bp^2 + bq^2
+\end{align}
+
+Factorize $b''$:
+
+$$ b'' = a(2pq + q^2) + b(p^2 + q^2) $$
+
+From:
+
+\begin{align}
+b' = bp + aq \\
+b'' = bp' + aq'
+\end{align}
+
+Follows:
+
+\begin{align}
+p' & = 2pq + q^2 \\
+q' & = p^2 + q^2
+\end{align}
+
+Check using $a''$:
+
+\begin{align}
+a'' & = bq' + aq' + ap' \\
+& = b(2pq+q^2) + a(2pq+q^2) + a(p^2+q^2) \\
+& = 2bpq + bq^2 + 2apq + aq^2 + ap^2 + aq^2 \\
+& = ap^2 + 2apq + 2aq^2 + 2bpq + bq^2 \qquad \text{q.e.d.}
+\end{align}
+
+Scheme implementation:
+
+\lstinputlisting{ex-1-19.scm}
+
+\end{document}
