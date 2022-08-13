@@ -1,3 +1,12 @@
+# 2022-08-13 (Sa)
+
+I struggled with exercise 1.19, because I wasn't really able to figure out what
+I needed to do. After trying different approaches, I peeked into a solution,
+which showed that one of my approaches was actually sensible; I just needed to
+work through it completely. Later in the evening, I was able to do everything on
+my own, and I wrote down the entire calculation using LaTeX. The implementation
+is extremely fast, as some tests with large Fibonacci numbers showed.
+
 # 2022-08-12 (Fr)
 
 Today, when I wanted to work on exercise 1.18, I figured out that I already
