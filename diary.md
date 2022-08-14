@@ -1,3 +1,10 @@
+# 2022-08-14 (Su)
+
+I worked through the rather tedious exercise 1.20, which requires tracing a GCD
+procedure using normal-order evaluation, which took me quite some time. Working
+through the applicative-order evaluation in the second part of the exercise was
+much less work, which presumably is the points the authors wanted to make.
+
 # 2022-08-13 (Sa)
 
 I struggled with exercise 1.19, because I wasn't really able to figure out what
