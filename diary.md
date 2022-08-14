@@ -5,6 +5,9 @@ procedure using normal-order evaluation, which took me quite some time. Working
 through the applicative-order evaluation in the second part of the exercise was
 much less work, which presumably is the points the authors wanted to make.
 
+I also quickly read through section 1.2.6 about primality tests to get a rough
+overview on the topic.
+
 # 2022-08-13 (Sa)
 
 I struggled with exercise 1.19, because I wasn't really able to figure out what
