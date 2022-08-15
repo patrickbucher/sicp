@@ -1,3 +1,11 @@
+# 2022-08-15 (Mo)
+
+I worked through section 1.2.6, and now understand the logic behind the Fermat
+test. I worked through exercise 1.21. I also started with exercise 1.22, which
+looks a bit odd to me: it's the first exercise that works with side-effects
+rather than return values, and the procedure I'm supposed to write should deal
+with both.
+
 # 2022-08-14 (Su)
 
 I worked through the rather tedious exercise 1.20, which requires tracing a GCD
