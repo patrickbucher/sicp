@@ -1,3 +1,12 @@
+# 2022-08-16 (Tu)
+
+I realized that exercise 1.22 was way easier to implement than I thought
+yesterday. I implemented the solution and performed the checks in the given
+number ranges (10k, 100k, 1M). However, CPUs are too fast nowadays to draw any
+conclusions about runtime performance in those ranges. And bigger ranges are
+impractical with the given implementation, which reports on each number that was
+checked.
+
 # 2022-08-15 (Mo)
 
 I worked through section 1.2.6, and now understand the logic behind the Fermat
