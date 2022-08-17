@@ -1,3 +1,8 @@
+# 2022-08-17 (We)
+
+I worked through exercise 1.23 and optimized the `smallest-divisor` procedure,
+which resulted in a speedup of 30 to 50 percent.
+
 # 2022-08-16 (Tu)
 
 I realized that exercise 1.22 was way easier to implement than I thought
