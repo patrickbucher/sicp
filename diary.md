@@ -1,3 +1,7 @@
+# 2022-08-18 (Th)
+
+I started with exercise 1.24 in the morning.
+
 # 2022-08-17 (We)
 
 I worked through exercise 1.23 and optimized the `smallest-divisor` procedure,
