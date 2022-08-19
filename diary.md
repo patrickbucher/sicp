@@ -4,8 +4,8 @@ I picked up exercise 1.24 from yesterday and ran the Fermat test with rather
 large prime numbers and different amounts of tests. I didn't bother to do a lot
 of calculations of expected vs. actual growth in runtime.
 
-I started with exercise 1.25, for which I'll step through the function calls in
-detail tomorrow, in order to compare those two procedures.
+I started with exercise 1.25, for which I stepped through the function calls in
+detail. The solution using `fast-expt` requires less steps and space.
 
 # 2022-08-18 (Th)
 
