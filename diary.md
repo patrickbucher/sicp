@@ -1,3 +1,10 @@
+# 2022-08-20 (Sa)
+
+I worked through exercise 1.26 by demonstrating that the implementation shown
+doubles the procedure call with every step, whereas the old implementation only
+requires a single invocation, which is much more efficient in terms of space and
+time.
+
 # 2022-08-19 (Fr)
 
 I picked up exercise 1.24 from yesterday and ran the Fermat test with rather
