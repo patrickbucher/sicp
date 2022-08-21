@@ -1,3 +1,9 @@
+# 2022-08-21 (Su)
+
+I worked through exercise 1.27 and extended my solution to a procedure that
+searches for Carmichael numbers in a given range. I used a naive prime test to
+check numbers passing the fermat test for primality.
+
 # 2022-08-20 (Sa)
 
 I worked through exercise 1.26 by demonstrating that the implementation shown
