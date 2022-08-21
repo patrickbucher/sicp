@@ -17,6 +17,18 @@ that the superordinate procedure shall stop the computation. However, such
 predicate functions are better written as internal procedures rather than
 standalone procedures, because the return value requires interpretation.
 
+In the evening, I finally got the implementation together. I tested it with the
+Carmichael numbers below 10'000 (all false) and with some big prime numbers (all
+true).
+
+Another source of confusion was the phrase "x is congruent to 1 modulo n". I
+first thought that `(= (remainder x n) (remainder 1 n))` was meant, which of
+course makes no sense at all. It's rather `(= (remainder x n) 1)`, which makes
+perfect sense.
+
+Exercise 1.28 just had too many layers of confusion, which I needed to entangle
+one by one.
+
 # 2022-08-20 (Sa)
 
 I worked through exercise 1.26 by demonstrating that the implementation shown

@@ -36,3 +36,19 @@
 	((congruent-to-1-modulo-n? (square x) n) 0)
 	(else x)))
 
+;; test with Carmichael numbers
+;; (miller-rabin-test 561)  #f
+;; (miller-rabin-test 1105) #f
+;; (miller-rabin-test 1105) #f
+;; (miller-rabin-test 1729) #f
+;; (miller-rabin-test 2465) #f
+;; (miller-rabin-test 2821) #f
+;; (miller-rabin-test 6601) #f
+;; (miller-rabin-test 8911) #f
+
+;; test with some big prime numbers
+;; (miller-rabin-test 22815088913)                          #t
+;; (miller-rabin-test 87178291199)                          #t
+;; (miller-rabin-test 3314192745739)                        #t
+;; (miller-rabin-test 10888869450418352160768000001)        #t
+;; (miller-rabin-test 263130836933693530167218012159999999) #t
