@@ -4,6 +4,19 @@ I worked through exercise 1.27 and extended my solution to a procedure that
 searches for Carmichael numbers in a given range. I used a naive prime test to
 check numbers passing the fermat test for primality.
 
+Later, I worked on exercise 1.28, which is quite hard. My biggest problem is
+that the exercise conflates the idea of the Miller-Rabin test with the existing
+implementation of `expmod`, adding accidental to the inherent complexity of the
+task.
+
+Even though I'm not able to get the exercise done yet, I found some useful
+technique to avoid multiple computations of a value that both needs to be
+returned and to be predicate checked: The predicate function not returns true or
+false, but the input parameter or false, depending on which result signifies
+that the superordinate procedure shall stop the computation. However, such
+predicate functions are better written as internal procedures rather than
+standalone procedures, because the return value requires interpretation.
+
 # 2022-08-20 (Sa)
 
 I worked through exercise 1.26 by demonstrating that the implementation shown
