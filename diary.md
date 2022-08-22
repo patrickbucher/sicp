@@ -1,3 +1,19 @@
+# 2022-08-22 (Mo)
+
+Early in the morning, I started reading section 1.3. I read up to exercise 1.29,
+which I attempted to do in the evening, but to no avail. I need to work through
+it using pen and paper. Or better: I first need to _completely_ understand the
+integral example.
+
+The good thing about functional programming is that the abstractions are very
+good rather than leaky. If you really grasp a concept, it quickly becomes second
+nature to you, and your cognitive load diminishes. Every time so far an exercise
+poses a cognitive load too high for me, I just did not fully understand the
+example demonstrated before.
+
+So I need to go back to the example and work through it carefully. If I really
+understand it, exercise 1.29 won't be an issue.
+
 # 2022-08-21 (Su)
 
 I worked through exercise 1.27 and extended my solution to a procedure that
