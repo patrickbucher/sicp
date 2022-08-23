@@ -1,3 +1,16 @@
+# 2022-08-23 (Tu)
+
+In the morning, I carefully wrote down the integral example, i.e. formula and
+code. Then I also wrote down Simpson's Rule, which I expanded on paper. I
+figured out that I needed to write a sum procedure that applies a multiplication
+to the terms, depending on their index. This `weighted-sum` procedure ended up
+having lots of parameters, which probably can be addressed using closures later
+on.
+
+The lesson I learned today is: If you write something down, you can see it. If
+you only think about it, you cannot see it; observing it in the mind causes
+mental load. So write it down to unburden the mind.
+
 # 2022-08-22 (Mo)
 
 Early in the morning, I started reading section 1.3. I read up to exercise 1.29,
