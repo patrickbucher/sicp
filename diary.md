@@ -1,3 +1,19 @@
+# 2022-08-24 (We)
+
+I started in the morning with exercise 1.30, which was quite easy. Exercise 1.31
+was harder. Since both numerator and denominator could change in every step, I
+wondered if I should handle numerator and denominator with the term and the next
+procedure, respectively. After figuring out the rules on how to build
+numerator/denominator solely based on the current iteration `i`, I was able to
+put building the fraction into the term procedure. The next procedure is a
+simple increment of `i`.
+
+Even though I didn't need to resort to pen and paper, expanding the formula for
+each iteration proofed useful. It also makes sense to define some internal
+procedures on the top-level, so that they are easier to be tested in isolation.
+(There might be some advanced technique to do that with the REPL; I guess I'll
+figure that out later when needed again and again.)
+
 # 2022-08-23 (Tu)
 
 In the morning, I carefully wrote down the integral example, i.e. formula and
