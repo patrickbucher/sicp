@@ -1,3 +1,10 @@
+# 2022-08-25 (Th)
+
+I worked through exercise 1.32, which generalises the ideas of the sum and product
+procedures into a accumulate procedure. The second part of the exercise, which
+is to write an iterative procedure starting from the recursive one, was doable
+with the `iter` function I used yesterday.
+
 # 2022-08-24 (We)
 
 I started in the morning with exercise 1.30, which was quite easy. Exercise 1.31
