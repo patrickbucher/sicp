@@ -1,3 +1,11 @@
+# 2022-08-26 (Fr)
+
+I managed to solve exercise 1.33. The iterative approach of `accumulate` was
+easy to extend with the filter logic; for the recursive approach, I didn't find
+a solution.
+
+Now up to lambdas!
+
 # 2022-08-25 (Th)
 
 I worked through exercise 1.32, which generalises the ideas of the sum and product
