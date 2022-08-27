@@ -1,3 +1,19 @@
+# 2022-08-27 (Sa)
+
+I read about `lambda` and `let`; the latter only being syntactic sugar for the
+former. Unlike in Clojure, symbols bound earlier in the `let` form do _not_
+conceal symbols with the same name. Instead, bindings created in `let` are only
+available in its body.
+
+I solved exercise 1.34, which I first got completely wrong; I assumed an endless
+recursion, just because I saw similar exercises before.
+
+I also wrote a function to compute the solution(s) for square equations. Since
+there are 0, 1, and 2 possible solutions based on the value of the
+determinant—for which `let` came in handy—the function returns a list of
+according length. (For this, I had to use `cons`, which wasn't introduced in
+SICP yet.)
+
 # 2022-08-26 (Fr)
 
 I managed to solve exercise 1.33. The iterative approach of `accumulate` was
