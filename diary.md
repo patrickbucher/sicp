@@ -1,3 +1,12 @@
+# 2022-08-28 (Su)
+
+I read section 1.3.3, which introduces the half-interval method for finding
+roots of equations (where `y=f(x)=0`). The next example is about finding fixed
+points, i.e. finding an `x` for which `x=f(x)` holds true.
+
+I understand the reasoning behind the first example, but I have no intuition for
+how the algorithm to find fixed point works.
+
 # 2022-08-27 (Sa)
 
 I read about `lambda` and `let`; the latter only being syntactic sugar for the
