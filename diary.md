@@ -7,6 +7,9 @@ points, i.e. finding an `x` for which `x=f(x)` holds true.
 I understand the reasoning behind the first example, but I have no intuition for
 how the algorithm to find fixed point works.
 
+I solved exercises 1.35 and 1.36, which where rather easy warm-up exercises.
+Exercise 1.37, which I leave for tomorrow, looks considerably harder.
+
 # 2022-08-27 (Sa)
 
 I read about `lambda` and `let`; the latter only being syntactic sugar for the
