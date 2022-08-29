@@ -1,3 +1,9 @@
+# 2022-08-29 (Mo)
+
+I worked on exercise 1.37, which wasn't that hard, after all. I only managed to
+do part a in the morning. In part b, I have to change the implementation from a
+recursive one to an iterative one, which I leave for the evening or tomorrow.
+
 # 2022-08-28 (Su)
 
 I read section 1.3.3, which introduces the half-interval method for finding
