@@ -8,6 +8,14 @@ I started with exercise 1.38, where I struggled with off-by-one errors for the
 beginning. I thought I figured it out, but the result converges around 2.5, not
 around 2.718, as it should. I need to figure that one out…
 
+Later on, I figured out that my iterative implementation of `cont-frak` only
+worked for the Golden Ratio, because only 1 is used there as the numerator and
+denominator. However, the implementation failed for Euler's number.
+
+So I need to re-visit exercise 1.37 b), and then can check my solution with
+Euler's number in exercise 1.38, which I apparently solved correctly using the
+recursive algorithm from exercise 1.37 a).
+
 # 2022-08-29 (Mo)
 
 I worked on exercise 1.37, which wasn't that hard, after all. I only managed to
