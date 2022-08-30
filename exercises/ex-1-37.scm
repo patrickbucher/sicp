@@ -26,3 +26,24 @@
 ;; 1.6181818181818184
 ;; (golden-ratio 11)
 ;; 1.6179775280898876
+
+(define (cont-frak-iter n d k)
+  (define (next-frak i result)
+    (if (> i k)
+	result
+	(next-frak (+ i 1) (/ (n i) (+ (d i) result)))))
+  (next-frak 1 0))
+
+(define (golden-ratio-iter k)
+  (/ 1 (cont-frak-iter (lambda (i) 1.0)
+		       (lambda (i) 1.0)
+		       k)))
+
+;; (golden-ratio-iter 10)
+;; 1.6181818181818184
+;; (golden-ratio-iter 11)
+;; 1.6179775280898876
+;; (golden-ratio-iter 1000000)
+;; 1.618033988749895
+;; (golden-ratio 1000000)
+;; maximum recursion depth exceeded
