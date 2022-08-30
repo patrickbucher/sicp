@@ -4,6 +4,10 @@ I finished part b) of exercise 1.37, for which I implemented `cont-frak` using
 tail-calls. Calling it for one million iterations takes roughly one to two
 seconds, whereas the original recursive approach fails due to a stack overflow.
 
+I started with exercise 1.38, where I struggled with off-by-one errors for the
+beginning. I thought I figured it out, but the result converges around 2.5, not
+around 2.718, as it should. I need to figure that one out…
+
 # 2022-08-29 (Mo)
 
 I worked on exercise 1.37, which wasn't that hard, after all. I only managed to
