@@ -1,3 +1,9 @@
+# 2022-08-30 (Tu)
+
+I finished part b) of exercise 1.37, for which I implemented `cont-frak` using
+tail-calls. Calling it for one million iterations takes roughly one to two
+seconds, whereas the original recursive approach fails due to a stack overflow.
+
 # 2022-08-29 (Mo)
 
 I worked on exercise 1.37, which wasn't that hard, after all. I only managed to
