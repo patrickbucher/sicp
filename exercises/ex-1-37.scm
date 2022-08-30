@@ -2,7 +2,7 @@
   (define (next-frak i)
     (if (> i k)
 	0
-	(/ (n i) (+ (d 1) (next-frak (+ i 1))))))
+	(/ (n i) (+ (d i) (next-frak (+ i 1))))))
   (next-frak 1))
 
 (define (golden-ratio k)
