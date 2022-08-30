@@ -16,6 +16,10 @@ So I need to re-visit exercise 1.37 b), and then can check my solution with
 Euler's number in exercise 1.38, which I apparently solved correctly using the
 recursive algorithm from exercise 1.37 a).
 
+In the evening, I figured out that I needed to approach the iterative algorithm
+_backwards_, i.e. start with `k` and iterate towards 0; building up the fraction
+from the inside-out.
+
 # 2022-08-29 (Mo)
 
 I worked on exercise 1.37, which wasn't that hard, after all. I only managed to
