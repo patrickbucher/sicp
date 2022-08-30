@@ -28,11 +28,11 @@
 ;; 1.6179775280898876
 
 (define (cont-frak-iter n d k)
-  (define (next-frak i result)
-    (if (> i k)
+  (define (prev-frak i result)
+    (if (= i 0)
 	result
-	(next-frak (+ i 1) (/ (n i) (+ (d i) result)))))
-  (next-frak 1 0))
+	(prev-frak (- i 1) (/ (n i) (+ (d i) result)))))
+  (prev-frak k 0))
 
 (define (golden-ratio-iter k)
   (/ 1 (cont-frak-iter (lambda (i) 1.0)

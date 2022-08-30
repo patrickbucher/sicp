@@ -1,9 +1,9 @@
-(define (cont-frak n d k)
-  (define (next-frak i)
-    (if (> i k)
-	0
-	(/ (n i) (+ (d i) (next-frak (+ i 1))))))
-  (next-frak 1))
+(define (cont-frak-iter n d k)
+  (define (prev-frak i result)
+    (if (= i 0)
+	result
+	(prev-frak (- i 1) (/ (n i) (+ (d i) result)))))
+  (prev-frak k 0))
 
 (define (d i)
   (if (= (remainder i 3) 2)
@@ -23,13 +23,13 @@
 	(show i)
 	1))
   (next 1))
-  
+
 (define (eulers-number k)
   (+
    2.
-   (cont-frak (lambda (i) 1)
-	      (lambda (i) (d i))
-	      k)))
+   (cont-frak-iter (lambda (i) 1)
+		   (lambda (i) (d i))
+		   k)))
 
 ;; (eulers-number 3) 2.75
 ;; (eulers-number 4) 2.7142857142857144
