@@ -1,3 +1,15 @@
+# 2022-08-31 (We)
+
+I worked throuh exercise 1.39, which required writing a new implementation of
+the continued fraction algorithm, because minus instead of plus is used in the
+denominator. I mixed up the function calls for the numerator and denominator,
+and therefore got random results, unless I called the function with `k=1`. This
+exercise also allowed me to repeat the notions of degrees and radians.
+
+I finish August, my first month of daily SICP. Chapter 1 is mostly done, just
+one section with seven exercises left. (Probably some really hard ones, but
+let's see…)
+
 # 2022-08-30 (Tu)
 
 I finished part b) of exercise 1.37, for which I implemented `cont-frak` using
