@@ -1,3 +1,12 @@
+# 2022-09-01 (Th)
+
+Despite my headache, I gave section 1.3.4 on procedures that return other
+procedures a first read. Then I looked at the fixed-point idea again from the
+section before, which is used for various computations.
+
+I'll play with the examples later, or tomorrow, depending on my headache. Many
+exercises are waiting at the end of the chapter.
+
 # 2022-08-31 (We)
 
 I worked throuh exercise 1.39, which required writing a new implementation of
