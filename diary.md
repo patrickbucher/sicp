@@ -1,3 +1,10 @@
+# 2022-09-02 (Fr)
+
+I started with the examples using average damping, but something doesn't work,
+and I get some type error I don't understand, even though I just entered the
+code from the book. So I guess the test numbers I'm using cause the trouble. I
+have to investigate later or tomorrow…
+
 # 2022-09-01 (Th)
 
 Despite my headache, I gave section 1.3.4 on procedures that return other
