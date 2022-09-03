@@ -18,7 +18,7 @@
 (define (average x y)
   (/ (+ x y) 2.0))
 
-(define (sqrt x)
+(define (average-damp-sqrt x)
   (fixed-point
    (average-damp
     (lambda (y) (/ x y)))
@@ -42,8 +42,8 @@
 
 (define (newton-transform g)
   (lambda (x)
-    (- x (/ g x)
-       ((deriv g) x))))
+    (- x (/ (g x)
+	    ((deriv g) x)))))
 
 (define (newtons-method g guess)
   (fixed-point (newton-transform g)
@@ -53,4 +53,19 @@
   (newtons-method
    (lambda (y)
      (- (square y) x))
+   1.0))
+
+(define (fixed-point-of-transform g transform guess)
+  (fixed-point (transform g) guess))
+
+(define (fpt-average-damp-sqrt x)
+  (fixed-point-of-transform
+   (lambda (y) (/ x y))
+   average-damp
+   1.0))
+
+(define (fpt-newton-sqrt x)
+  (fixed-point-of-transform
+   (lambda (y) (- (square y) x))
+   newton-transform
    1.0))
