@@ -1,3 +1,11 @@
+# 2022-09-03 (Sa)
+
+I figured out the problem with the examples from yesterday: I missed to open a
+parenthese, so a function was regarded as a number, which explains the error.
+
+I have to step through the examples carefully again, then I can start with the
+final exercises of the chapter.
+
 # 2022-09-02 (Fr)
 
 I started with the examples using average damping, but something doesn't work,
