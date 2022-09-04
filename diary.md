@@ -1,3 +1,11 @@
+# 2022-09-04 (Su)
+
+Exercise 1.40 was a simple application of Newton's method. Exercise 1.41 looked
+easy at the beginning, but proofed to be very tricky: The evaluation tree gets
+bigger very quickly, because the function calls double on every layer.
+
+Exercise 1.42 introduced the `compose` function, which I already used a lot.
+
 # 2022-09-03 (Sa)
 
 I figured out the problem with the examples from yesterday: I missed to open a
