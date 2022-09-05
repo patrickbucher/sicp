@@ -1,3 +1,9 @@
+# 2022-09-05 (Mo)
+
+Exercise 1.43 was rather easy, using repeated calls to the `compose` function in
+the previous exercise. I also wrote an iterative implementation of the
+procedure, which worked fine.
+
 # 2022-09-04 (Su)
 
 Exercise 1.40 was a simple application of Newton's method. Exercise 1.41 looked
