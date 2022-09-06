@@ -1,3 +1,8 @@
+# 2022-09-06 (Tu)
+
+I worked on exercise 1.44, which wasn't too difficult. However, I wonder how
+smoothed functions are used in practice.
+
 # 2022-09-05 (Mo)
 
 Exercise 1.43 was rather easy, using repeated calls to the `compose` function in
