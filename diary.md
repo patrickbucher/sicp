@@ -1,10 +1,20 @@
 # 2022-09-07 (We)
 
-For exercise 1.44, I went back to the previous section to make sense of the
+For exercise 1.45, I went back to the previous section to make sense of the
 square root computation using average damping. I re-used the code from earlier
 exercises to compute the cube, the fourth, and the fifth root using repeated
 average damping. However, one repetition (i.e. two calls) was enough to get
 converging results on my examples.
+
+In the evening, I worked on exercise 1.46. I first struggled to understand how
+I'm supposed to structure the procedure, but my initial idea proofed to be
+valid, which I tested with a number guessing game. (I wanted to do it as a
+binary search first, but then resorted to simple increment/decrement
+improvements, which is good enough to proof the point.) Afterwards, the `sqrt`
+and `fixed-point` function were quite easy to implement using the
+`iterative-improve` procedure.
+
+This was chapter 1!
 
 # 2022-09-06 (Tu)
 
