@@ -1,3 +1,11 @@
+# 2022-09-07 (We)
+
+For exercise 1.44, I went back to the previous section to make sense of the
+square root computation using average damping. I re-used the code from earlier
+exercises to compute the cube, the fourth, and the fifth root using repeated
+average damping. However, one repetition (i.e. two calls) was enough to get
+converging results on my examples.
+
 # 2022-09-06 (Tu)
 
 I worked on exercise 1.44, which wasn't too difficult. However, I wonder how
