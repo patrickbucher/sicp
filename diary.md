@@ -6,6 +6,9 @@ the next guess quite right last night. Today, it worked after a few tries (I had
 to resort to `floor` instead of `round`). Afterwards, I was able to remove quite
 some debugging code.
 
+I started reading chapter 2. The numerator/denominator example will be useful
+for my next programming class, where I'd like to introduce structures in Go.
+
 # 2022-09-07 (We)
 
 For exercise 1.45, I went back to the previous section to make sense of the
