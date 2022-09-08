@@ -1,3 +1,11 @@
+# 2022-09-08 (Th)
+
+I picked up the binary search from yesterday, but worked with pen an paper this
+time. This proofed to be useful, because I didn't quite get the computation of
+the next guess quite right last night. Today, it worked after a few tries (I had
+to resort to `floor` instead of `round`). Afterwards, I was able to remove quite
+some debugging code.
+
 # 2022-09-07 (We)
 
 For exercise 1.45, I went back to the previous section to make sense of the
@@ -15,6 +23,9 @@ and `fixed-point` function were quite easy to implement using the
 `iterative-improve` procedure.
 
 This was chapter 1!
+
+I started to implement a binary search for a number guessing game, but the
+guesses never converged. So I called it a day.
 
 # 2022-09-06 (Tu)
 
