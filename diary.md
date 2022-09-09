@@ -1,3 +1,8 @@
+# 2022-09-09 (Fr)
+
+I read the beginning of chapter 2 again and worked through the rational number
+examples. I also did exercise 2.1, which was rather easy.
+
 # 2022-09-08 (Th)
 
 I picked up the binary search from yesterday, but worked with pen an paper this

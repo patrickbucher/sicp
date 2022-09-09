@@ -1,0 +1,17 @@
+(define (gcd x y)
+  (if (= y 0) x (gcd y (remainder x y))))
+
+(define (make-rat n d)
+  (cond ((and (< n 0) (< d 0)) (cons (abs n) (abs d)))
+	((and (< n 0) (> d 0)) (cons n d))
+	((and (> n 0) (< d 0)) (cons (* -1 n) (abs d)))
+	(else (cons n d))))
+
+;; (make-rat -3 5)
+;; (-3 . 5)
+;; (make-rat 3 5)
+;; (3 . 5)
+;; (make-rat -3 -5)
+;; (3 . 5)
+;; (make-rat 3 -5)
+;; (-3 . 5)
