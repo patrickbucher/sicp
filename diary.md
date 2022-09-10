@@ -1,3 +1,9 @@
+# 2022-09-10 (Sa)
+
+I continued reading in chapter 2 and worked through exercises 2.2 and 2.3, which
+were rather easy, but also enlightening. This kind of knowledge transfers 1:1 to
+object-oriented programming. Polymorphism is easily achieved using procedures.
+
 # 2022-09-09 (Fr)
 
 I read the beginning of chapter 2 again and worked through the rational number
