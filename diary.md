@@ -1,3 +1,18 @@
+# 2022-09-11 (Su)
+
+I read further in chapter 2, and was astonished that instead of a cons list, one
+can also use closures to the same effect, at least in the given example of
+rational numbers.
+
+Exercise 2.4 was a bit tricky to understand, but once I grasped the evaluation,
+it totally made sense to me. Exercise 2.5 was even trickier. My hunch to apply
+prime factorization to the problem proofed to be the right approach, and I was
+able to implement the `car` and `cdr` operation by figuring out how many times
+the factors 2 and 3 are inside the product `cons`ed together in the first place.
+I went from despair to delight within 5 minutes.
+
+Exercise 2.6, dealing with Church numerals, I leave for tomorrow.
+
 # 2022-09-10 (Sa)
 
 I continued reading in chapter 2 and worked through exercises 2.2 and 2.3, which
