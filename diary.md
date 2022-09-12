@@ -1,3 +1,8 @@
+# 2022-09-12 (Mo)
+
+In the morning, I started with exercise 2.6 on Church numerals, which is quite
+mind boggling. I had to left it unfinished for the time being.
+
 # 2022-09-11 (Su)
 
 I read further in chapter 2, and was astonished that instead of a cons list, one
