@@ -1,3 +1,16 @@
+# 2022-09-13 (Tu)
+
+I once again stepped carefully to all the substitutions and figured out what I
+already read yesterday: The Church number `n` is the n-th application of `f(x)`.
+After I was able to give a definition of `one` and `two` using Church numerals,
+the `add` procedure was quite straightforward. (I first wanted to compose the
+first function as many times as the second function indicates, but that is
+forbidden by the exercise and also pointless, because the `repeated` procedure
+works with actual numbers.) Then I figured out that I only need to compose the
+two Church numbers.
+
+This exercise was not only mind boggling, but also very humbling.
+
 # 2022-09-12 (Mo)
 
 In the morning, I started with exercise 2.6 on Church numerals, which is quite
