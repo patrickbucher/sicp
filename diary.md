@@ -1,3 +1,19 @@
+# 2022-09-14 (We)
+
+I read the section about interval arithmetic and thought to have spotted some
+serious grammar issues there ("She reasons that the minimum value the sum could
+be is the sum of the two lower bounds and the maximum value it could be
+is the sum of the two upper bounds.", p. 94) After checking the errata and
+finding nothing, I read the sentence again, and then it made sense to me: I
+mentally grouped the words the wrong way: "the minimum value; the sum; could be;
+is the sum…", which doesn't make sense, but when I read it as "the minimum value
+the sum could be; is the sum…". This sentence is like a flip-flop picture; if
+you see the wrong thing, look away, look at it again, and then you'll see the
+right thing. At least for a non-native English speaker like me…
+
+However, I worked through the example code and finished exercises 2.7 and 2.8,
+which were rather easy.
+
 # 2022-09-13 (Tu)
 
 I once again stepped carefully to all the substitutions and figured out what I
