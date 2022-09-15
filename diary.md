@@ -7,6 +7,8 @@ switched their widths. The addition yielded the same result, but not so for the
 multiplication, which proofed the point. I started writing the formulas down in
 LaTeX, after I did in on paper. (I'll have to finish it later.)
 
+I finished exercise 2.9 during my lunch break.
+
 # 2022-09-14 (We)
 
 I read the section about interval arithmetic and thought to have spotted some

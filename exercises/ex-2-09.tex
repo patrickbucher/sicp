@@ -34,6 +34,34 @@ For addition, only the width matters, not the actual numbers.
 
 \subsection*{Multiplication}
 
-TODO: same examples, different results
+For multiplication, all four combinations have to be tried:
+
+\begin{align}
+a &= 1, w_a = 0.1, a = [0.9;1.1] \\
+b &= 2, w_b = 0.2, b = [1.8;2.2] \\
+c_1 &= a_l * b_l = 0.9 \times 1.8 = 1.62 \\
+c_2 &= a_l * b_u = 0.9 \times 2.2 = 1.98 \\
+c_3 &= a_u * b_l = 1.1 \times 1.8 = 1.98 \\
+c_4 &= a_u * b_u = 1.1 \times 2.2 = 2.42 \\
+c_l &= \text{min}(c_1, c_2, c_3, c_4) = 1.62 \\
+c_u &= \text{max}(c_1, c_2, c_3, c_4) = 2.42 \\
+w_c &= \frac{c_u - c_l}{2} = \frac{2.42 - 1.62}{2} = \frac{0.8}{2} = 0.4
+\end{align}
+
+Same width, switched values:
+
+\begin{align}
+p &= 2, w_p = 0.1, p = [1.9;2.1] \\
+q &= 1, w_q = 0.2, q = [0.8;1.2] \\
+r_1 &= p_l * q_l = 1.9 \times 0.8 = 1.52 \\
+r_2 &= p_l * q_u = 1.9 \times 1.2 = 2.28 \\
+r_3 &= p_u * q_l = 2.1 \times 0.8 = 1.68 \\
+r_4 &= p_u * q_u = 2.1 \times 1.2 = 2.52 \\
+r_l &= \text{min}(r_1, r_2, r_3, r_4) = 1.52 \\
+r_u &= \text{max}(r_1, r_2, r_3, r_4) = 2.52 \\
+w_r &= \frac{r_u - r_l}{2} = \frac{2.52 - 1.52}{2} = \frac{1.0}{2} = 0.5
+\end{align}
+
+The product's width cannot be determined by the factors width, because it also depends on the factors itself!
 
 \end{document}
