@@ -1,3 +1,12 @@
+# 2022-09-15 (Th)
+
+I started with exercise 2.9. The stated issue intuitively made sense to me, but
+I had no idea on how to proof it. So I made two examples for each operation
+(addition and multiplication), where the variables kept their values, but
+switched their widths. The addition yielded the same result, but not so for the
+multiplication, which proofed the point. I started writing the formulas down in
+LaTeX, after I did in on paper. (I'll have to finish it later.)
+
 # 2022-09-14 (We)
 
 I read the section about interval arithmetic and thought to have spotted some

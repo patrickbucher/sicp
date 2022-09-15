@@ -1,0 +1,39 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage{amsmath}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+\section*{SICP: Ex. 2.9, p. 95}
+
+\subsection*{Addition}
+
+Given:
+
+\begin{align}
+a &= 1, w_a = 0.1, a = [0.9;1.1] \\
+b &= 2, w_b = 0.2, b = [1.8;2.2] \\
+c_l &= 0.9 + 1.8 = 2.7 \\
+c_u &= 1.1 + 2.2 = 3.3 \\
+w_c &= \frac{c_u - c_l}{2} = \frac{3.3 - 2.7}{2} = \frac{0.6}{2} = 0.3 \\
+w_c &= w_a + w_b = 0.1 + 0.2 = 0.3
+\end{align}
+
+Same width, switched values:
+
+\begin{align}
+p &= 2, w_p = 0.1, p = [1.9;2.1] \\
+q &= 1, w_q = 0.2, q = [0.8;1.2] \\
+r_l &= 1.9 + 0.8 = 2.7 \\
+r_u &= 2.1 + 1.2 = 3.3 \\
+w_r &= \frac{r_u - r_l}{2} = \frac{3.3 - 2.7}{2} = \frac{0.6}{2} = 0.3 \\
+w_r &= w_p + w_q = 0.1 + 0.2 = 0.3
+\end{align}
+
+For addition, only the width matters, not the actual numbers.
+
+\subsection*{Multiplication}
+
+TODO: same examples, different results
+
+\end{document}
