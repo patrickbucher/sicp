@@ -3,7 +3,9 @@
 I worked on exercise 2.10, but had an issue with the `mul-interval` procedure I
 typed in the other day; I obviously misplaced a parenthese in the `let` form,
 which could happen easily. (Clojure's `let` needs way less parentheses, which
-makes it easier to use.) After that was fixed, the exercise was easy.
+makes it easier to use.) After that was fixed, the exercise was easy. However, I
+don't now what to return if a division cannot be computed, so I resorted to
+`#f`.
 
 # 2022-09-15 (Th)
 
