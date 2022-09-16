@@ -7,6 +7,8 @@ makes it easier to use.) After that was fixed, the exercise was easy. However, I
 don't now what to return if a division cannot be computed, so I resorted to
 `#f`.
 
+I also started with exercise 2.11, which needs a bit further reasoning.
+
 # 2022-09-15 (Th)
 
 I started with exercise 2.9. The stated issue intuitively made sense to me, but
