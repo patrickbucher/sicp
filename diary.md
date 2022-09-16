@@ -1,3 +1,10 @@
+# 2022-09-16 (Fr)
+
+I worked on exercise 2.10, but had an issue with the `mul-interval` procedure I
+typed in the other day; I obviously misplaced a parenthese in the `let` form,
+which could happen easily. (Clojure's `let` needs way less parentheses, which
+makes it easier to use.) After that was fixed, the exercise was easy.
+
 # 2022-09-15 (Th)
 
 I started with exercise 2.9. The stated issue intuitively made sense to me, but
