@@ -1,3 +1,15 @@
+# 2022-09-17 (Sa)
+
+I worked through all the nine different cases for exercise 2.11 and figured out
+how to compute the minimum and maximum values. The only case where brute force
+is needed, is when both intervals span over zero (both lower negative, both
+upper positive). The other eight cases can be computed directly by reasoning
+about which boundry to use as the factors.
+
+I implemented a brute-force method to check my implementation. Then I
+implemented the first three cases; the rest I leave for tomorrow, for today's a
+busy day!
+
 # 2022-09-16 (Fr)
 
 I worked on exercise 2.10, but had an issue with the `mul-interval` procedure I
