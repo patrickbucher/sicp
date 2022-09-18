@@ -1,3 +1,9 @@
+# 2022-09-18 (Su)
+
+I implemented the remaining six of the nine cases and refactored the code.
+Exercise 2.11 is done; however, zero values are not handled. Since this exercise
+section is done, I'll start with the new section tomorrow.
+
 # 2022-09-17 (Sa)
 
 I worked through all the nine different cases for exercise 2.11 and figured out
