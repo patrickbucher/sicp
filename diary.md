@@ -1,3 +1,8 @@
+# 2022-09-19 (Mo)
+
+I read further on different representations of intervals and worked through
+exercise 2.12, which was rather easy.
+
 # 2022-09-18 (Su)
 
 I implemented the remaining six of the nine cases and refactored the code.

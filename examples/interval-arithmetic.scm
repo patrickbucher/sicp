@@ -21,3 +21,12 @@
 		(make-interval
 		 (/ 1.0 (upper-bound y))
 		 (/ 1.0 (lower-bound y)))))
+
+(define (make-interval lower upper)
+  (cons lower upper))
+
+(define (lower-bound x)
+  (car x))
+
+(define (upper-bound x)
+  (cdr x))
