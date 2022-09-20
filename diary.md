@@ -1,3 +1,9 @@
+# 2022-09-20 (Tu)
+
+I worked on exercise 2.13, for which I found a quite straightforward solution.
+However, when typing in the formula with LaTeX, I found a mistake. The corrected
+solution does not look convincing, so I have to double-check later on.
+
 # 2022-09-19 (Mo)
 
 I read further on different representations of intervals and worked through
