@@ -6,33 +6,30 @@
 
 \section*{SICP: Ex. 2.13, p. 96}
 
-Multiplication (Interval Arithmetics):
+Multiplication (Interval Arithmetics, $\Delta_x$ as a Ratio of $x$):
+
+\begin{alignat}{3}
+    c &= ab \\
+    c \pm c\Delta_c &= (a \pm a\Delta_a) (b \pm b\Delta_b) &&| c = ab \\
+    ab \pm ab\Delta_c &= (a \pm a\Delta_a)(b \pm b\Delta_b) &&| -ab \\
+    \pm ab\Delta_c &= (a \pm a\Delta_a)(b \pm b\Delta_b) - ab &&| \div \pm ab \\
+    \Delta_c &= \frac{(a \pm a\Delta_a)(b \pm b\Delta_b) - ab}{\pm ab} &&| \text{ignore negative case} \\
+    \Delta_c &= \frac{(a + a\Delta_a)(b + b\Delta_b) - ab}{ab} &&| \text{expand} \\
+    \Delta_c &= \frac{ab+ab\Delta_b+ab\Delta_a+ab\Delta_a\Delta_b-ab}{ab} &&| \text{simplify} \\
+    \Delta_c &= \frac{ab\Delta_b+ab\Delta_a+ab\Delta_a\Delta_b}{ab} &&| \text{factor out} \; ab \\
+    \Delta_c &= \frac{ab(\Delta_b+\Delta_a+\Delta_a\Delta_b)}{ab} &&| \div ab \\
+    \Delta_c &= \Delta_b+\Delta_a+\Delta_a\Delta_b
+\end{alignat}
+
+Example:
 
 \begin{align}
-c &= ab \\
-c \pm \Delta_c &= (a \pm \Delta_a) (b \pm \Delta_b) \\
-\end{align}
-
-Lower and Upper Bounds:
-
-\begin{align}
-c_l &= (a - a \Delta_a) (b - b \Delta_b) \\
-c_u &= (a + a \Delta_a) (b + b \Delta_b)
-\end{align}
-
-Interval of Product:
-
-\begin{align}
-\Delta_c &= \frac{c_l+c_u}{2} \frac{1}{c} \\
-\Delta_c &= \frac{c_l+c_u}{2c} \\
-\Delta_c &= \frac{c_l+c_u}{2ab} \\
-\Delta_c &= \frac{(a+a\Delta_a)(b+b\Delta_b)+(a-a\Delta_a)(b-b\Delta_b)}{2ab} \\
-\Delta_c &= \frac{ab+ab\Delta_b+ab\Delta_a+ab\Delta_a\Delta_b+ab-ab\Delta_b-ab\Delta_a+ab\Delta_a\Delta_b}{2ab} \\
-\Delta_c &= \frac{ab(1+\Delta_b+\Delta_a+\Delta_a\Delta_b+1-\Delta_b-\Delta_a+\Delta_a\Delta_b)}{2ab} \\
-\Delta_c &= \frac{ab(2+2\Delta_a\Delta_c)}{2ab} \\
-\Delta_c &= \frac{2ab(1+\Delta_a\Delta_c)}{2ab} \\
-\Delta_c &= 1+\Delta_a\Delta_c \\
-\text{???}
+    a &= 2, \Delta_a = 0.10 \\
+    b &= 4, \Delta_b = 0.05 \\
+    c &= ab = 2 \times 4 = 8 \\
+    \Delta_c &= \Delta_a + \Delta_b + \Delta_a\Delta_b = 0.10 * 0.05 + 0.10 \times 0.05 = 0.155 \\
+    c_l &= c - c\Delta_c = 8 - 8 \times 0.155 = 6.76 \\
+    c_u &= c + c\Delta_c = 8 + 8 \times 0.155 = 9.24
 \end{align}
 
 \end{document}

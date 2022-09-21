@@ -1,8 +1,22 @@
+# 2022-09-21 (We)
+
+In the morning, I figured out what I did wrong with my calculation. I found
+another solution that looked much saner to me. I entered my calculations into a
+LaTeX document and thereby used the `alignat` environment for the first time.
+
+I also implemented the computation in Scheme, which worked quite well after
+fixing some "off by the factor of 100" error (I mixed up percentages and
+ratios).
+
 # 2022-09-20 (Tu)
 
 I worked on exercise 2.13, for which I found a quite straightforward solution.
 However, when typing in the formula with LaTeX, I found a mistake. The corrected
 solution does not look convincing, so I have to double-check later on.
+
+I figured out later, that I used absolute widths rather than percentage
+intervals, so I performed the entire calculation again—and got exactly the same
+formula to calculate the delta of the product.
 
 # 2022-09-19 (Mo)
 
