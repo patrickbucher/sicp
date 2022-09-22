@@ -1,3 +1,11 @@
+# 2022-09-22 (Th)
+
+I worked through the examples demonstrating different results in interval
+arithmetics when using two different but equivalent formulas. Then I started
+with exercise 2.14, but first tried out addition and subtraction before doing
+the multiplication and division, as asked by the exercise. I wanted to
+re-implement the whole arithmetics using percentages from scratch before.
+
 # 2022-09-21 (We)
 
 In the morning, I figured out what I did wrong with my calculation. I found
