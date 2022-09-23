@@ -1,3 +1,9 @@
+# 2022-09-23 (Fr)
+
+I finished exercise 2.14, for which I implemented both multiplication and
+division. Since multiplication uses the same brute-force technique as
+subtraction, I implemented a common procedure that also accepts an operator.
+
 # 2022-09-22 (Th)
 
 I worked through the examples demonstrating different results in interval
