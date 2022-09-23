@@ -4,6 +4,9 @@ I finished exercise 2.14, for which I implemented both multiplication and
 division. Since multiplication uses the same brute-force technique as
 subtraction, I implemented a common procedure that also accepts an operator.
 
+I also wrote some comments on exercises 2.15 and 2.16. However, I didn't spend a
+lot of time on exercise 2.16, which clearly is rather a task for mathematicians.
+
 # 2022-09-22 (Th)
 
 I worked through the examples demonstrating different results in interval

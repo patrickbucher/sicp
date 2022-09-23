@@ -1,0 +1,8 @@
+You can add anything to a given formula, if you also add the reverse operation
+to the same formula; say, you add 5 and then remove 5, or you multiply
+something by 2 and than divide it by 2. This, however, is not true for interval
+arithmetics, in which the error bounds increase with each additional operation.
+
+In order to get more accurate results, the number of redundant operations must
+be reduced as much as possible. I could think of no way to proof that for any
+formula.
