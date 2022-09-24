@@ -1,3 +1,15 @@
+# 2022-09-24 (Sa)
+
+I started reading the section on lists in the morning, but didn't do any
+examples or exercises.
+
+I started over in the evening and typed in some examples. I figured out that
+`nil` is no longer define in MIT-Scheme; one has to use `'()` instead. (A
+footnote a couple of pages later makes the case for using `'()`.)
+
+After working through the examples, I finished two rather simple exercises.
+Reversing a list I already did in Prolog a couple of years ago.
+
 # 2022-09-23 (Fr)
 
 I finished exercise 2.14, for which I implemented both multiplication and
