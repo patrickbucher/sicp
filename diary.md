@@ -1,3 +1,10 @@
+# 2022-09-25 (Su)
+
+I worked through exercise 2.19, which was surprisingly easy and only required
+the use of `car`, `cdr`, and `null?`. It was also surprising to me that the
+order of the given coins does not matter. I quickly implemented a `reverse`
+procedure for more convenient testing.
+
 # 2022-09-24 (Sa)
 
 I started reading the section on lists in the morning, but didn't do any
