@@ -1,3 +1,11 @@
+# 2022-09-26 (Mo)
+
+I worked through exercise 2.20, which was fairly easy to implement. However, my
+implementation didn't work, because I implemented the `odd?` and `even?`
+predicates the wrong way; using division instead of the `remanider` procedure,
+that is. When I thought that I was finished, I had to reverse the resulting
+list, for which I wrote an iterative procedure, once again.
+
 # 2022-09-25 (Su)
 
 I worked through exercise 2.19, which was surprisingly easy and only required
