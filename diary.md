@@ -6,6 +6,10 @@ predicates the wrong way; using division instead of the `remanider` procedure,
 that is. When I thought that I was finished, I had to reverse the resulting
 list, for which I wrote an iterative procedure, once again.
 
+Having read the next section on the `map` procedure, I realized that recursive
+procedures do not require reversing the result in order to keep the original
+order of items.
+
 # 2022-09-25 (Su)
 
 I worked through exercise 2.19, which was surprisingly easy and only required
