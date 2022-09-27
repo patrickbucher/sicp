@@ -1,3 +1,9 @@
+# 3033-09-27 (Tu)
+
+I worked through exercises 2.21, 2.22, and 2.23, which were rather easy. I was
+glad to see that my issue with the order of the result of an iterative procedure
+really is an issue in exercise 2.22.
+
 # 2022-09-26 (Mo)
 
 I worked through exercise 2.20, which was fairly easy to implement. However, my
