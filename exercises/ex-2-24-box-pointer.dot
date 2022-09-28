@@ -1,26 +1,38 @@
 digraph box_pointer {
-    rankdir=LR;
     compound=true; // allow to connect clusters
     node [shape=rect;fontname="Fantasque Sans Mono"];
 
-    subgraph cluster_A {
-        A [label="1"];
+    subgraph cluster_one {
+        A [label="⋅"];
         B [label="⋅"];
     }
-    subgraph cluster_B {
-        C [label="2"];
+    subgraph cluster_two {
+        C [label="⋅"];
         D [label="⋅"];
     }
-    subgraph cluster_C {
-        E [label="3"];
+    subgraph cluster_three {
+        E [label="⋅"];
         F [label="⋅"];
     }
-    subgraph cluster_D {
-        G [label="4"];
+    subgraph cluster_four {
+        G [label="⋅"];
         H [label="⋅"];
     }
-    
-    B -> C [lhead=cluster_B];
-    D -> E [lhead=cluster_C];
-    F -> G [lhead=cluster_D];
+
+    Start [shape=point];
+    One [label="1"];
+    Two [label="2"];
+    Three [label="3"];
+    Four [label="4"];
+    nil [label="nil";rect=plaintext];
+
+    Start -> A [lhead=cluster_one];
+    A -> One;
+    B -> C [lhead=cluster_two];
+    C -> Two;
+    D -> E [lhead=cluster_three];
+    E -> Three;
+    F -> G [lhead=cluster_four];
+    G -> Four;
+    H -> nil;
 }
