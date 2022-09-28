@@ -24,7 +24,7 @@ digraph box_pointer {
     Two [label="2"];
     Three [label="3"];
     Four [label="4"];
-    nil [label="nil";rect=plaintext];
+    nil [label="nil";shape=plaintext];
 
     Start -> A [lhead=cluster_one];
     A -> One;
