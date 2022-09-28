@@ -1,0 +1,26 @@
+digraph box_pointer {
+    rankdir=LR;
+    compound=true; // allow to connect clusters
+    node [shape=rect;fontname="Fantasque Sans Mono"];
+
+    subgraph cluster_A {
+        A [label="1"];
+        B [label="⋅"];
+    }
+    subgraph cluster_B {
+        C [label="2"];
+        D [label="⋅"];
+    }
+    subgraph cluster_C {
+        E [label="3"];
+        F [label="⋅"];
+    }
+    subgraph cluster_D {
+        G [label="4"];
+        H [label="⋅"];
+    }
+    
+    B -> C [lhead=cluster_B];
+    D -> E [lhead=cluster_C];
+    F -> G [lhead=cluster_D];
+}

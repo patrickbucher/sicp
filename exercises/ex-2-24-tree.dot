@@ -1,0 +1,14 @@
+digraph tree {
+    node [shape=plaintext;fontname="Fantasque Sans Mono"];
+
+    A -> {1, B};
+    B -> {2, C};
+    C -> {3, D};
+    D -> {4, N};
+
+    A [shape=point];
+    B [shape=point];
+    C [shape=point];
+    D [shape=point];
+    N [label="nil"];
+}
