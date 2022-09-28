@@ -1,4 +1,12 @@
-# 3033-09-27 (Tu)
+# 2022-09-28 (We)
+
+I worked through the `count-leaves` example and struggled to figure out the
+right `cons` structure for exercise 2.24. Once I figured it out, I created two
+graphs using Graphviz, which I haven't been using for quite a long time. It
+proofed to be the right tool for the job, and I learned some new things (e.g.
+how to optically connect a node to a cluster).
+
+# 2022-09-27 (Tu)
 
 I worked through exercises 2.21, 2.22, and 2.23, which were rather easy. I was
 glad to see that my issue with the order of the result of an iterative procedure
