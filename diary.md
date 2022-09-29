@@ -4,6 +4,9 @@ I worked through exercise 2.25, which was a bit harder (and more cumbersome)
 than it initially looked like. I tried to limit the function cals to `car` and
 `cdr` with combinations thereof, e.g. `cadadr`.
 
+I also got to know the `append` function in exercise 2.26 and was a bit puzzled
+with the difference between `cons`/`list` at first, but then figured it out.
+
 # 2022-09-28 (We)
 
 I worked through the `count-leaves` example and struggled to figure out the
