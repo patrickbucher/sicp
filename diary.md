@@ -1,3 +1,13 @@
+# 2022-09-30 (Fr)
+
+I worked through exercise 2.27, which wasn't as hard as I first thought. Having
+re-implemented `reverse` instead of just copying the code probably helped as a
+warmup exercise.
+
+This concludes the second month of SICP. I haven't missed a single day. I
+probably will miss my moving they the next week: the 4th of October. But let's
+see…
+
 # 2022-09-29 (Th)
 
 I worked through exercise 2.25, which was a bit harder (and more cumbersome)
