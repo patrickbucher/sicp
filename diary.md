@@ -5,7 +5,7 @@ re-implemented `reverse` instead of just copying the code probably helped as a
 warmup exercise.
 
 This concludes the second month of SICP. I haven't missed a single day. I
-probably will miss my moving they the next week: the 4th of October. But let's
+probably will miss my moving day the next week: the 4th of October. But let's
 see…
 
 # 2022-09-29 (Th)
