@@ -1,3 +1,13 @@
+# 2022-10-01 (Sa)
+
+I started with exercise 2.28 about tree processing, and first got confused,
+because I already anticipated an iterative solution using an accumulator. As
+I resorted to the recursive approach, the procedure worked on first try. A
+recursive approach is way more "natural" for a recursive structure like a tree
+than an iterative one!
+
+I refactored the function and called it a day.
+
 # 2022-09-30 (Fr)
 
 I worked through exercise 2.27, which wasn't as hard as I first thought. Having
