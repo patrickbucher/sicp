@@ -1,3 +1,15 @@
+# 2022-10-02 (Su)
+
+I worked through exercise 2.29, which was quite a lot of work. My main issue was
+that two different kinds of data structures are involved: mobiles and branches.
+And I mixed those up in my implementation, which is one of the perils of
+programming without types.
+
+Part d) of the exercise was quite enlightening. I also was able to simplify the
+main procedures of exercises b) and c) after switching from `(not (list? ...))`
+and `(not (pair? ...))` to the `(number? ...)` predicate. I should have defined
+that one with the access procedures from the very start.
+
 # 2022-10-01 (Sa)
 
 I started with exercise 2.28 about tree processing, and first got confused,
