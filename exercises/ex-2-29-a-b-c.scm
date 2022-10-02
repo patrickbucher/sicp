@@ -47,27 +47,20 @@
 (define (branch-structure b) (car (cdr b)))
 
 ;; b)
-(define (weight? b)
-  (not (list? (branch-structure b))))
-
 (define (total-weight m)
-  (if (not (list? m))
+  (if (number? m)
       m
       (let ((l (left-branch m))
 	    (r (right-branch m)))
-	(+ (if (weight? l)
-	       (branch-structure l)
-	       (total-weight (branch-structure l)))
-	   (if (weight? r)
-	       (branch-structure r)
-	       (total-weight (branch-structure r)))))))
+	(+ (total-weight (branch-structure l))
+	   (total-weight (branch-structure r))))))
       
 ;; (total-weight m)
 ;; 26
 
 ;; c)
 (define (balanced? m)
-  (if (not (list? m))
+  (if (number? m)
       #t ; a weight is balanced
       (let ((l (left-branch m))
 	    (r (right-branch m)))
