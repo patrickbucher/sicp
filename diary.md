@@ -1,3 +1,9 @@
+# 2022-10-03 (Mo)
+
+I worked through the tree map example, as well as through exercises 2.30 and
+2.31. Exercise 2.32 is a bit more tricky, so I left it as unfinished business,
+to think about during the day.
+
 # 2022-10-02 (Su)
 
 I worked through exercise 2.29, which was quite a lot of work. My main issue was
