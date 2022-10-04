@@ -1,3 +1,9 @@
+# 2022-10-04 (Tu)
+
+Today's moving day. However, I managed to solve exercise 2.32. Sleeping over it
+again was a good idea (even though I didn't get that much sleep). That's all
+for today.
+
 # 2022-10-03 (Mo)
 
 I worked through the tree map example, as well as through exercises 2.30 and
