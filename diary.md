@@ -1,3 +1,12 @@
+# 2022-10-05 (We)
+
+After not having missed moving day, I worked through the examples of the next
+section and read on. There term "transducers" is introduced, which I already
+heard in the Clojure community. I already used `filter` and `map` a lot and
+even have implemented them, but never with `cons`. What I knew as a `reduce`
+function is called `accumulate` in SICP, which is probably the better term for
+what is accomplished.
+
 # 2022-10-04 (Tu)
 
 Today's moving day. However, I managed to solve exercise 2.32. Sleeping over it
