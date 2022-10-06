@@ -1,3 +1,8 @@
+# 2022-10-06 (Th)
+
+With some headache, I worked through some examples (`accumulate`, `enumerate`).
+I'll continue in the evening.
+
 # 2022-10-05 (We)
 
 After not having missed moving day, I worked through the examples of the next
