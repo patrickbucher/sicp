@@ -1,3 +1,8 @@
+# 2022-10-07 (Fr)
+
+I took up the examples on conventional interfaces again and started with
+exercise 2.33, which needs a bit more thinking.
+
 # 2022-10-06 (Th)
 
 With some headache, I worked through some examples (`accumulate`, `enumerate`).
