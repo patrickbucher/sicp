@@ -1,3 +1,15 @@
+# 2022-10-08 (Sa)
+
+After some struggle, I managed to finish exercise 2.33. The main issue was that
+I provided my own whacky implementation of `accumulate` instead of re-using the
+one provided in the chapter. This made things hard, if not impossible.
+
+Once I switched to the provided `accumulate` implementation, the pieces fell
+into place, and the exercise was easy to finish.
+
+I absolutely need to get rid of my habit to implement procedures using tail-call
+optimization from the start. This just makes everything harder.
+
 # 2022-10-07 (Fr)
 
 I took up the examples on conventional interfaces again and started with
