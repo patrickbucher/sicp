@@ -1,3 +1,11 @@
+# 2022-10-09 (Su)
+
+I worked through exercise 2.34; first on paper, then I re-implemented
+`accumulate` recursively, just to get out of the procedural mindset. Revisiting
+`accumulate` also helped me to figure out the lambda expression for the Horner
+evaluation. (The second parameter, `higher-terms`, could have been named better,
+in my opinion—as a singular, that is.)
+
 # 2022-10-08 (Sa)
 
 After some struggle, I managed to finish exercise 2.33. The main issue was that
