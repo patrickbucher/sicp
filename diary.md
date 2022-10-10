@@ -1,3 +1,24 @@
+# 2022-10-10 (Mo)
+
+I worked through exercises 2.35 and 2.36. Even though I have been using
+higher-order procedures like `map` and `reduce` for a long time, I obviously
+haven't realized the full power of them, because using them does not
+automatically did not come to my mind at the very start, especially in exercise
+2.36. (In exercise 2.35, the use of `map` was already given.)
+
+I wonder if every algorithm can be implemented by the means of `enumerate`,
+`filter`, `map`, `accumulate` (or `reduce`, respectively).
+
+I once again thought about my failed attempt to implement `accumulate` using
+tail-call optimization the last week. When I tested the procedure using
+additions and multiplications, everything worked fine. But once I tried to use
+it with `cons`, the result was totally different from the recursive
+implementation. Last night I realized the issue: the order of operators does
+matter for `cons`, but not for `+` or `*`. I remembered my short Haskell
+interlude in the summer of 2020, where `foldl` and `foldr` have been introduced.
+Now I guess that I have implemented my tail-call optimized `accumulate` as
+`foldr`, but I needed `foldl`. I'll pick up on that later.
+
 # 2022-10-09 (Su)
 
 I worked through exercise 2.34; first on paper, then I re-implemented
