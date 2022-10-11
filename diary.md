@@ -1,3 +1,11 @@
+# 2022-10-11 (Tu)
+
+I started with exercise 2.37, which was quite some struggle so far. So far, I
+was unable to implement the `matrix-*-vector` procedure, which is given using a
+call to `map` on the top-level. However, I changed the structure by wrapping the
+given `map` call using an `accumulate-n` call, which does work. I'll re-visit
+this part of the exercise once I'm done with the rest.
+
 # 2022-10-10 (Mo)
 
 I worked through exercises 2.35 and 2.36. Even though I have been using
