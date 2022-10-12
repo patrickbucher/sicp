@@ -18,13 +18,36 @@
 
 (define m (list (list 0 1) (list 2 3) (list 4 5))) ; 3 rows, 2 cols
 (define n (list (list 0 1 2) (list 3 4 5))) ; 2 rows, 3 cols
+(define v (list 1 2 3))
 
-;; TODO: This does not match the structure from the exercise given as:
-;; (define (matrix-*-vector m v) (map <??> m))
 (define (matrix-*-vector m v)
-  (accumulate-n * 1 (list (map (lambda (row) (accumulate + 0 row)) m) v)))
+  (map (lambda (w) (dot-product v w)) m))
 
 ;; (matrix-*-vector m (list 1 2 3))
 ;; (1 10 27)
 ;; (matrix-*-vector n (list 1 2))
 ;; (3 24)
+
+(define (transpose mat)
+  (accumulate-n cons '() mat))
+
+;; m
+;; ((0 1) (2 3) (4 5))
+;; (transpose m)
+;; ((0 2 4) (1 3 5))
+;; (transpose (transpose m))
+;; ((0 1) (2 3) (4 5))
+
+(define (matrix-*-matrix m n)
+  (let ((cols (transpose n)))
+    (map (lambda (w) (matrix-*-vector cols w)) m)))
+
+;; (matrix-*-matrix m n)
+;; ((3 4 5) (9 14 19) (15 24 33))
+
+;; .       0  1  2
+;;         3  4  5
+;;        --------
+;; 0  1 |  3  4  5
+;; 2  3 |  9 14 10
+;; 4  5 | 15 24 33

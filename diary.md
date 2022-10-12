@@ -1,3 +1,10 @@
+# 2022-10-12 (We)
+
+I was able to finish exercise 2.37 after a short peek into the proper solution
+to `matrix-*-vector`. I did it the right way all along, but tested it the wrong
+way, i.e. I expected a different result than the correct one that was returned
+already.
+
 # 2022-10-11 (Tu)
 
 I started with exercise 2.37, which was quite some struggle so far. So far, I
