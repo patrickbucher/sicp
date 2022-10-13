@@ -1,3 +1,13 @@
+# 2022-10-13 (Th)
+
+Before tackling exercise 2.38, I wanted to re-implement `accumulate` both
+recursively and iteratively to experiment with the differences. The recursive
+approach (a.k.a. `fold-right`) works fine for `cons`ing together two lists. The
+iterative approach (a.k.a. `fold-left`) works fine with the `exp` procedure
+(chained exponentiation). The two procedures produce the same output, if the
+given operation produces the same result with changed parameter order: `(= (op a
+b) (op b a))`.
+
 # 2022-10-12 (We)
 
 I was able to finish exercise 2.37 after a short peek into the proper solution
