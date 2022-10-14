@@ -1,3 +1,9 @@
+# 2022-10-14 (Fr)
+
+I worked through exercise 2.38, which was rather easy after yesterday's
+preparation work for it. The property `(= (op a b) (op b a))` is called
+_commutative law_, which I forgot and had to search.
+
 # 2022-10-13 (Th)
 
 Before tackling exercise 2.38, I wanted to re-implement `accumulate` both
