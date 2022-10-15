@@ -1,3 +1,13 @@
+# 2022-10-15 (Sa)
+
+I worked through exercise 2.39, which was about reversing lists using
+`fold-left` and `fold-right`. The `fold-left` implementation was more "natural".
+For the `fold-right` implementation, I defined a placeholder procedure `switch`
+and wrote out the entire call stack, until it was just a sequence of `switch`
+calls. Filling in the actual definition of `switch` was then very easy. I guess
+this is what Dijkstra meant by "reasoning with uninterpreted symbols". This
+allowed me to unwrap the whole problem before tackling the solution to it.
+
 # 2022-10-14 (Fr)
 
 I worked through exercise 2.38, which was rather easy after yesterday's
