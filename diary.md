@@ -1,3 +1,10 @@
+# 2022-10-16 (Su)
+
+I worked through the examples of the "Nested Mappings" section and
+re-implemented some procedures from earlier in the book (e.g. prime test). I
+heard of `flatmap` before when reading about monads; now it showed up in this
+different context, for a different purpose.
+
 # 2022-10-15 (Sa)
 
 I worked through exercise 2.39, which was about reversing lists using
