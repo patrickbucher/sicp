@@ -1,3 +1,8 @@
+# 2022-10-17 (Mo)
+
+I worked through exercise 2.40, which gave me the chance to repeat some
+techniques from yesterday's example.
+
 # 2022-10-16 (Su)
 
 I worked through the examples of the "Nested Mappings" section and
