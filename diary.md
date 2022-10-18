@@ -1,3 +1,9 @@
+# 2022-10-18 (Tu)
+
+Having been sick the whole day, I only did exercise 2.41 in the evening. I
+figured out that triple-nested enumerations require two calls to `flatmap` for
+proper unwrapping. However, the reason isn't yet intuitively clear to me.
+
 # 2022-10-17 (Mo)
 
 I worked through exercise 2.40, which gave me the chance to repeat some
