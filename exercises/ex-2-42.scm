@@ -18,10 +18,11 @@
 	  (queen-cols (- k 1))))))
   (queen-cols board-size))
 
-;; TODO: implement procedures
-;; empty-board
-;; safe
-;; adjoin-position
+(define empty-board '()) ;; TODO
+
+(define (safe? rc positions) #f) ;; TODO
+
+(define (adjoin-position row col rest-of-queens) '()) ;; TODO
 
 (define (flatmap proc seq)
   (accumulate append '() (map proc seq)))
