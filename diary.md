@@ -1,3 +1,8 @@
+# 2022-10-19 (We)
+
+Today I was still recovering from a cold, so I only read about the 8 Queens
+Puzzle.
+
 # 2022-10-18 (Tu)
 
 Having been sick the whole day, I only did exercise 2.41 in the evening. I
