@@ -1,7 +1,12 @@
 # 2022-10-19 (We)
 
 Today I was still recovering from a cold, so I only read about the 8 Queens
-Puzzle.
+Puzzle. Later on, I once again worked through the `flatmap` example as a
+preparation for the 8 Queens Puzzle. I started with exercise 2.42, but struggled
+to figure out what kind of representation to use. After my approach to just use
+lists of row indices (the column index is the position in the list) failed, I
+glanced at a solution that uses row/col pairs for the positions. So I'll try
+this approach tomorrow.
 
 # 2022-10-18 (Tu)
 
