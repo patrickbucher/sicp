@@ -8,6 +8,11 @@ lists of row indices (the column index is the position in the list) failed, I
 glanced at a solution that uses row/col pairs for the positions. So I'll try
 this approach tomorrow.
 
+I quickly returned into the code to write some building blocks (are two
+positions in the same row, column, diagonal?); then I finished the exercise.
+However, calling `(queens 8)` blows the stack. But the solution to `(queens 3)`
+looks sensible.
+
 # 2022-10-18 (Tu)
 
 Having been sick the whole day, I only did exercise 2.41 in the evening. I
