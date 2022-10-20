@@ -1,3 +1,15 @@
+# 2022-10-20 (Th)
+
+I didn't get to work on exercise 2.43 before late in the evening, but figured
+out the differences quite quickly. I didn't perform a detailed mathematical
+analysis on the runtime difference, but my hunch that the modified `queen-cols`
+is exponentially slower as the original one against some sample turned out to be
+true when checking against some sample solution.
+
+I won't work through the tasks to analyse the runtime complexity of procedures
+as thoroughly as through the programming exercises and leave this to another
+time and book project (Introduction to Algorithms, 4th Edition).
+
 # 2022-10-19 (We)
 
 Today I was still recovering from a cold, so I only read about the 8 Queens
