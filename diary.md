@@ -1,3 +1,10 @@
+# 2022-10-21 (Fr)
+
+I started reading section 2.2.4 about the picture language. I wonder how I'm
+going to test my solutions to the exercises, as no implementation for actually
+drawing the pictures is provided. (Maybe I need to try Racket for this
+particular task.)
+
 # 2022-10-20 (Th)
 
 I didn't get to work on exercise 2.43 before late in the evening, but figured
