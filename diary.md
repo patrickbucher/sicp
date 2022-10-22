@@ -1,3 +1,11 @@
+# 2022-10-22 (Sa)
+
+I decided to not just do the exercises on the picture language without properly
+testing them, i.e. with a verifyable graphical output. For this, I'm going to
+switch to Racket for the next couple of exercises, and I'll document what is
+needed for the Racket setup in this repo. Not exactly SICP, but I'll probably be
+using a Racket package called `sicp` for this purpose, so close enough…
+
 # 2022-10-21 (Fr)
 
 I started reading section 2.2.4 about the picture language. I wonder how I'm
