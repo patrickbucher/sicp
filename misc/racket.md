@@ -42,3 +42,49 @@ Remove (uninstall) a package:
 
     raco pkg remove sicp
 
+## Emacs
+
+Use `melpa` instaed of `melpa-stable` (`~/emacs`):
+
+    (require 'package)
+    (add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+    (package-initialize)
+
+Refresh the packages after re-opening Emacs:
+
+    M-x package-refresh-contents
+
+Install `racket-mode`:
+
+    M-x package-install RET racket-mode
+
+Install the package `geiser-racket`:
+
+    M-x package-install RET geiser-racket
+
+Extend your Geiser config (`~/emacs`):
+
+    (setq geiser-mit-binary "/usr/bin/scheme")
+    (setq geiser-racket-binary "/usr/bin/racket")
+    (setq geiser-active-implementations '(mit racket))
+    (add-to-list 'auto-mode-alist '("\\.rkt\\'" . geiser-mode))
+
+Start using the picture language (example code: `../examples/einstein.rkt`):
+
+    #lang sicp
+    (#%require sicp-pict)
+    (paint einstein)
+
+Open it in Emacs:
+
+    emacs ../examples/einstein.rkt
+
+Start a Racket REPL and evaluate the whole buffer:
+
+    C-c C-z
+    C-x o
+    C-c C-b
+
+An image of Einstein should appear.
+
