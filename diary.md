@@ -6,6 +6,10 @@ switch to Racket for the next couple of exercises, and I'll document what is
 needed for the Racket setup in this repo. Not exactly SICP, but I'll probably be
 using a Racket package called `sicp` for this purpose, so close enough…
 
+After some struggles, I managed to get my setup based on Racket, Emacs, and
+Geiser running. So tomorrow I can start digging in with the picture language
+examples and exercises.
+
 # 2022-10-21 (Fr)
 
 I started reading section 2.2.4 about the picture language. I wonder how I'm
