@@ -1,3 +1,13 @@
+# 2022-10-23 (Su)
+
+Even though I got together a somewhat working Racket setup with Emacs and
+Geiser, I still have some [issues](https://stackoverflow.com/q/74169756/6763074)
+with evaluating Racket expressions.
+
+Instead of wasting more time with this setup, I switched over to DrRacket. Now I
+was able to properly execute the examples. I also worked through the easy
+exercise 2.44. At least, I'm back on track now…
+
 # 2022-10-22 (Sa)
 
 I decided to not just do the exercises on the picture language without properly
