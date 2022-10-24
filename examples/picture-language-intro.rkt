@@ -4,6 +4,12 @@
 (define wave (load-painter "wave-man.jpg"))
 (define rogers (load-painter "william-barton-rogers.jpg"))
 
+(define (paint-res p w h)
+  (paint p #:width w #:height h))
+
+(define (paint-big p)
+  (paint p #:width 800 #:height 800))
+
 (paint wave)
 (paint rogers)
 
@@ -48,4 +54,4 @@
         (below painter
                (beside smaller smaller)))))
 
-(paint (corner-split rogers 3))
+(paint-big (corner-split rogers 3))
