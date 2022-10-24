@@ -34,7 +34,8 @@
       (let ((smaller (right-split painter (- n 1))))
         (beside painter
                 (below smaller smaller)))))
-(paint (right-split rogers 4))
+
+(paint-big (right-split rogers 4))
 
 (define (corner-split painter n)
   (if (= n 0)
@@ -55,3 +56,26 @@
                (beside smaller smaller)))))
 
 (paint-big (corner-split rogers 3))
+
+(define (square-limit painter n)
+  (let ((quarter (corner-split painter n)))
+    (let ((half (beside (flip-horiz quarter)
+                        quarter)))
+      (below (flip-vert half) half))))
+
+(paint-big (square-limit rogers 3))
+
+(define (square-of-four tl tr bl br)
+  (lambda (painter)
+    (let ((top (beside (tl painter)
+                       (tr painter)))
+          (bottom (beside (bl painter)
+                          (br  painter))))
+      (below bottom top))))
+
+(define (new-flipped-pairs painter)
+  (let ((combine4
+         (square-of-four identity flip-vert identity flip-vert)))
+    (combine4 painter)))
+
+(paint-big (new-flipped-pairs rogers))
