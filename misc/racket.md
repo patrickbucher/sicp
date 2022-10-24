@@ -68,7 +68,6 @@ Extend your Geiser config (`~/emacs`):
     (setq geiser-mit-binary "/usr/bin/scheme")
     (setq geiser-racket-binary "/usr/bin/racket")
     (setq geiser-active-implementations '(mit racket))
-    (add-to-list 'auto-mode-alist '("\\.rkt\\'" . geiser-mode))
 
 Start using the picture language (example code: `../examples/einstein.rkt`):
 
