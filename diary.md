@@ -1,3 +1,13 @@
+# 2022-10-24 (Mo)
+
+I managed to output pictures with an arbitrary resolution in DrRacket. This,
+however, was not a configuration issue, but a set of parameters to the
+`paint` procedure I didn't know. I also have to double-check on the Racket
+syntax of keywords, which are used for that purpose.
+
+I played around with a few more examples and managed to work through exercise
+2.45.
+
 # 2022-10-23 (Su)
 
 Even though I got together a somewhat working Racket setup with Emacs and
