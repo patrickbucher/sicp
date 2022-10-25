@@ -1,3 +1,16 @@
+# 2022-10-25 (Tu)
+
+I'm back on track and finally managed to do an exercise in the early morning:
+exercise 2.46 about vectors. However, my Emacs/Geiser/Racket setup still isn't
+working properly. And DrRacket is not the editor I'd like to work with on a
+daily basis.
+
+Yesterday, I also started implementing my
+[SuperLeague](https://github.com/patrickbucher/superleague-polyglot) stock
+program in Racket. For this, I'm using Visual Studio Code. But Vim would be just
+as good, I think, for I haven't figured out yet how to interact with the REPL in
+VSCode.
+
 # 2022-10-24 (Mo)
 
 I managed to output pictures with an arbitrary resolution in DrRacket. This,
