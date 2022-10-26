@@ -1,3 +1,13 @@
+# 2022-10-26 (We)
+
+I worked through exercise 2.47 using DrRacket. Unfortunately, my setup based on
+Emacs, Geiser, and Racket is still not properly working.
+
+Yesterday, I finished my first implementation of the SuperLeague stock program
+using Racket. I'll have to figure out the difference between `accumulate` and
+`reduce` (the ones I've implemented on my own). I thought that they do the same,
+which is not the case.
+
 # 2022-10-25 (Tu)
 
 I'm back on track and finally managed to do an exercise in the early morning:
