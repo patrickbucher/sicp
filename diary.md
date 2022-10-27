@@ -1,3 +1,7 @@
+# 2022-10-27 (Th)
+
+Today I only managed to do exercise 2.48, which was easy, in the morning.
+
 # 2022-10-26 (We)
 
 I worked through exercise 2.47 using DrRacket. Unfortunately, my setup based on
