@@ -57,14 +57,14 @@
          (make-segment (make-vect 0.7 0.8)
                        (make-vect 0.6 0.6)) ;; 11
          (make-segment (make-vect 0.6 0.6)
-                       (make-vect 0.75 0.6)) ;; 12
-         (make-segment (make-vect 0.75 0.6)
+                       (make-vect 0.7 0.6)) ;; 12
+         (make-segment (make-vect 0.7 0.6)
                        (make-vect 1.0 0.35)) ;; 13
          (make-segment (make-vect 1.0 0.25)
-                       (make-vect 0.7 0.55)) ;; 14
-         (make-segment (make-vect 0.7 0.55)
+                       (make-vect 0.65 0.55)) ;; 14
+         (make-segment (make-vect 0.65 0.55)
                        (make-vect 0.7 0.0)) ;; 15
          (make-segment (make-vect 0.6 0.0)
-                       (make-vect 0.5 0.4)) ;; 16
-         (make-segment (make-vect 0.5 0.4)
+                       (make-vect 0.5 0.3)) ;; 16
+         (make-segment (make-vect 0.5 0.3)
                        (make-vect 0.4 0.0))))) ;; 17

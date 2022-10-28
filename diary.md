@@ -1,3 +1,12 @@
+# 2022-10-28 (Fr)
+
+I worked through exercise 2.49, which was a bit irritating at the beginning,
+until I figured out that `sicp-pict` defines all the procedures needed to
+perform the task.
+
+I managed to draw shapes quite fast; only the `wave` figure turned out a bit
+corny and rather looks like a skiapode than a human.
+
 # 2022-10-27 (Th)
 
 Today I only managed to do exercise 2.48, which was easy, in the morning.
