@@ -1,3 +1,19 @@
+# 2022-10-29 (Sa)
+
+Finally I found some time to do my exercises properly. I sat down for exercises
+2.50 and 2.51, which were quite enlightening. I finally understand the
+difference of a frame and a painter. The painter itself is a procedure to be
+called with the frame as an argument.
+
+"The most useful thing a function can return is another function.", I once
+heard, probably in an interview Gerald Jay Sussman concerning the SICP follow-up
+book _Software Desing for Flexibility_. I now understand what he meant.
+
+Yesterday, I also figured out what was wrong with my Emacs/Geiser/Racket setup:
+nothing! I just had a syntax error in my code. Now I can also use Emacs for
+Racket programming, but I have to leave away the `#lang sicp` declaration for
+some reason.
+
 # 2022-10-28 (Fr)
 
 I worked through exercise 2.49, which was a bit irritating at the beginning,
