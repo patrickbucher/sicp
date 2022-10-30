@@ -17,7 +17,7 @@
       (lambda (frame)
         (paint-left frame)
         (paint-right frame)))))
-          
+
 
 (define (below1 upper lower)
   (let ((split-point (make-vect 0.0 0.5)))

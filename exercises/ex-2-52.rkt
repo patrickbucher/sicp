@@ -60,19 +60,19 @@
 (define (right-split painter n)
   (if (= n 0)
       painter
-      (let ((smaller (right-split painter (- n 1))))                                                      
-        (beside painter                                                                                   
-                (below smaller smaller))))) 
+      (let ((smaller (right-split painter (- n 1))))
+        (beside painter
+                (below smaller smaller)))))
 
-(define (corner-split painter n)                                                                          
-  (if (= n 0)                                                                                             
-      painter                                                                                             
-      (let ((up (up-split painter (- n 1)))                                                               
-            (right (right-split painter (- n 1))))                                                        
+(define (corner-split painter n)
+  (if (= n 0)
+      painter
+      (let ((up (up-split painter (- n 1)))
+            (right (right-split painter (- n 1))))
         (let ((top-left (beside up (flip-horiz up)))
               (bottom-right (below right (flip-vert right)))
-              (corner (corner-split painter (- n 1))))                                                    
-          (beside (below painter top-left)                                                                
+              (corner (corner-split painter (- n 1))))
+          (beside (below painter top-left)
                   (below bottom-right corner))))))
 
 (define (square-of-four tl tr bl br)
