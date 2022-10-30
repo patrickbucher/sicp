@@ -1,3 +1,20 @@
+# 2022-10-30 (Su)
+
+I finished section 2.2 by working through exercise 2.52, which was rather a
+demonstration than a serious challenge. But it made the point put forward in the
+text.
+
+This section was a temptation to quit, but once I got my environment together
+with Racket, I really could follow through with properly testing my code. I now
+better understand higher-order functions in terms of procedures that return
+other procedures.
+
+I'm glad that I followed through; and since today is October 30th, it is three
+months ago that I choose to seriously work through SICP, at least through the
+first two or three chapters. There's still a lot ahead in chapter 2, which
+probably will take up the rest of the year, given the little time I'm able to
+spend on it.
+
 # 2022-10-29 (Sa)
 
 Finally I found some time to do my exercises properly. I sat down for exercises
