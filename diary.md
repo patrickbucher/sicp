@@ -1,3 +1,10 @@
+# 2022-10-31 (Mo)
+
+I started reading the section on symbolic data. With some of it I already was
+familiar. Exercise 2.53, however, demonstrated that I didn't fully understand it
+yet. But I managed to work through it nonetheless, as well as exercises 2.54 and
+2.55. Finally some early-morning progress again…
+
 # 2022-10-30 (Su)
 
 I finished section 2.2 by working through exercise 2.52, which was rather a
