@@ -1,3 +1,10 @@
+# 2022-11-01 (Tu)
+
+Today was a very unproductive day in terms of SICP. I only started reading the
+next section with examples on differentiation using symbols. I need to pick up
+the pace tomorrow! Today was a public holiday, after all, so I shouldn't feel
+too bad about it…
+
 # 2022-10-31 (Mo)
 
 I started reading the section on symbolic data. With some of it I already was
