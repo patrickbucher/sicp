@@ -5,6 +5,9 @@ procedures representing and working with the data structures. Now I'll revisit
 differentiation from a math perspective by computing the examples on my own
 before I start working on the exercises.
 
+I worked through the three sample calculations and checked them on WolframAlpha.
+Now I'm confident that I understand the basics.
+
 # 2022-11-01 (Tu)
 
 Today was a very unproductive day in terms of SICP. I only started reading the
