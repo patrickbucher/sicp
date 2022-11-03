@@ -1,3 +1,9 @@
+# 2022-11-03 (Th)
+
+I worked through the improvements of the derivatives example and checked them
+against my manual calculations from yesterday. I had a glance at 2.56, but need
+some more thinking time before tackling it.
+
 # 2022-11-02 (We)
 
 I started with implementing the derivative procedure with all its required
