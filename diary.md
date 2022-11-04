@@ -1,3 +1,16 @@
+# 2022-11-04 (Fr)
+
+Exercise 2.56 was rather easy, and I remembered the derivation rule to be
+implemented as one of the most basics one I used on a daily basis during math
+classes twelve years ago. For the implementation, I've also written a `pow`
+procedure, which even can deal with negative exponents. The extended `deriv`
+procedure worked the first time I tested it.
+
+Symbolic computation is a very interesting concept. When I remember solving
+equations in Python using some special library for the purpose, I would not want
+to go back, but stick to Scheme, which has support for symbols built in natively
+to the language.
+
 # 2022-11-03 (Th)
 
 I worked through the improvements of the derivatives example and checked them
