@@ -1,3 +1,9 @@
+# 2022-11-05 (Sa)
+
+I got to work on exercise 2.57 only in the afternoon. I wasn't able to figure
+out a way to implement the multi-arity expressions without touching the original
+`deriv` procedure, so I solved the problem in isolation.
+
 # 2022-11-04 (Fr)
 
 Exercise 2.56 was rather easy, and I remembered the derivation rule to be
