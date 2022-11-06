@@ -1,3 +1,9 @@
+# 2022-11-06 (Su)
+
+For exercise 2.58, I wrote some kind of simple parser that converts infix
+notation to prefix notation for sums and products. I skip on the second part,
+but keep the problem in mind.
+
 # 2022-11-05 (Sa)
 
 I got to work on exercise 2.57 only in the afternoon. I wasn't able to figure
