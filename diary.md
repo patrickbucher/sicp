@@ -1,3 +1,8 @@
+# 2022-11-07 (Mo)
+
+I read about the set representation, worked through the example code, and
+implemented the union procedure for two sets in exercise 2.59.
+
 # 2022-11-06 (Su)
 
 For exercise 2.58, I wrote some kind of simple parser that converts infix
