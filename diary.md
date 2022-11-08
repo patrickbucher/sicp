@@ -1,3 +1,11 @@
+# 2022-11-08 (Tu)
+
+I worked through exercise 2.60, in which the internal set representation is
+allowed to store duplicates. The union and intersection implementation therefore
+need to check for duplicates when building up the result set. This additional
+step is straightforward when working with an iterative rather than a recursive
+implementation.
+
 # 2022-11-07 (Mo)
 
 I read about the set representation, worked through the example code, and
