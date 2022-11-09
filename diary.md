@@ -1,3 +1,9 @@
+# 2022-11-09 (We)
+
+I read the section about sets represented as ordered lists, worked through the
+example code, and did exercise 2.61, which was rather straightforward using an
+iterative approach.
+
 # 2022-11-08 (Tu)
 
 I worked through exercise 2.60, in which the internal set representation is
