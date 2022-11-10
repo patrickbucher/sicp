@@ -1,3 +1,9 @@
+# 2022-11-10 (Th)
+
+I started with exercise 2.62 and thought about different approaches. As I wanted
+to re-use the `adjoin-set` procedure from yesterday, I realized that it cannot
+properly handle duplicates. So I need to go back to that one first.
+
 # 2022-11-09 (We)
 
 I read the section about sets represented as ordered lists, worked through the
