@@ -1,3 +1,10 @@
+# 2022-11-11 (Fr)
+
+First, I fixed the `adjoin-set` procedure of exercise 2.61, which consisted just
+of handling another condition. Second, I implemented `union-set` using the
+`adjoin-set` procedure. I'm not sure if the implementation has the order O(n),
+but either the first or second set shrinks with every iteration.
+
 # 2022-11-10 (Th)
 
 I started with exercise 2.62 and thought about different approaches. As I wanted
