@@ -1,3 +1,7 @@
+# 2022-11-12 (Sa)
+
+I read about sets represented as binary trees and implemented the example.
+
 # 2022-11-11 (Fr)
 
 First, I fixed the `adjoin-set` procedure of exercise 2.61, which consisted just
