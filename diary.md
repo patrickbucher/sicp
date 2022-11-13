@@ -1,3 +1,12 @@
+# 2022-11-13 (Su)
+
+In the morning, I started to re-read the section on sets as binary trees, which
+I had to abandon due to more urgent tasks at hand.
+
+I only managed to start with exercise 2.63 late in the evening. I typed in the
+two implementations, but was not able anymore to reason about the two different
+approaches, which I save up for tomorrow.
+
 # 2022-11-12 (Sa)
 
 I read about sets represented as binary trees and implemented the example.
