@@ -1,3 +1,10 @@
+# 2022-11-14 (Mo)
+
+I started analyzing the two procedures for exercise 2.63 (recursive and
+iterative) to convert trees to lists, but haven't concluded yet if any of the
+two is more efficient. I guess that both require the same amount of step,
+because the shape and size of the data structure determines the number of steps.
+
 # 2022-11-13 (Su)
 
 In the morning, I started to re-read the section on sets as binary trees, which
