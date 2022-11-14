@@ -41,18 +41,109 @@
 		result-list)))))
   (copy-to-list tree '()))
 
-(define t (adjoin-set
-	   5
-	   (adjoin-set
-	    3
-	    (adjoin-set
-	     7
-	     (adjoin-set
-	      2
-	      (adjoin-set
-	       4
-	       (adjoin-set
-		6
-		(adjoin-set
-		 8
-		 '()))))))))
+(define t1
+  (adjoin-set
+   11
+   (adjoin-set
+    5
+    (adjoin-set
+     1
+     (adjoin-set
+      9
+      (adjoin-set
+       3
+       (adjoin-set
+	7
+	'())))))))
+
+(define t2
+  (adjoin-set
+   11
+   (adjoin-set
+    9
+    (adjoin-set
+     5
+     (adjoin-set
+      7
+      (adjoin-set
+       1
+       (adjoin-set
+	3
+	'())))))))
+
+(define t3
+  (adjoin-set
+   11
+   (adjoin-set
+    7
+    (adjoin-set
+     9
+     (adjoin-set
+      1
+      (adjoin-set
+       3
+       (adjoin-set
+	5
+	'())))))))
+
+(define balanced
+  (adjoin-set
+   8
+   (adjoin-set
+    6
+    (adjoin-set
+     4
+     (adjoin-set
+      2
+      (adjoin-set
+       7
+       (adjoin-set
+	3
+	(adjoin-set
+	 5
+	 '()))))))))
+
+(define unbalanced
+  (adjoin-set
+   7
+   (adjoin-set
+    6
+    (adjoin-set
+     5
+     (adjoin-set
+      4
+      (adjoin-set
+       3
+       (adjoin-set
+	2
+	(adjoin-set
+	 1
+	 '()))))))))
+
+;; (tree->list-1 t1)
+;; (1 3 5 7 9 11)
+;; (tree->list-2 t1)
+;; (1 3 5 7 9 11)
+
+;; (tree->list-1 t2)
+;; (1 3 5 7 9 11)
+;; (tree->list-2 t2)
+;; (1 3 5 7 9 11)
+
+;; (tree->list-1 t3)
+;; (1 3 5 7 9 11)
+;; (tree->list-2 t3)
+;; (1 3 5 7 9 11)
+
+;; (tree->list-1 unbalanced)
+;; (1 2 3 4 5 6 7)
+;; (tree->list-2 unbalanced)
+;; (1 2 3 4 5 6 7)
+
+;; (tree->list-1 balanced)
+;; (2 3 4 5 6 7 8)
+;; (tree->list-2 balanced)
+;; (2 3 4 5 6 7 8)
+
+;; 1) Both procedures produce the same result when given the same input.
+
