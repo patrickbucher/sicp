@@ -147,3 +147,5 @@
 
 ;; 1) Both procedures produce the same result when given the same input.
 
+;; 2) Both procedures spawn two recursive call per node and, thus, have
+;; the same runtime complexity.
