@@ -1,3 +1,13 @@
+# 2022-11-16 (We)
+
+I only managed to type in the code of exercise 2.64 in the evening. I quickly
+tested it; more to come tomorrow.
+
+# 2022-11-15 (Tu)
+
+I concluded that the two procedures in exercise 2.63 have the same growth when
+working through a (balanced) tree.
+
 # 2022-11-14 (Mo)
 
 I started analyzing the two procedures for exercise 2.63 (recursive and
