@@ -1,3 +1,11 @@
+# 2022-11-17 (Th)
+
+I started analyzing the list to tree conversion algorithm on paper, which
+clarified things up for me. The nested `let` bindings make everything a bit
+harder to read. Here, Clojure offers a much nicer syntax. I still need to play
+around with the example and draw the tree thus built, but I roughly get the idea
+behind the algorithm.
+
 # 2022-11-16 (We)
 
 I only managed to type in the code of exercise 2.64 in the evening. I quickly
