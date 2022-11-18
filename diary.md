@@ -1,6 +1,9 @@
 # 2022-11-18 (Fr)
 
-I wrote down and clarified my notes on exercise 2.64.
+I wrote down and clarified my notes on exercise 2.64. Then I've drawn the tree
+for the list `(1 3 5 7 9 11)` using GraphViz.
+
+I gathered the code for exercise 2.65 from the exercises before.
 
 # 2022-11-17 (Th)
 
