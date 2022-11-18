@@ -1,3 +1,7 @@
+# 2022-11-18 (Fr)
+
+I wrote down and clarified my notes on exercise 2.64.
+
 # 2022-11-17 (Th)
 
 I started analyzing the list to tree conversion algorithm on paper, which
