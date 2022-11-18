@@ -1,0 +1,18 @@
+digraph tree {
+    node [fontname="Fnatasque Sans Mono"];
+
+    1;
+    none [label=""];
+    3;
+    5;
+    7;
+    9;
+    11;
+
+    5 -> 1 [label=" l "];
+    1 -> none [label=" l "];
+    1 -> 3 [label=" r "];
+    5 -> 9 [label=" r "];
+    9 -> 7 [label=" l "];
+    9 -> 11 [label=" r "];
+}
