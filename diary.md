@@ -1,3 +1,9 @@
+# 2022-11-19 (Sa)
+
+I once more stepped through the algorithm to convert a sorted list of elements
+into a tree. I already thought about how to implement intersection and union
+using a tree, but haven't found a solution yet (exercise 2.65, that is).
+
 # 2022-11-18 (Fr)
 
 I wrote down and clarified my notes on exercise 2.64. Then I've drawn the tree
