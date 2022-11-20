@@ -1,3 +1,11 @@
+# 2022-11-20 (Su)
+
+I started working on exercise 2.65. I found an approach, but am not ready to
+implement it yet. The idea is to traverse the first tree, and to extend the set
+if the current element is contained in the second tree. However, I don't know
+how to collect those entries by the means of recursion. (Each step creates new
+partial solutions, which need to be integrated into the solution set.)
+
 # 2022-11-19 (Sa)
 
 I once more stepped through the algorithm to convert a sorted list of elements
