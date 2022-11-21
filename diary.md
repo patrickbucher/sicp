@@ -11,6 +11,10 @@ the current node's value. This reduced the complexity from `O(n)` to `O(log n)`
 for the lookup. The intersection algorithm is now of complexity `O(n * log m)`,
 where `n` is the size of the first tree, and `m` the size of the second one.
 
+Later on, I also implemented the `union-set` procedure. Working with two
+structurally similar data structure at the same time is rather messy, compared
+to working with a single data structure.
+
 # 2022-11-20 (Su)
 
 I started working on exercise 2.65. I found an approach, but am not ready to
