@@ -69,9 +69,8 @@
 (define (tree-contains? t v)
   (cond ((null? t) #f)
 	((= (entry t) v) #t)
-	((or (tree-contains? (left-branch t) v)
-	     (tree-contains? (right-branch t) v)))
-	(else #f)))
+	((> (entry t) v) (tree-contains? (left-branch t) v))
+	((< (entry t) v) (tree-contains? (right-branch t) v))))
 
 (define (intersection-set t1 t2)
   (if (null? t1)
