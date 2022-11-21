@@ -1,3 +1,9 @@
+# 2022-11-21 (Mo)
+
+I noticed that I already had all the procedures in place in order to implement
+the intersection procedure. The results of the two sub-trees can easily be
+merged using append, because their values are guaranteed to be unique.
+
 # 2022-11-20 (Su)
 
 I started working on exercise 2.65. I found an approach, but am not ready to

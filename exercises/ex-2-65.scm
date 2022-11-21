@@ -57,7 +57,7 @@
 	((= v (car l)) #t)
 	(else (list-contains? (cdr l) v))))
 
-(define (list-union-set s1 s2)
+(define (list-intersection-set s1 s2)
   (define (union remainder acc)
     (if (null? remainder)
 	acc
@@ -73,19 +73,19 @@
 	     (tree-contains? (right-branch t) v)))
 	(else #f)))
 
-(define (union-set t1 t2)
+(define (intersection-set t1 t2)
   (if (null? t1)
       '()
       (let ((v (entry t1))
 	    (l (left-branch t1))
 	    (r (right-branch t1)))
-	(let ((left-set (union-set l t2))
-	      (right-set (union-set r t2)))
+	(let ((left-set (intersection-set l t2))
+	      (right-set (intersection-set r t2)))
 	  (if (tree-contains? t2 v)
 	      (extend (append left-set right-set) v)
 	      (append left-set right-set))))))
 
-;; TODO intersection-set
+;; TODO union-set
 
 (define t (list->tree '(1 3 5 7 9 11)))
 (define u (list->tree '(1 2 3 4 7 8 9)))
