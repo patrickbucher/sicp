@@ -73,12 +73,20 @@
 	     (tree-contains? (right-branch t) v)))
 	(else #f)))
 
-;; TODO: descend the first tree t1, check for each element whether or
-;; not it is contained in t2. Extend the set if so, leave the set as it
-;; is otherwise. Problem: How to accumulate two result sets into one?
+(define (union-set t1 t2)
+  (if (null? t1)
+      '()
+      (let ((v (entry t1))
+	    (l (left-branch t1))
+	    (r (right-branch t1)))
+	(let ((left-set (union-set l t2))
+	      (right-set (union-set r t2)))
+	  (if (tree-contains? t2 v)
+	      (extend (append left-set right-set) v)
+	      (append left-set right-set))))))
+
+;; TODO intersection-set
 
 (define t (list->tree '(1 3 5 7 9 11)))
 (define u (list->tree '(1 2 3 4 7 8 9)))
 
-;; TODO union-set
-;; TODO intersection-set
