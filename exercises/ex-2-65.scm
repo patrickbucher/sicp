@@ -84,8 +84,22 @@
 	      (extend (append left-set right-set) v)
 	      (append left-set right-set))))))
 
-;; TODO union-set
+(define (union-set t1 t2)
+  (if (and (null? t1) (null? t2))
+      '()
+      (let ((left (union-set (if (null? t1) '() (left-branch t1))
+			     (if (null? t2) '() (left-branch t2))))
+	    (right (union-set (if (null? t1) '() (right-branch t1))
+			      (if (null? t2) '() (right-branch t2)))))
+	(cond ((null? t1) (extend (append left right) (entry t2)))
+	      ((null? t2) (extend (append left right) (entry t1)))
+	      (else (extend (extend (append left right) (entry t1)) (entry t2)))))))
 
 (define t (list->tree '(1 3 5 7 9 11)))
 (define u (list->tree '(1 2 3 4 7 8 9)))
 
+;; (intersection-set t u)
+;; (1 3 7 9)
+
+;; (union-set t u)
+;; (1 2 3 4 5 7 8 9 11)
