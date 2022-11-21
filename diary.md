@@ -4,6 +4,13 @@ I noticed that I already had all the procedures in place in order to implement
 the intersection procedure. The results of the two sub-trees can easily be
 merged using append, because their values are guaranteed to be unique.
 
+In the evening, I figured out that my `tree-contains?` procedure unneccessarily
+searched through the whole tree, where it could just descend into one of the two
+branches based on whether or not the searched value is smaller or bigger than
+the current node's value. This reduced the complexity from `O(n)` to `O(log n)`
+for the lookup. The intersection algorithm is now of complexity `O(n * log m)`,
+where `n` is the size of the first tree, and `m` the size of the second one.
+
 # 2022-11-20 (Su)
 
 I started working on exercise 2.65. I found an approach, but am not ready to
