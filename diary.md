@@ -3,6 +3,9 @@
 I started with exercise 2.66 in the morning by implementing the whole tree
 structure from scratch.
 
+I managed to build up the tree structure (storing employees from the Dilbert
+universe); then the lookup was the much easier task.
+
 # 2022-11-21 (Mo)
 
 I noticed that I already had all the procedures in place in order to implement
