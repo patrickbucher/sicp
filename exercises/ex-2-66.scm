@@ -29,13 +29,44 @@
 (define (node-right node)
   (caddr node))
 
-;; TODO: insert record instead of node
-;; TODO: perform the actual insert
-(define (tree-insert tree new-node)
+(define (tree-insert tree new-record)
   (if (null? tree)
-      new-node
-      (let ((new-id (employee-id (node-value new-node)))
+      (node-new new-record '() '())
+      (let ((new-id (employee-id new-record))
 	    (val-id (employee-id (node-value tree))))
-	(cond ((< new-id val-id) (tree-insert (node-left tree)))
-	      ((> new-id val-id) (tree-insert (node-right tree)))
-	      (else tree))))) ;; same id: could update...
+	(cond ((< new-id val-id)
+	       (node-new (node-value tree)
+			 (tree-insert (node-left tree) new-record)
+			 (node-right tree)))
+	      ((> new-id val-id)
+	       (node-new (node-value tree)
+			 (node-left tree)
+			 (tree-insert (node-right tree) new-record)))
+	      (else '())))))
+
+;; sample tree
+(define t
+  (tree-insert
+   (tree-insert
+    (tree-insert
+     (tree-insert
+      (tree-insert
+       (tree-insert
+	'()
+	dilbert)
+       wally)
+      alice)
+     dogbert)
+    catbert)
+   boss))
+
+;; lookup in O(log n)
+(define (lookup key tree)
+  (if (null? tree)
+      '()
+      (let ((this-key (employee-id (node-value tree))))
+	(if (= key this-key)
+	    (node-value tree)
+	    (if (< key this-key)
+		(lookup key (node-left tree))
+		(lookup key (node-right tree)))))))
