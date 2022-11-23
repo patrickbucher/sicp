@@ -1,3 +1,9 @@
+# 2022-11-23 (We)
+
+I started reading the section about Huffman encoding. Before I start with the
+implementation part, I'd like to approach the problem in another programming
+language, e.g. Go or Python, to fully understand it.
+
 # 2022-11-22 (Tu)
 
 I started with exercise 2.66 in the morning by implementing the whole tree
