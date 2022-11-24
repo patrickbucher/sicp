@@ -1,3 +1,9 @@
+# 2022-11-24 (Th)
+
+I implemented the Huffman tree example and worked through exercise 2.67, which
+was very easy. I started implementing Huffman encoding in Go yesterday, but only
+had little time to do so.
+
 # 2022-11-23 (We)
 
 I started reading the section about Huffman encoding. Before I start with the
