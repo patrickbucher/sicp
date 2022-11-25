@@ -1,3 +1,10 @@
+# 2022-11-25 (Fr)
+
+I only managed to work on exercise 2.68 in the evening. The tree traversal
+wasn't too hard. I made a mistake to compare the symbols using `=` instead of
+`eq?`, but otherwise, it worked after the first try. Next up: building up the
+huffman encoding tree, which I leave for tomorrow.
+
 # 2022-11-24 (Th)
 
 I implemented the Huffman tree example and worked through exercise 2.67, which
