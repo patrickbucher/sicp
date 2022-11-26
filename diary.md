@@ -1,3 +1,8 @@
+# 2022-11-26 (Sa)
+
+I started with exercise 2.69. As the first step, the symbol/weight pairs needs
+to be put in order, which is a bit more challanging than I first thought.
+
 # 2022-11-25 (Fr)
 
 I only managed to work on exercise 2.68 in the evening. The tree traversal
