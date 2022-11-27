@@ -1,3 +1,13 @@
+# 2022-11-27 (Su)
+
+I managed to get exercise 2.69 done. However, I slightly modified the data
+structures, so that both a leaf and an inner node can be used the same way in
+terms of weight and symbol access. I always keep the nodes sorted for the
+successive merge, so that I can always take the first two. For this purpose, I
+re-use the procedure to get the initial sorted set.
+
+The Huffman tree generated looks good to me.
+
 # 2022-11-26 (Sa)
 
 I started with exercise 2.69. As the first step, the symbol/weight pairs needs
