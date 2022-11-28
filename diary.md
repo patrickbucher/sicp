@@ -1,3 +1,11 @@
+# 2022-11-28 (Mo)
+
+I worked through exercise 2.70 by combining the code of 2.68 and 2.69, but I had
+to do some small adjustments. I made a mistake when entering the text to be
+encoded, which then caused an error I could not track down. (The symbol could
+not be encoded, of course.) I improved error handling by adding a corresponding
+symbol to the list, so that it's clear from the result what went wrong.
+
 # 2022-11-27 (Su)
 
 I managed to get exercise 2.69 done. However, I slightly modified the data
