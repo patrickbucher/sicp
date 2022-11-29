@@ -1,0 +1,2 @@
+The most frequent symbol can always be encoded in one bit.
+The least frequent symbol requires n-1 bits.
