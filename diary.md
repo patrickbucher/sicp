@@ -1,3 +1,8 @@
+# 2022-11-29 (Tu)
+
+I answered the questions that remained for exercise 2.70. The remaining two
+questions that remain for the Huffman encoding are rather theoretical.
+
 # 2022-11-28 (Mo)
 
 I worked through exercise 2.70 by combining the code of 2.68 and 2.69, but I had
