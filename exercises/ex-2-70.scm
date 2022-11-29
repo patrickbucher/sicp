@@ -139,3 +139,14 @@
 ;; (encode text (generate-huffman-tree alphabet))
 ;; (1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 0 0 0
 ;;  0 0 0 0 0 0 1 1 0 0 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 1 0 0 1)
+
+;; (length text)
+;; 36
+;; (length (encode text (generate-huffman-tree alphabet)))
+;; 84
+
+;; The raw text contains 36 pieces of information. It has been encoded in 84 bits.
+;; There are 8 distinct pieces of information. A fixed-length code would require
+;; 3 bits per piece of information, i.e. 36*3=108 bits. Thus, 24 bits have been
+;; saved compared to a fixed encoding.
+
