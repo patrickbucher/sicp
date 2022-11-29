@@ -3,6 +3,7 @@
 I answered the questions that remained for exercise 2.70. The remaining two
 questions that remain for the Huffman encoding are rather theoretical. For
 exercise 2.71, I created two trees for n=5 and n=10, and answered the question.
+For exercise 2.72, I answered the question roughly.
 
 # 2022-11-28 (Mo)
 
