@@ -1,3 +1,14 @@
+# 2022-11-30 (We)
+
+I started reading the section on different representations for the same data.
+The notions of "horizontal abstraction barries" (the barrier between high-level
+operations and internal representations) and "vertical abstraction barriers"
+(multiple internal representations) are introduced. Operations working on
+multiple representations are called "generic" operations.
+
+I typed in the examples for the two representations of complex numbers. But I
+first need to study the subject before continuing with the examples.
+
 # 2022-11-29 (Tu)
 
 I answered the questions that remained for exercise 2.70. The remaining two
