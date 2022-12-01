@@ -1,3 +1,8 @@
+# 2022-12-01 (Th)
+
+I reviewed complex numbers in a math textbook. Then I read the next section on
+tagged types.
+
 # 2022-11-30 (We)
 
 I started reading the section on different representations for the same data.
