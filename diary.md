@@ -1,3 +1,19 @@
+# 2022-12-02 (Fr)
+
+The usage of the `atan` function with _two_ arguments irritated me. Now I
+figured out, that it can be used in two ways: with a single argument or with two
+arguments:
+
+> (atan 3 4)
+.6435011087932844
+> (atan (/ 3 4))
+.6435011087932844
+
+Now that I get the math behind the example, I can continue with the code.
+
+I typed in the code with the tagged types procedures and tried it out, which
+concludes this sub-section.
+
 # 2022-12-01 (Th)
 
 I reviewed complex numbers in a math textbook. Then I read the next section on
