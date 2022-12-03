@@ -1,3 +1,14 @@
+# 2022-12-03 (Sa)
+
+I started reading the section on data-directed programming and additivity. The
+concept absolutely makes sense to me, and combines two of my favourite concepts:
+orthogonality and tables (i.e. maps).
+
+However, since `put` and `get` (which are map accessors, I guess) aren't
+introduced until chapter 3, I cannot really work with the examples. So I stopped
+in the middle of exercise 2.73, and I'll try to implement my own version. (Not
+efficiently as a tree, but at least so that I can test my code with it.)
+
 # 2022-12-02 (Fr)
 
 The usage of the `atan` function with _two_ arguments irritated me. Now I
