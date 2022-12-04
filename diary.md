@@ -1,3 +1,10 @@
+# 2022-12-04 (Su)
+
+I implemented a table (map, dictionary, associative array, whatever) with `put`
+and `get` operation. The implementation is based on a list, and therefore is
+rather slow, with O(n) complexity both for insertion and lookup. But that's
+enough to revisit the examples from the current chapter, which I'll do tomorrow.
+
 # 2022-12-03 (Sa)
 
 I started reading the section on data-directed programming and additivity. The
@@ -15,10 +22,10 @@ The usage of the `atan` function with _two_ arguments irritated me. Now I
 figured out, that it can be used in two ways: with a single argument or with two
 arguments:
 
-> (atan 3 4)
-.6435011087932844
-> (atan (/ 3 4))
-.6435011087932844
+    > (atan 3 4)
+    .6435011087932844
+    > (atan (/ 3 4))
+    .6435011087932844
 
 Now that I get the math behind the example, I can continue with the code.
 
