@@ -1,3 +1,8 @@
+# 2022-12-05 (Mo)
+
+I implemented the example code that installs two separate versions of complex
+number implementations. I'll continue with exercise 2.73 (part 2) later.
+
 # 2022-12-04 (Su)
 
 I implemented a table (map, dictionary, associative array, whatever) with `put`
