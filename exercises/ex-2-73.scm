@@ -44,3 +44,4 @@
 
 ;; 2) TODO: [I first need to implement my own version of put and get,
 ;; otherwise I cannot properly test it.]
+(load "examples/op-type-table.scm")
