@@ -1,3 +1,9 @@
+# 2022-12-06 (Tu)
+
+I modified the table implementation (`put`/`get`) so that it works with a global
+`table` variable, which is modified using `set!`. Like this, I can use the exact
+code from the book for exercise 2.73, which has to wait a bit longer.
+
 # 2022-12-05 (Mo)
 
 I implemented the example code that installs two separate versions of complex
