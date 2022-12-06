@@ -1,3 +1,5 @@
+;; constructors and accessors
+
 (define (make-key op type)
   (cons op type))
 
@@ -20,7 +22,15 @@
 (define (get-pair-value pair)
   (cdr pair))
 
-(define (put table op type item)
+
+;; the global table
+
+(define table '())
+
+
+;; table operations put and get
+
+(define (put op type item)
   (define (insert left right pair)
     (if (null? right)
 	(append left (list pair))
@@ -38,16 +48,27 @@
   (let ((key (make-key op type)))
     (let ((pair (make-pair key item)))
       (if (null? table)
-	  (list pair)
-	  (insert table '() pair)))))
+	  (set! table (list pair))
+	  (set! table (insert table '() pair))))))
 
-(define (get table op type)
-  (let ((key (make-key op type)))
-    (if (null? table)
-	#f
-	(let ((current (car table)))
-	  (let ((current-key (get-pair-key current)))
-	    (if (same-key? current-key key)
-		(get-pair-value current)
-		(get (cdr table) op type)))))))
+(define (get op type)
+  (define (get-from table op type)
+    (let ((key (make-key op type)))
+      (if (null? table)
+	  #f
+	  (let ((current (car table)))
+	    (let ((current-key (get-pair-key current)))
+	      (if (same-key? current-key key)
+		  (get-pair-value current)
+		  (get-from (cdr table) op type)))))))
+  (get-from table op type))
 
+
+;; demonstration
+
+;; (put + 'number 'add-numbers)
+;; (put + 'string 'concat-strings)
+;; (get + 'number)
+;; add-numbers
+;; (get + 'string)
+;; concat-strings
