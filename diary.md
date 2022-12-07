@@ -1,3 +1,10 @@
+# 2022-12-07 (We)
+
+I got the example with the rectangular and polar implementations of complex
+numbers with generic procedures to run. However, I had to simplify the code, so
+that only a single tag is use in the operations table, instead of a list of
+tags. _Now_ I'm ready for exercise 2.73.
+
 # 2022-12-06 (Tu)
 
 I modified the table implementation (`put`/`get`) so that it works with a global
