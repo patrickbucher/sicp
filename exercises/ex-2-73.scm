@@ -1,26 +1,6 @@
-;; original procedure
-
-(define (deriv exp var)
-  (cond ((number? exp) 0)
-	((variable? exp)
-	 (if (same-variable? exp var) 1 0))
-	((sum? exp)
-	 (make-sum (deriv (addend exp) var)
-		   (deriv (augend exp) var)))
-	((product? exp)
-	 (make-sum
-	  (make-product
-	   (multiplier exp)
-	   (deriv (multiplicand exp) var))
-	  (make-product
-	   (deriv (multiplier exp) var)
-	   (multiplicand exp))))
-	;; more rules can be added here
-	(else (error "unknown expression type: DERIV" exp))))
-
-
 ;; generic procedure
 
+(load "exercises/ex-2-56.scm")
 (load "examples/op-type-table.scm")
 
 (define (deriv-generic exp var)
@@ -44,9 +24,8 @@
 ;; (i.e. numbers or symbol) as opposed to data structures containing a
 ;; tag.
 
-;; 2)
 
-(load "exercises/ex-2-56.scm")
+;; 2)
 
 (define (install-sum-prod)
   (define (derive-sum ops var)
@@ -66,6 +45,29 @@
 (define x (make-product 'a 3))
 (define y (make-product 'a 2))
 (define z (make-sum x y))
+
 ;; (install-sum-prod)
 ;; (deriv-generic z 'a)
 ;; 5
+
+
+;; 3)
+
+(define (install-exp)
+  (define (derive-exp ops var)
+    (let ((b (car ops))
+	  (e (cadr ops)))
+      (make-product e
+		    (make-exponentiation b (- e 1)))))
+  (put 'deriv 'pow derive-exp))
+
+(define e (make-exponentiation 'x 3))
+
+;; (install-exp)
+;; (deriv-generic e 'x)
+;; (* 3 (pow x 2))
+
+
+;; 4)
+
+;; Only the calls to the put procedure have to be adjusted accordingly.
