@@ -21,7 +21,9 @@
 
 ;; generic procedure
 
-(define (deriv exp  var)
+(load "examples/op-type-table.scm")
+
+(define (deriv-generic exp var)
   (cond ((number? exp) 0)
 	((variable? exp)
 	 (if (same-variable? exp var)
@@ -42,6 +44,28 @@
 ;; (i.e. numbers or symbol) as opposed to data structures containing a
 ;; tag.
 
-;; 2) TODO: [I first need to implement my own version of put and get,
-;; otherwise I cannot properly test it.]
-(load "examples/op-type-table.scm")
+;; 2)
+
+(load "exercises/ex-2-56.scm")
+
+(define (install-sum-prod)
+  (define (derive-sum ops var)
+    (let ((a (car ops))
+	  (b (cadr ops)))
+      (make-sum (deriv-generic a var)
+		(deriv-generic b var))))
+  (define (derive-prod ops var)
+    (let ((a (car ops))
+	  (b (cadr ops)))
+      (make-sum
+       (make-product a (deriv-generic b var))
+       (make-product (deriv-generic a var) b))))
+  (put 'deriv '+ derive-sum)
+  (put 'deriv '* derive-prod))
+
+(define x (make-product 'a 3))
+(define y (make-product 'a 2))
+(define z (make-sum x y))
+;; (install-sum-prod)
+;; (deriv-generic z 'a)
+;; 5
