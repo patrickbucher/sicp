@@ -1,3 +1,10 @@
+# 2022-12-08 (Th)
+
+Finally a day off, and finally some progress: I finished exercise 2.73 after
+some struggles. The problem was that I had wrong representations of the data in
+my head. Once I got those straight, the exercise was rather easy and
+straightforward. I leave exercise 2.74 for later or tomorrow.
+
 # 2022-12-07 (We)
 
 I got the example with the rectangular and polar implementations of complex
