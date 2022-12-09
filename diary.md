@@ -1,3 +1,10 @@
+# 2022-12-09 (Fr)
+
+After a night of heavy headaches and a day full of teaching, I only managed to
+start with exercise 2.74 in the evening. I defined the structure for both files
+and records, but only have written the boiler-plate code for the actual
+`get-record` procedure.
+
 # 2022-12-08 (Th)
 
 Finally a day off, and finally some progress: I finished exercise 2.73 after
