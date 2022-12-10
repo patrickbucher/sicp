@@ -1,3 +1,8 @@
+# 2022-12-10 (Sa)
+
+I worked through part 1 and 2 of exercise 2.74. Due to some silly mistakes, I
+lost a lot of time. But the task itself is not too difficoult.
+
 # 2022-12-09 (Fr)
 
 After a night of heavy headaches and a day full of teaching, I only managed to
