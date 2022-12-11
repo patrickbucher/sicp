@@ -111,3 +111,24 @@
 ;; 115000
 ;; (get-salary pair-file 'dogbert)
 ;; 190000
+
+
+;; 3)
+(define (find-employee-record files name)
+  (if (null? files)
+      #f
+      (let ((record (get-record (car files) name)))
+	(if (null? record)
+	    (find-employee-record (cdr files) name)
+	    record))))
+
+(define files (list list-file pair-file))
+
+;; (find-employee-record files "Dilbert")
+;; (list-emp "Dilbert" "123 Nerd Drive" 120000)
+;; (find-employee-record files 'boss)
+;; (pair-emp (name . "Pointy-Haired Boss") (addr . "Success Road") (slry . 180000))
+
+
+;; 4) The procedures get-record and get-salary must be extended. The
+;; new file must be appended to the files list.
