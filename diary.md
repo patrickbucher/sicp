@@ -1,3 +1,8 @@
+# 2022-12-11 (Su)
+
+I only found some time to finish exercise 2.74 in the afternoon. I read the
+following section on message passing, but then called it a day.
+
 # 2022-12-10 (Sa)
 
 I worked through part 1 and 2 of exercise 2.74. Due to some silly mistakes, I
