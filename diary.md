@@ -1,3 +1,8 @@
+# 2022-12-12 (Mo)
+
+I worked through the message passing example and then did exercises 2.75 and
+2.76, which were rather easy and straightforward.
+
 # 2022-12-11 (Su)
 
 I only found some time to finish exercise 2.74 in the afternoon. I read the
