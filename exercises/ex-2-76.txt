@@ -1,0 +1,17 @@
+1) Generic operations with explicit dispatch
+   - For each new type, every procedure has to be extended, in order to work with that new type.
+   - For each new operation, only a single procedure needs to be written, but it must support all the existing types.
+
+2) Data-directed style
+   - For each new type, all the needed operations need to be put into the table.
+   - For each new operation, the implementations for all types need to be put into the table.
+
+3) Message-passing style
+   - For each new type, a new set of procedures has to be implemented.
+   - For each new operation, all the existing types have to be extended.
+
+A) Adding new types
+   - Both explicit dispatch and message passing allow to just add the new type, without modifying the existing code.
+
+B) Adding new operations
+   - Data-directed style allows to just add new operations, without modifying the existing code.
