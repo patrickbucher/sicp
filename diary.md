@@ -1,3 +1,9 @@
+# 2022-12-13 (Tu)
+
+I started reading the section a bout systems with generic operations. I have to
+re-visit the `put`/`get` table operations, as well as `apply-generic`, so that I
+can implement everything needed.
+
 # 2022-12-12 (Mo)
 
 I worked through the message passing example and then did exercises 2.75 and
