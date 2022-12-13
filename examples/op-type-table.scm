@@ -72,18 +72,32 @@
   (get-from table op type))
 
 
-;; single type tags:
-;; (put + 'number (lambda (x y) (+ x y)))
-;; (put + 'string (lambda (x y) (string x y)))
-;; ((get + 'number) 3 4)
-;; 7
-;; ((get + 'string) "foo" "bar")
-;; "foobar"
-
 ;; compound type tags:
-;; (put + '(number number) (lambda (x y) (+ x y)))
-;; (put - '(number number) (lambda (x y) (- x y)))
-;; ((get + '(number number)) 3 4)
+;; (put 'add '(number number) (lambda (x y) (+ x y)))
+;; (put 'add '(string string) (lambda (x y) (string x y)))
+;; (put 'sub '(number number) (lambda (x y) (- x y)))
+;; ((get 'add '(number number)) 3 4)
 ;; 7
-;; ((get - '(number number)) 7 3)
+;; ((get 'add '(string string)) "foo" "bar")
+;; "foobar"
+;; ((get 'sub '(number number)) 7 3)
 ;; 4
+
+
+(define (apply-generic op . args)
+  (define (type-tag arg) (car arg))
+  (define (contents arg) (cadr arg))
+  (let ((type-tags (map type-tag args)))
+    (let ((proc (get op type-tags)))
+      (if proc
+	  (apply proc (map contents args))
+	  (error "No method for these types: APPLY-GENERIC"
+		 (list op type-tags))))))
+
+;; (apply-generic 'add (list 'number 3) (list 'number 4))
+;; 7
+;; (apply-generic 'add (list 'string "foo") (list 'string "bar"))
+;; "foobar"
+;; (apply-generic 'sub (list 'number 7) (list 'number 4))
+;; 3
+
