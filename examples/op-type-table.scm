@@ -1,4 +1,4 @@
-;; constructors and accessors
+;; constructors and accessors (internal procedures)
 
 (define (make-key op type)
   (cons op type))
@@ -10,8 +10,16 @@
   (cdr key))
 
 (define (same-key? this that)
-  (and (eq? (car this) (car that))
-       (eq? (cdr this) (cdr that))))
+  (let ((this-op (get-key-op this))
+	(that-op (get-key-op that))
+	(this-type (get-key-type this))
+	(that-type (get-key-type that)))
+    (and (eq? this-op that-op)
+	 (cond ((and (list? this-type) (list? that-type))
+		(equal? this-type that-type))
+	       ((and (symbol? this-type) (symbol? that-type))
+		(eq? this-type that-type))
+	       (else #f)))))
 
 (define (make-pair key value)
   (cons key value))
@@ -64,11 +72,18 @@
   (get-from table op type))
 
 
-;; demonstration
+;; single type tags:
+;; (put + 'number (lambda (x y) (+ x y)))
+;; (put + 'string (lambda (x y) (string x y)))
+;; ((get + 'number) 3 4)
+;; 7
+;; ((get + 'string) "foo" "bar")
+;; "foobar"
 
-;; (put + 'number 'add-numbers)
-;; (put + 'string 'concat-strings)
-;; (get + 'number)
-;; add-numbers
-;; (get + 'string)
-;; concat-strings
+;; compound type tags:
+;; (put + '(number number) (lambda (x y) (+ x y)))
+;; (put - '(number number) (lambda (x y) (- x y)))
+;; ((get + '(number number)) 3 4)
+;; 7
+;; ((get - '(number number)) 7 3)
+;; 4
