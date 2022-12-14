@@ -1,3 +1,8 @@
+# 2022-12-14 (We)
+
+I worked on the generic arithmetic example, but it doesn't work yet. There's an
+issue with the `apply-generic` procedure that I need to figure out.
+
 # 2022-12-13 (Tu)
 
 I started reading the section a bout systems with generic operations. I have to
