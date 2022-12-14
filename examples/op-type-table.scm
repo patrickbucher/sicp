@@ -72,6 +72,10 @@
   (get-from table op type))
 
 
+;; single type tags:
+;; (put 'incr 'number (lambda (x) (+ x 1)))
+;; ((get 'incr 'number) 3)
+;; 4
 ;; compound type tags:
 ;; (put 'add '(number number) (lambda (x y) (+ x y)))
 ;; (put 'add '(string string) (lambda (x y) (string x y)))
