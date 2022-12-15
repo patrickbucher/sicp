@@ -1,3 +1,9 @@
+# 2022-12-15 (Th)
+
+I manage to fix the issue with `apply-generic`. One internal procedure used
+lists instead of pairs, so it worked when I (gently) tested it directly, but not
+when it was used by the generic dispatcher procedures.
+
 # 2022-12-14 (We)
 
 I worked on the generic arithmetic example, but it doesn't work yet. There's an
