@@ -90,7 +90,7 @@
 
 (define (apply-generic op . args)
   (define (type-tag arg) (car arg))
-  (define (contents arg) (cadr arg))
+  (define (contents arg) (cdr arg))
   (let ((type-tags (map type-tag args)))
     (let ((proc (get op type-tags)))
       (if proc
@@ -98,10 +98,10 @@
 	  (error "No method for these types: APPLY-GENERIC"
 		 (list op type-tags))))))
 
-;; (apply-generic 'add (list 'number 3) (list 'number 4))
+;; (apply-generic 'add (cons 'number 3) (cons 'number 4))
 ;; 7
-;; (apply-generic 'add (list 'string "foo") (list 'string "bar"))
+;; (apply-generic 'add (cons 'string "foo") (cons 'string "bar"))
 ;; "foobar"
-;; (apply-generic 'sub (list 'number 7) (list 'number 4))
+;; (apply-generic 'sub (cons 'number 7) (cons 'number 4))
 ;; 3
 

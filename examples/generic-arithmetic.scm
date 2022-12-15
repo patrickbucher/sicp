@@ -1,5 +1,5 @@
 (load "examples/op-type-table.scm")
-(load "examples/data-directed-complex-numbers.scm")
+(load "examples/complex-numbers.scm")
 
 
 ;; high-level procedures
@@ -137,7 +137,7 @@
 (install-complex-package)
 
 
-;; FIXME
+;; example usage
+
 ;; (add (make-scheme-number 3) (make-scheme-number 5))
-;; The procedure #[compound-procedure 38 apply-generic] has been called with 3 arguments;
-;; it requires excactly 2 artguments.
+;; (scheme-number . 8)
