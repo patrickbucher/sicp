@@ -1,3 +1,12 @@
+# 2022-12-16 (Fr)
+
+I figured out the issue with complex numbers in the generic math package; there
+were dispatch procedures missing. This was also an issue 2.77, which I had to
+shortcut. (The root issue is that the `put`/`get` operations to be used never
+have been defined properly; so it's a lot of guess work. Unfortunately, I have
+to drag some of those issue to the end of the chapter. But here, I decided to
+leave exercise 2.77 unfinished in order to get going.)
+
 # 2022-12-15 (Th)
 
 I manage to fix the issue with `apply-generic`. One internal procedure used
