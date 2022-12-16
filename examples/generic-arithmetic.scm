@@ -31,7 +31,7 @@
   'done)
 
 (define (make-scheme-number n)
-  ((get 'make 'scheme-number) n))
+n  ((get 'make 'scheme-number) n))
 
 
 ;; rational numbers
@@ -83,7 +83,8 @@
 	  'rectangular)
      x y))
   (define (make-from-mag-ang r a)
-    ((get 'make-from-mag-ang 'polar)
+    ((get 'make-from-mag-ang
+	  'polar)
      r a))
   ;; internal procedures
   (define (add-complex z1 z2)
@@ -122,6 +123,13 @@
   (put 'make-from-mag-ang 'complex
        (lambda (r a)
 	 (tag (make-from-mag-ang r a))))
+  ;; missing interface procedures
+  (put 'make-from-real-imag 'rectangular
+       (lambda (x y)
+	 (make-from-real-imag-rectangular x y)))
+  (put 'make-from-mag-ang 'polar
+       (lambda (r a)
+	 (make-from-mag-ang-polar r a)))
   'done)
 
 (define (make-complex-from-real-imag x y)
@@ -141,3 +149,11 @@
 
 ;; (add (make-scheme-number 3) (make-scheme-number 5))
 ;; (scheme-number . 8)
+;; (add (make-rational 3 4) (make-rational 4 3))
+;; (rational 25 . 12)
+;; (add (make-complex-from-real-imag 3 4) (make-complex-from-real-imag 2 3))
+;; (complex rectangular 5 . 7)
+;; (add (make-complex-from-mag-ang 2 50) (make-complex-from-mag-ang 3 20))
+;; (complex rectangular 3.1541782424244023 . 2.2140860447750255)
+;; (add (make-complex-from-real-imag 3 4) (make-complex-from-mag-ang 4 50))
+;; (complex rectangular 6.859864113968453 . 2.950500585184285)
