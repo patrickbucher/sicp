@@ -31,7 +31,7 @@
   'done)
 
 (define (make-scheme-number n)
-n  ((get 'make 'scheme-number) n))
+  ((get 'make 'scheme-number) n))
 
 
 ;; rational numbers
