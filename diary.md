@@ -1,3 +1,10 @@
+# 2022-12-17 (Sa)
+
+I managed to do exercises 2.77 to 2.80 rather quickly. However, I didn't
+intergrate the change to the `'scheme-number` type into the existing example,
+but implemented it in isolation, for I don't want to fiddle with something that
+now works quite well.
+
 # 2022-12-16 (Fr)
 
 I figured out the issue with complex numbers in the generic math package; there
