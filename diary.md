@@ -3,6 +3,8 @@
 I read the section about coercion and type hierarchies, and learned a lot about
 the inadequacies of object-oriented type hierarchies based on inheritance.
 
+I implemented the coercion table using the higher-level `filter` procedure.
+
 # 2022-12-17 (Sa)
 
 I managed to do exercises 2.77 to 2.80 rather quickly. However, I didn't
