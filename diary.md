@@ -1,3 +1,7 @@
+# 2022-12-19 (Mo)
+
+I typed in the new `apply-generic` procedure with support for coercion.
+
 # 2022-12-18 (Su)
 
 I read the section about coercion and type hierarchies, and learned a lot about
