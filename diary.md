@@ -1,3 +1,9 @@
+# 2022-12-20 (Tu)
+
+I made a few working examples for the new `apply-generic` supporting coercions,
+and also worked through exercise 2.81; however, without proper testing (but I
+get the point).
+
 # 2022-12-19 (Mo)
 
 I typed in the new `apply-generic` procedure with support for coercion.
