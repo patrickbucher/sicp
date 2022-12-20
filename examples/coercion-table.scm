@@ -32,8 +32,8 @@
 	(same-key? pair-key key)))
     (let ((found (filter has-same-key? coercion-table)))
       (if (null? found)
-	  (error "no coercion found for " key)
-	  (car found)))))
+	  #f
+	  (cdar found)))))
 
 (load "examples/op-type-table.scm")
 
@@ -58,7 +58,7 @@
 			  op (t1->t2 a1) a2))
 			(t2->t1
 			 (apply-generic
-			  op (t2-t1 a2)))
+			  op (t2->t1 a2)))
 			(else
 			 (error
 			  "No method for these types"
@@ -68,4 +68,14 @@
 	       (list op type-tags)))))))
 
 
-;; TODO: examples
+;; (put 'mul '(scheme-number scheme-number) (lambda (x y) (* (car x) (car y))))
+;; (apply-generic 'mul '(scheme-number 3) '(scheme-number 2))
+;; 6
+
+;; (put 'mul '(rational rational) (lambda (x y) (cons (* (car x) (car y)) (* (cadr x) (cadr y)))))
+;; (apply-generic 'mul '(rational 2 3) '(rational 3 2))
+;; (6 . 6)
+
+;; (put-coercion 'scheme-number 'rational (lambda (x) (list 'rational (cadr x) 1)))
+;; (apply-generic 'mul '(scheme-number 3) '(rational 3 2))
+;; (9 . 2)
