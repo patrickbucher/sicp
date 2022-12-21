@@ -1,3 +1,9 @@
+# 2022-12-21 (We)
+
+I started exercise 2.82 at home and continued working on it on the train.
+(Fortunately, the `geiser-mit` package is quite a small download, affordable
+over a mobile hot spot.) However, I wasn't able to finish the exercise yet.
+
 # 2022-12-20 (Tu)
 
 I made a few working examples for the new `apply-generic` supporting coercions,
