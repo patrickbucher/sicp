@@ -1,3 +1,8 @@
+# 2022-12-22 (Th)
+
+I worked on exercise 2.82, and the solution looks promising; however, testing it
+requires a lot of more work, which I intend to do later.
+
 # 2022-12-21 (We)
 
 I started exercise 2.82 at home and continued working on it on the train.
