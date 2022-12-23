@@ -26,14 +26,17 @@
 		  (list (make-pair key proc))))))
 
 (define (get-coercion src-type dst-type)
-  (let ((key (make-key src-type dst-type)))
-    (define (has-same-key? pair)
-      (let ((pair-key (get-pair-key pair)))
-	(same-key? pair-key key)))
-    (let ((found (filter has-same-key? coercion-table)))
-      (if (null? found)
-	  #f
-	  (cdar found)))))
+  (define (identity x) x)
+  (if (eq? src-type dst-type)
+      identity
+      (let ((key (make-key src-type dst-type)))
+	(define (has-same-key? pair)
+	  (let ((pair-key (get-pair-key pair)))
+	    (same-key? pair-key key)))
+	(let ((found (filter has-same-key? coercion-table)))
+	  (if (null? found)
+	      #f
+	      (cdar found))))))
 
 (load "examples/op-type-table.scm")
 
