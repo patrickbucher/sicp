@@ -1,3 +1,11 @@
+# 2022-12-23 (Fr)
+
+After some initial struggles, I managed to get an example for exercise 2.82
+running. However, I had to extend the coercion table implementation so that an
+identity function is returned if the source and destination type are equal.
+
+I yet have to write a more sophisticated example, using more than two arguments.
+
 # 2022-12-22 (Th)
 
 I worked on exercise 2.82, and the solution looks promising; however, testing it
