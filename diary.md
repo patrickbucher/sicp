@@ -1,3 +1,8 @@
+# 2022-12-24 (Sa)
+
+I finished exercise 2.82 by defining an example showing the shortcomings of the
+approach, which is enough for Christmas Evening.
+
 # 2022-12-23 (Fr)
 
 After some initial struggles, I managed to get an example for exercise 2.82
