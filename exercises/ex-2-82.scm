@@ -63,3 +63,21 @@
 
 ;; (apply-generic 'add a b)
 ;; (foo . 7)
+
+(define x (cons 'tx 1))
+(define y (cons 'ty 2))
+(define z (cons 'tz 3))
+
+(define add-zs (lambda (a b c) (cons 'tz (+ (cdr a) (cdr b) (cdr c)))))
+(put 'add '(tz tz tz) add-zs)
+
+(define tx->ty (lambda (x) (cons 'ty (cdr x))))
+(define ty->tz (lambda (y) (cons 'tz (cdr y))))
+(put-coercion 'tx 'ty tx->ty)
+(put-coercion 'ty 'tz ty->tz)
+
+;; (apply-generic 'add x y z)
+;; no common coercion found
+
+;; The transitive coercion tx->ty->tz is not attempted, because It
+;; would require more than one step.
