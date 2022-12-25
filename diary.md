@@ -1,3 +1,7 @@
+# 2022-12-25 (Su)
+
+I started exercise 2.83, but wasn't able to finish it yet due to Christmas duties.
+
 # 2022-12-24 (Sa)
 
 I finished exercise 2.82 by defining an example showing the shortcomings of the
