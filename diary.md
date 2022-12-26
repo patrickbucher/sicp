@@ -1,3 +1,8 @@
+# 2022-12-26 (Mo)
+
+I continued to work on exercise 2.83 on the train, but got the structure wrong;
+so I need to double-check my implementation.
+
 # 2022-12-25 (Su)
 
 I started exercise 2.83, but wasn't able to finish it yet due to Christmas duties.
