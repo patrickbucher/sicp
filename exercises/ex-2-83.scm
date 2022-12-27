@@ -22,6 +22,11 @@
 		 (raise-next new-value remaining-coercions)))))))
   (raise-next value coercions))
 
-(define a '('integer 3))
+(define a (cons 'integer 3))
 ;; (raise a 'rational)
+;; (rational 3 . 1.)
+;; (raise a 'real)
+;; (real . 3.)
+;; (raise a 'complex)
+;; (complex 3. . 0)
 
