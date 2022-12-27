@@ -1,3 +1,8 @@
+# 2022-12-27 (Tu)
+
+I figured out the issue with exercise 2.83: I used proper lists for the example
+instead of a pair. Having fixed that, the coercions work now.
+
 # 2022-12-26 (Mo)
 
 I continued to work on exercise 2.83 on the train, but got the structure wrong;
