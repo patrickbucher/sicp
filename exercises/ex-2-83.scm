@@ -18,7 +18,7 @@
 	     (let ((next-coercion (car coercions))
 		   (remaining-coercions (cdr coercions)))
 	       ;; TODO: check coercion for source type...?
-	       (let ((new-value ((cadr next-coercion) value)))
+	       (let ((new-value ((cdr next-coercion) value)))
 		 (raise-next new-value remaining-coercions)))))))
   (raise-next value coercions))
 
