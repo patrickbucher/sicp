@@ -1,3 +1,9 @@
+# 2022-12-28 (We)
+
+I started with exercise 2.84, which looked very demanding at the beginning.
+However, having de-composed the steps to raise the values to a common type, the
+task looked way easier than at the beginning.
+
 # 2022-12-27 (Tu)
 
 I figured out the issue with exercise 2.83: I used proper lists for the example
