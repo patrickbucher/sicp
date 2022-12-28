@@ -1,8 +1,9 @@
+(define type-tower '(integer rational real complex))
+
 (define (raise value to-type)
   (define (set-tag type value) (cons type value))
   (define (get-tag x) (car x))
   (define (get-value x) (cdr x))
-  (define types '(integer rational real complex))
   (define coercions
     (list (cons (cons 'integer 'rational)
 		(lambda (x) (set-tag 'rational (cons (get-value x) 1.0))))
@@ -17,7 +18,6 @@
 	   (let ((current-type (get-tag value)))
 	     (let ((next-coercion (car coercions))
 		   (remaining-coercions (cdr coercions)))
-	       ;; TODO: check coercion for source type...?
 	       (let ((new-value ((cdr next-coercion) value)))
 		 (raise-next new-value remaining-coercions)))))))
   (raise-next value coercions))
