@@ -1,3 +1,10 @@
+# 2022-12-29 (Th)
+
+Once again, I had a day without any plans at my disposal, so I was able to
+work on exercise 2.84 without any pressure. I was able to solve it after some
+struggles with old state lurking around in the op/type table, which thought me
+about the perils of changing state in an uncontrolled manner.
+
 # 2022-12-28 (We)
 
 I started with exercise 2.84, which looked very demanding at the beginning.
