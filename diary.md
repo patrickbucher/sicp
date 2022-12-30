@@ -1,3 +1,9 @@
+# 2022-12-30 (Fr)
+
+I started with exercise 2.85, which is quite involved and big. Having laid out
+the biggest part of the scaffolding, I let the task sink in until I continue to
+work on it.
+
 # 2022-12-29 (Th)
 
 Once again, I had a day without any plans at my disposal, so I was able to
