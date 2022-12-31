@@ -1,3 +1,26 @@
+# 2022-12-31 (Sa)
+
+I continued to work on exercise 2.85. I had some issues with the projection
+procedures, but only because I didn't properly test the `raise` procedure from
+exercise 2.83. Having fixed (and properly tested) that, I was able to finish the
+projections. Next up: implementing the `drop` procedure, which will have to wait
+for 2023.
+
+That was 2022 from the SICP perspective. I started on July 30th and did not miss
+a single day. The end of chapter 2 is very demanding, but I didn't quit. And I
+wrote quite some Scheme code:
+
+    $ find ~/github.com/patrickbucher/sicp/ -type f -name '*.scm' \
+        -exec wc -l {} \; \
+        | awk '{ sloc += $1; } END { print sloc }'
+    6578
+
+A lot of it is from the book, and some of it copied from earlier examples. But I
+literally wrote thousands of lines of Scheme code, and learned a lot doing so.
+
+I'm on page 201 now, so 200 pages in five months is 40 pages per month. 409
+pages are left, so I should be able to finish SICP in 2023. Let's bring it on!
+
 # 2022-12-30 (Fr)
 
 I started with exercise 2.85, which is quite involved and big. Having laid out
