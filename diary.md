@@ -1,3 +1,17 @@
+# 2022-01-01 (Su)
+
+I started the year by finishing exercise 2.85. All the work of the last two days
+has finally paid off, and the implementation of `drop` fell in place almost
+immeadiately. Having fixed a small arity mismatch in a coercion procedure,
+everything worked as intended.
+
+Exercise 2.85 was a tough one.
+
+However, I sometimes doubted my bottom-up approach. How can I be sure that the
+procedures I'm writing are really needed to solve the bigger problem? Maybe I
+should layout the rough algorithm of an exercise at the beginning, especially
+because the problem is clearly stated.
+
 # 2022-12-31 (Sa)
 
 I continued to work on exercise 2.85. I had some issues with the projection
