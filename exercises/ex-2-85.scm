@@ -14,11 +14,16 @@
 (define (new-complex real imag) (set-tag (cons real imag) 'complex))
 
 (define (complex->real x)
-  (error "not implemented yet"))
+  (new-real (car (get-value x))))
+
 (define (real->rational x)
-  (error "not implemented yet"))
+  (new-rational (round (get-value x)) 1))
+
 (define (rational->integer x)
-  (error "not implemented yet"))
+  (let ((value (get-value x)))
+    (let ((dividend (car value))
+	  (divisor (cdr value)))
+      (new-integer (round (/ dividend divisor))))))
 
 (define (install-coercions)
   (put-coercion 'complex 'real complex->real)
@@ -75,23 +80,25 @@
   (car (raise-all to-type (list object))))
 
 (define (project-complex->real x)
-  (let ((dropped (new-real (car (get-value x)) 1)))
+  (let ((dropped (complex->real x)))
     (let ((raised (raise-single dropped 'complex)))
-      (eq-complex? raised x))))
+      (if (eq-complex? raised x)
+	  dropped
+	  #f))))
 
 (define (project-real->rational x)
-  ;; The value is truncated for the lack of a general solution.
-  (let ((dropped (new-rational (round (get-value x)) 1)))
+  (let ((dropped (real->rational x)))
     (let ((raised (raise-single dropped 'real)))
-      (eq-real? raised x))))
+      (if (eq-real? raised x)
+	  dropped
+	  #f))))
 
 (define (project-rational->integer x)
-  (let ((value (get-value x)))
-    (let ((dividend (car value))
-	  (divisor (cdr value)))
-      (let ((dropped (new-integer (round (/ dividend divisor)))))
-	(let ((raised (raise-single dropped 'rational)))
-	  (eq-rational? raised x))))))
+  (let ((dropped (rational->integer x)))
+    (let ((raised (raise-single dropped 'rational)))
+      (if (eq-rational? raised x)
+	  dropped
+	  #f))))
 
 (define (install-projections)
   (put 'project '(complex real) project-complex->real)
@@ -100,21 +107,47 @@
   'done)
 
 (define (get-lower type)
-  ;; TODO: implement
-  (error "not implemented yet"))
+  (define (next prev rest)
+    (let ((head (car rest))
+	  (tail (cdr rest)))
+      (if (eq? head type)
+	  prev
+	  (next head tail))))
+  (next '() type-tower))
 
 (define (drop object)
   (define (drop-next object)
     (let ((type (get-tag object)))
       (let ((lower (get-lower type)))
-	(let ((eq-op? (get 'eq (list type type))))
-	  (let ((dropped (project object lower)))
-	    (if (eq-op? object (raise-to dropped type))
-		dropped
-		(error (string "cannot drop " object " to " type))))))))
-  ;; TODO: properly finish implementation
+	(let ((project (get 'project (list type lower))))
+	  (if (not project)
+	      object
+	      (let ((dropped (project object)))
+		(if (not dropped)
+		    object
+		    (drop-next dropped))))))))
   (drop-next object))
 
 (install-coercions)
 (install-eqs)
 (install-projections)
+
+;; (drop (new-integer 3))
+;; (integer . 3)
+
+;; (drop (new-rational 3 2))
+;; (rational 3 . 2)
+;; (drop (new-rational 3 1))
+;; (integer . 3)
+
+;; (drop (new-real 3.1))
+;; (real . 3.1)
+;; (drop (new-real 3.0))
+;; (integer . 3.)
+
+;; (drop (new-complex 3 2))
+;; (complex 3 . 2)
+;; (drop (new-complex 3.5 0))
+;; (real . 3.5)
+;; (drop (new-complex 3 0))
+;; (integer . 3)
