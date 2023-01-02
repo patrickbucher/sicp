@@ -1,3 +1,15 @@
+# 2022-01-02 (Mo)
+
+For exercise 2.86, I implemented the real part for different types (integer,
+reational, and real). I re-implemented the type coercions and equality
+operations on those types as an exercise. The only operation I implemented for
+complex numbers was the equality check; and I only implemented it for
+real/imaginary representations of complex numbers, not for magnitude/angle
+representations.
+
+Now I hope that I'm done with complex numbers and their various implementations
+for the moment; the whole thing got quite convoluted over time.
+
 # 2022-01-01 (Su)
 
 I started the year by finishing exercise 2.85. All the work of the last two days
