@@ -1,3 +1,8 @@
+# 2022-01-03 (Tu)
+
+I gave the section on the symbolic algebra example a first read. I'll go over it
+in more detail tomorrow, and let the problem sink in until then.
+
 # 2022-01-02 (Mo)
 
 For exercise 2.86, I implemented the real part for different types (integer,
