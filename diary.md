@@ -1,3 +1,9 @@
+# 2022-01-04 (We)
+
+I re-read the section on symbolic algebra and started writing down the example
+code. I still don't understand the code, but I hope that the exercises will
+enlighten me.
+
 # 2022-01-03 (Tu)
 
 I gave the section on the symbolic algebra example a first read. I'll go over it
