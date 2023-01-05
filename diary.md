@@ -1,3 +1,10 @@
+# 2022-01-05 (Th)
+
+The symbolic algebra example starts to annoy me, because there's not a single
+example of how the system is supposed to be used. Instead, I have to figure out
+the data structures to be used by walking through five layers of procedures. One
+single line of example code could have fixed that.
+
 # 2022-01-04 (We)
 
 I re-read the section on symbolic algebra and started writing down the example
