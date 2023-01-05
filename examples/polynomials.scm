@@ -3,6 +3,10 @@
 (define (install-polynomial-package)
   ;; internal procedures
   (define (add-terms L1 L2)
+    
+    ;; NOTE: teporary, drop-in solution
+    (define (add a b) (display (string "oh lawd " a)) (newline) (+ a b))
+    
     (cond ((empty-termlist? L1) L2)
 	  ((empty-termlist? L2) L1)
 	  (else
@@ -40,11 +44,18 @@
     (cons variable term-list))
   (define (variable p) (car p))
   (define (term-list p) (cdr p))
-  ;; TODO: same-variable?
-  ;; TODO: variable?
   ;; representation of terms and term lists
-  ;; TODO: adjoin-term
-  ;; TODO: coeff
+    (define (adjoin-term term term-list)
+    (if (=zero? (coeff term))
+	term-list
+	(cons term term-list)))
+  (define (the-empty-termlist) '())
+  (define (first-term term-list) (car term-list))
+  (define (rest-terms term-list) (cdr term-list))
+  (define (empty-termlist? term-list) (null? term-list))
+  (define (make-term order coeff) (list order coeff))
+  (define (order term) (car term))
+  (define (coeff term) (cadr term))
   (define (add-poly p1 p2)
     (if (same-variable? (variable p1)
 			(variable p2))
@@ -61,6 +72,14 @@
 			      (term-list p2)))
 	(error ("Polys not in same var: MUL-POLY"
 		(list p1 p2)))))
+  ;; procedures from earlier examples
+  (define (attach-tag tag object)
+    (cons tag object))
+  (define (same-variable? v1 v2)
+  (and (variable? v1)
+       (variable? v2)
+       (eq? v1 v2)))
+  (define (variable? x) (symbol? x))
   ;; interface to the rest of the system
   (define (tag p) (attach-tag 'polynomial p))
   (put 'add '(polynomial polynomial)
@@ -75,3 +94,7 @@
   'done)
 
 (install-polynomial-package)
+
+(define a ((get 'make 'polynomial) (list 'x 3) '(1 2 3)))
+(define b ((get 'make 'polynomial) (list 'x 3) '()))
+;; ((get 'add '(polynomial polynomial)) a b)
