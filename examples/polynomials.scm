@@ -4,6 +4,7 @@
 (define (install-polynomial-package)
   ;; internal procedures
   (define (add-terms L1 L2)
+    (define (add x y) (+ x y)) ;; NOTE: drop-in replacement for generic add
     (cond ((empty-termlist? L1) L2)
 	  ((empty-termlist? L2) L1)
 	  (else
@@ -85,8 +86,7 @@
 
 (install-polynomial-package)
 
-(define a ((get 'make 'polynomial) 'x '((3 2) (2 1) (1 4) (0 5))))
-(define b ((get 'make 'polynomial) 'x '((3 1) (2 0) (1 5) (0 3))))
-(define c ((get 'make 'polynomial) 'x '((3 3) (2 1) (1 9) (0 8))))
-(define d ((get 'make 'polynomial) 'x '()))
-;; ((get 'add '(polynomial polynomial)) a b)
+(define a ((get 'make 'polynomial) 'x '((3 1) (2 2) (1 2) (0 5))))
+(define b ((get 'make 'polynomial) 'x '((3 2) (2 1) (1 4) (0 2))))
+;; (apply-generic 'add a b)
+;; Unbound variable: =zero? [see Exercise 2.87, p. 209]
