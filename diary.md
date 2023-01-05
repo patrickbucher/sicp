@@ -5,6 +5,11 @@ example of how the system is supposed to be used. Instead, I have to figure out
 the data structures to be used by walking through five layers of procedures. One
 single line of example code could have fixed that.
 
+When I almost wanted to abandon chapter 2, I did one more thorough code check.
+Using `apply-generic`, I'm now able to call the example code. However, it fails
+exactly where exercise 2.87 picks up. So I'll give the entire thing one more
+chance.
+
 # 2022-01-04 (We)
 
 I re-read the section on symbolic algebra and started writing down the example
