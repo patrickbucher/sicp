@@ -1,10 +1,23 @@
 (load "examples/op-type-table.scm") ;; set, get
 (load "examples/generic-arithmetic.scm") ;; add
 
+;; half-generic procedures (using numbers without wrapping)
+(define (=zero? expr)
+  (if (number? expr)
+      (= expr 0)
+      (apply-generic '=zero? expr)))
+(define (add a b)
+  (if (and (number? a) (number? b))
+      (+ a b)
+      (apply-generic 'add a b)))
+(define (mul a b)
+  (if (and (number? a) (number? b))
+      (* a b)
+      (apply-generic 'mul a b)))
+
 (define (install-polynomial-package)
   ;; internal procedures
   (define (add-terms L1 L2)
-    (define (add x y) (+ x y)) ;; NOTE: drop-in replacement for generic add
     (cond ((empty-termlist? L1) L2)
 	  ((empty-termlist? L2) L1)
 	  (else
@@ -35,6 +48,17 @@
 	   (make-term (+ (order t1) (order t2))
 		      (mul (coeff t1) (coeff t2)))
 	   (mul-term-by-all-terms t1 (rest-terms L))))))
+  (define (=poly-zero? poly)
+    (define (all-terms-zero? terms)
+      (if (empty-termlist? terms)
+	  #t
+	  (let ((head (first-term terms))
+		(tail (rest-terms terms)))
+	    (if (not (= (coeff head) 0))
+		#f
+		(all-terms-zero? tail)))))
+    (let ((terms (term-list poly)))
+      (all-terms-zero? terms)))
   ;; representation of poly
   (define (make-poly variable term-list)
     (cons variable term-list))
@@ -82,11 +106,15 @@
        (lambda (p1 p2) (tag (mul-poly p1 p2))))
   (put 'make 'polynomial
        (lambda (var terms) (tag (make-poly var terms))))
+  (put '=zero? '(polynomial) =poly-zero?)
   'done)
 
 (install-polynomial-package)
 
 (define a ((get 'make 'polynomial) 'x '((3 1) (2 2) (1 2) (0 5))))
 (define b ((get 'make 'polynomial) 'x '((3 2) (2 1) (1 4) (0 2))))
+
 ;; (apply-generic 'add a b)
-;; Unbound variable: =zero? [see Exercise 2.87, p. 209]
+;; (polynomial x (3 3) (2 3) (1 6) (0 7))
+;; (apply-generic 'mul a b)
+;; (polynomial x (6 2) (5 5) (4 10) (3 22) (2 17) (1 24) (0 10))
