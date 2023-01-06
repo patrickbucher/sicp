@@ -1,3 +1,9 @@
+# 2022-01-06 (Fr)
+
+I'm back on track after having finished exercise 2.87. I incorporated the code
+into the polynomials example, which now works (having written some procedures
+for plain numbers that do not expect them to be tagged as `'scheme-number`).
+
 # 2022-01-05 (Th)
 
 The symbolic algebra example starts to annoy me, because there's not a single
