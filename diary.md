@@ -1,3 +1,8 @@
+# 2022-01-07 (Sa)
+
+After some problems with untagged and tagged data, I was able to implement
+exercise 2.88 using a `negate` procedure.
+
 # 2022-01-06 (Fr)
 
 I'm back on track after having finished exercise 2.87. I incorporated the code
