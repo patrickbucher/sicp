@@ -1,3 +1,10 @@
+# 2022-01-08 (Su)
+
+I worked through exercise 2.89, which is exactly the kind of work that keeps me
+going in SICP. Those kinds of exercises provide a good mix of rather general
+higher-order functions (such as `zip` and `enumerate`; however, with slight
+adjustments) and recursive thinking.
+
 # 2022-01-07 (Sa)
 
 After some problems with untagged and tagged data, I was able to implement
