@@ -1,3 +1,9 @@
+# 2022-01-09 (Mo)
+
+I started with the major exercise 2.90, for which I already have a plan.
+Implementing the addition/multiplication procedures for different
+representations, however, will be quite hard.
+
 # 2022-01-08 (Su)
 
 I worked through exercise 2.89, which is exactly the kind of work that keeps me
