@@ -1,3 +1,8 @@
+# 2022-01-10 (Tu)
+
+I continued working on exercise 2.90, for which I managed to complete the
+addition of ordered terms lists. Next up: multiplication.
+
 # 2022-01-09 (Mo)
 
 I started with the major exercise 2.90, for which I already have a plan.
