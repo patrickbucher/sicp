@@ -1,6 +1,6 @@
 (load "examples/op-type-table.scm")
 (load "examples/coercion-table.scm")
-(load "exercises/ex-2-89.scm")
+(load "exercises/ex-2-89.scm") ;; coercions (ordered, counted)
 
 (define (set-tag t l) (cons t l))
 (define (get-tag l) (car l))
@@ -15,10 +15,32 @@
 	      (error "no coercion " tag "->" type " found")
 	      (coercion tl))))))
 
+(define (prepend n e l)
+  (if (<= n 0)
+      l
+      (prepend (- n 1) e (cons e l))))
+
+(define (combine l1 l2 op)
+  (define (next left right acc)
+    (if (null? left)
+	acc
+	(next (cdr left)
+	      (cdr right)
+	      (append acc (list (op (car left) (car right)))))))
+  (if (not (= (length l1) (length l2)))
+      (error "l1 and l2 have different lengths")
+      (next l1 l2 '())))
+
 (define (install-ordered-termlist-package)
   ;; internal procedures
   (define (add-term-lists l1 l2)
-    (error "not implemented yet"))
+    (let ((n1 (length l1))
+	  (n2 (length l2)))
+      (let ((m1 (- n2 n1))
+	    (m2 (- n1 n2)))
+	(let ((l1 (prepend m1 0 l1))
+	      (l2 (prepend m2 0 l2)))
+	  (combine l1 l2 +)))))
   (define (mul-term-lists l1 l2)
     (error "not implemented yet"))
   (define (=zero? l)
@@ -55,3 +77,10 @@
 (install-ordered-termlist-package)
 (install-counted-termlist-package)
 (install-termlist-coercions)
+
+(define o1 ((get 'make 'ordered) '(3 5 1 2 4 3)))
+(define o2 ((get 'make 'ordered) '(4 2 1 3 5)))
+;; (apply-generic 'add o1 o2)
+;; (ordered 3 9 3 3 7 8)
+;; (apply-generic 'mul o1 o2)
+;; TODO
