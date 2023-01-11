@@ -44,7 +44,7 @@
   (define (mul-term-lists l1 l2)
     (error "not implemented yet"))
   (define (=zero? l)
-    (error "not implemented yet"))
+    (= (length (filter (lambda (x) (not (= x 0))) l)) 0))
   ;; coercion
   (define (ensure-ordered tl) (ensure tl 'ordered))
   ;; representation
@@ -57,6 +57,8 @@
        (lambda (l1 l2) (tag (mul-term-lists l1 l2))))
   (put 'make 'ordered
        (lambda (l) (tag (make-term-list l))))
+  (put '=zero? '(ordered)
+       (lambda (l) (=zero? l)))
   'done)
 
 (define (install-counted-termlist-package)
@@ -78,6 +80,7 @@
 (install-counted-termlist-package)
 (install-termlist-coercions)
 
+(define o0 ((get 'make 'ordered) '(0 0 0)))
 (define o1 ((get 'make 'ordered) '(3 5 1 2 4 3)))
 (define o2 ((get 'make 'ordered) '(4 2 1 3 5)))
 ;; (apply-generic 'add o1 o2)
