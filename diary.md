@@ -1,3 +1,10 @@
+# 2022-01-11 (We)
+
+I continued working on exercise 2.90 in the train. I implemented the `=zero?`
+predicate for ordered term lists, and used it to simplify the addition
+implementation. I also started with the multiplication, but the train ride was
+to short to get deep into it.
+
 # 2022-01-10 (Tu)
 
 I continued working on exercise 2.90, for which I managed to complete the
