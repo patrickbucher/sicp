@@ -46,14 +46,12 @@
 		     (l2 (prepend m2 0 l2)))
 		 (combine l1 l2 +)))))))
   (define (mul-term-lists l1 l2)
-    (define (next-left left right acc)
-      (if (null? left)
-	  acc
-	  (error "not implemented yet")))
     (cond ((=zero? l1) '())
 	  ((=zero? l2) '())
 	  (else
-	   (next-left l1 l2 '()))))
+	   (let ((l1-counted (ordered->counted l1))
+		 (l2-counted (ordered->counted l2)))
+	     (error "not implemented yet")))))
   (define (=zero? l)
     (= (length (filter (lambda (x) (not (= x 0))) l)) 0))
   ;; coercion
