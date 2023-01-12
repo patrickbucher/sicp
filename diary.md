@@ -1,3 +1,11 @@
+# 2022-01-12 (Th)
+
+I tried to figure out how to multiply ordered representations of term lists, but
+gave up on it. The problem is not the multiplication process itself, but the
+interpretation of its result. So I'm going to implement it for counted
+representations only, which is then used for ordered representations using a
+coercion.
+
 # 2022-01-11 (We)
 
 I continued working on exercise 2.90 in the train. I implemented the `=zero?`
