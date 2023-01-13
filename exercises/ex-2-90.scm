@@ -31,6 +31,20 @@
       (error "l1 and l2 have different lengths")
       (next l1 l2 '())))
 
+(define (mul-counted l1 l2)
+  (define (mul-next left right acc)
+    (if (null? left)
+	acc
+	(let ((lh (car left))
+	      (lt (cdr left)))
+	  (mul-next lt right (append acc (mul-each lh right '()))))))
+  (define (mul-each term term-list acc)
+    (map (lambda (ct)
+	   (cons (+ (car term) (car ct))
+		 (* (cadr term) (cadr ct))))
+	 term-list))
+  (mul-next l1 l2 '()))
+
 (define (install-ordered-termlist-package)
   ;; internal procedures
   (define (add-term-lists l1 l2)
@@ -51,7 +65,7 @@
 	  (else
 	   (let ((l1-counted (ordered->counted l1))
 		 (l2-counted (ordered->counted l2)))
-	     (error "not implemented yet")))))
+	     (mul-counted l1-counted l2-counted)))))
   (define (=zero? l)
     (= (length (filter (lambda (x) (not (= x 0))) l)) 0))
   ;; coercion
@@ -101,4 +115,4 @@
 ;; (apply-generic 'add o1 o2)
 ;; (ordered 3 9 3 3 7 8)
 ;; (apply-generic 'mul o1 o2)
-;; TODO
+;; (ordered (9 . 12) (8 . 6) (7 . 3) (6 . 9) (5 . 15) ...)
