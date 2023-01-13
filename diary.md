@@ -1,3 +1,9 @@
+# 2022-01-13 (Fr)
+
+I implemented the multiplication of counted term lists, which was rather easy to
+do. However, the result is not satisfying yet, because products with the same
+exponent aren't added up yet. I should approach this as the next task.
+
 # 2022-01-12 (Th)
 
 I tried to figure out how to multiply ordered representations of term lists, but
