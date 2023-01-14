@@ -1,3 +1,9 @@
+# 2022-01-14 (Sa)
+
+After some issues to get started, I implemented the higher-order functions
+`reduce` and `partition`, which the I used to simplify the term list by
+addition, which I still need to integrate.
+
 # 2022-01-13 (Fr)
 
 I implemented the multiplication of counted term lists, which was rather easy to
