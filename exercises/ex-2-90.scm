@@ -1,6 +1,7 @@
 (load "examples/op-type-table.scm")
 (load "examples/coercion-table.scm")
 (load "exercises/ex-2-89.scm") ;; coercions (ordered, counted)
+(load "lib/functools.scm") ;; reduce, partition
 
 (define (set-tag t l) (cons t l))
 (define (get-tag l) (car l))
@@ -44,6 +45,26 @@
 		 (* (cadr term) (cadr ct))))
 	 term-list))
   (mul-next l1 l2 '()))
+
+(define (simplify-addition counted-terms)
+  (define (add-up terms)
+    (let ((power (cadar terms))
+	  (coeffs (map car terms)))
+      (let ((total (reduce + coeffs 0)))
+	(list power total))))
+  (define (next rest acc)
+    (if (null? rest)
+	acc
+	(let ((head (car rest))
+	      (tail (cdr rest)))
+	  (let ((partitioned
+		 (partition (lambda (x) (= (cadr head) (cadr x))) rest)))
+	    (let ((same-power (car partitioned))
+		  (other-powers (cadr partitioned)))
+	      (if (null? same-power)
+		  (next other-powers (cons head acc))
+		  (next other-powers (cons (add-up same-power) acc))))))))
+  (reverse (next counted-terms '())))
 
 (define (install-ordered-termlist-package)
   ;; internal procedures
