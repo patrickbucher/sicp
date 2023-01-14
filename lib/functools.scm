@@ -1,4 +1,4 @@
-(define (reduce elements combine init)
+(define (reduce combine elements init)
   (define (next rest acc)
     (if (null? rest)
 	acc
@@ -7,15 +7,15 @@
 	  (next tail (combine head acc)))))
   (next elements init))
 
-(define (partition elements predicate)
+(define (partition predicate elements)
   (define (pigeonhole elem acc)
     (let ((matching (car acc))
-	  (failing (cdr acc)))
+	  (failing (cadr acc)))
       (if (predicate elem)
-	  (cons (append matching (list elem))
+	  (list (append matching (list elem))
 		failing)
-	  (cons matching
+	  (list matching
 		(append failing (list elem))))))
-  (reduce elements
-	  pigeonhole
-	  (cons '() '())))
+  (reduce pigeonhole
+	  elements
+	  '(() ())))
