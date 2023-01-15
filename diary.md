@@ -1,3 +1,15 @@
+# 2022-01-15 (Su)
+
+Unfortunately, I got the representation of counted terms lists wrong, so my
+multiplication didn't really work. Having fixed that, I also introduced a proper
+sorting of the resulting terms list, and I moved more procedures (`prepend`,
+`combine`) into my `functools` package. Now it's time for the second part of the
+exercise: implementing the operations for the counted representations, for which
+I got most of the procedures ready.
+
+The third part would be to re-engineer the algebraic package to use both term
+lists implementations.
+
 # 2022-01-14 (Sa)
 
 After some issues to get started, I implemented the higher-order functions
