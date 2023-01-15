@@ -1,7 +1,7 @@
 (load "examples/op-type-table.scm")
 (load "examples/coercion-table.scm")
 (load "exercises/ex-2-89.scm") ;; coercions (ordered, counted)
-(load "lib/functools.scm") ;; reduce, partition
+(load "lib/functools.scm") ;; reduce, partition, prepend, combine
 
 (define (set-tag t l) (cons t l))
 (define (get-tag l) (car l))
@@ -16,22 +16,6 @@
 	      (error "no coercion " tag "->" type " found")
 	      (coercion tl))))))
 
-(define (prepend n e l)
-  (if (<= n 0)
-      l
-      (prepend (- n 1) e (cons e l))))
-
-(define (combine l1 l2 op)
-  (define (next left right acc)
-    (if (null? left)
-	acc
-	(next (cdr left)
-	      (cdr right)
-	      (append acc (list (op (car left) (car right)))))))
-  (if (not (= (length l1) (length l2)))
-      (error "l1 and l2 have different lengths")
-      (next l1 l2 '())))
-
 (define (mul-counted l1 l2)
   (define (mul-next left right acc)
     (if (null? left)
@@ -41,30 +25,31 @@
 	  (mul-next lt right (append acc (mul-each lh right '()))))))
   (define (mul-each term term-list acc)
     (map (lambda (ct)
-	   (cons (+ (car term) (car ct))
+	   (list (+ (car term) (car ct))
 		 (* (cadr term) (cadr ct))))
 	 term-list))
   (mul-next l1 l2 '()))
 
 (define (simplify-addition counted-terms)
   (define (add-up terms)
-    (let ((power (cadar terms))
-	  (coeffs (map car terms)))
-      (let ((total (reduce + coeffs 0)))
-	(list power total))))
-  (define (next rest acc)
-    (if (null? rest)
+    (if (null? terms)
+	'()
+	(let ((power (caar terms))
+	      (coeffs (map cadr terms)))
+	  (let ((total (reduce + coeffs 0)))
+	    (list power total)))))
+  (define (next terms acc)
+    (if (null? terms)
 	acc
-	(let ((head (car rest))
-	      (tail (cdr rest)))
+	(let ((head (car terms))
+	      (tail (cdr terms)))
 	  (let ((partitioned
-		 (partition (lambda (x) (= (cadr head) (cadr x))) rest)))
+		 (partition (lambda (x) (= (car head) (car x))) terms)))
 	    (let ((same-power (car partitioned))
 		  (other-powers (cadr partitioned)))
-	      (if (null? same-power)
-		  (next other-powers (cons head acc))
-		  (next other-powers (cons (add-up same-power) acc))))))))
-  (reverse (next counted-terms '())))
+	      (next other-powers (cons (add-up same-power) acc)))))))
+  (sort (next counted-terms '())
+	(lambda (a b) (> (car a) (car b)))))
 
 (define (install-ordered-termlist-package)
   ;; internal procedures
@@ -86,7 +71,9 @@
 	  (else
 	   (let ((l1-counted (ordered->counted l1))
 		 (l2-counted (ordered->counted l2)))
-	     (mul-counted l1-counted l2-counted)))))
+	     (counted->ordered
+	      (simplify-addition
+	       (mul-counted l1-counted l2-counted)))))))
   (define (=zero? l)
     (= (length (filter (lambda (x) (not (= x 0))) l)) 0))
   ;; coercion
@@ -136,4 +123,11 @@
 ;; (apply-generic 'add o1 o2)
 ;; (ordered 3 9 3 3 7 8)
 ;; (apply-generic 'mul o1 o2)
-;; (ordered (9 . 12) (8 . 6) (7 . 3) (6 . 9) (5 . 15) ...)
+;; (ordered 12 26 17 24 51 50 21 25 29 15)
+
+(define oa ((get 'make 'ordered) '(2 1 3 5)))
+(define ob ((get 'make 'ordered) '(4 2 5)))
+;; (apply-generic 'add oa ob)
+;; (ordered 2 5 5 10)
+;; (apply-generic 'mul oa ob)
+;; (ordered 8 8 24 31 25 25)
