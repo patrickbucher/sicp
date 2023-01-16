@@ -1,3 +1,9 @@
+# 2022-01-16 (Mo)
+
+I started implementing the package for the counted term list representation.
+Unfortunately, the addition results are incorrect, which I need to check in
+detail.
+
 # 2022-01-15 (Su)
 
 Unfortunately, I got the representation of counted terms lists wrong, so my
