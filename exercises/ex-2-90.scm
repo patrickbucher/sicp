@@ -88,12 +88,37 @@
        (lambda (l1 l2) (tag (mul-term-lists l1 l2))))
   (put 'make 'ordered
        (lambda (l) (tag (make-term-list l))))
-  (put '=zero? '(ordered)
+  (put '=zero? 'ordered
        (lambda (l) (=zero? l)))
   'done)
 
 (define (install-counted-termlist-package)
-  ;; TODO: as above
+  ;; internal procedures
+  (define (add-term-lists l1 l2)
+    (cond ((and (=zero? l1) (=zero? l2)) '())
+	  ((=zero? l1) l2)
+	  ((=zero? l2) l1)
+	  (else
+	   (simplify-addition (append (cdr l1) (cdr l2))))))
+  (define (mul-term-lists l1 l2)
+    ;; TODO: use mul-counted
+    (error "not implemented yet"))
+  (define (=zero? l)
+    (= (length (filter (lambda (x) (not (= (car x) 0))) (cdr l))) 0))
+  ;; coercion
+  (define (ensure-counted tl) (ensure tl 'counted))
+  ;; representation
+  (define (tag l) (set-tag 'counted l))
+  (define (make-term-list l) l)
+  ;; exposed procedures
+  (put 'add '(counted counted)
+       (lambda (l1 l2) (tag (add-term-lists l1 l2))))
+  (put 'mul '(counted counted)
+       (lambda (l1 l2) (tag (mul-term-lists l1 l2))))
+  (put 'make 'counted
+       (lambda (l) (tag (make-term-list l))))
+  (put '=zero? 'counted
+       (lambda (l) (=zero? l)))
   'done)
 
 (define (install-termlist-coercions)
@@ -131,3 +156,15 @@
 ;; (ordered 2 5 5 10)
 ;; (apply-generic 'mul oa ob)
 ;; (ordered 8 8 24 31 25 25)
+
+(define c0 ((get 'make 'counted) '((2 0) (1 0) (0 0))))
+(define c1 ((get 'make 'counted) '((5 3) (4 3) (3 1) (2 2) (1 4) (0 3))))
+(define c2 ((get 'make 'counted) '((4 4) (3 2) (2 1) (1 3) (0 5))))
+;; (apply-generic 'add c0 c0)
+;; (counted (1 0) (0 0)) TODO: ???
+;; (apply-generic 'add c0 c1)
+;; (counted (4 3) (3 1) (2 2) (1 4) (0 3)) TODO: ???
+
+(define ca ((get 'make 'counted) '((3 2) (2 1) (1 3) (0 5))))
+(define cb ((get 'make 'counted) '((2 4) (2 2) (0 5))))
+;; TODO
