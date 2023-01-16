@@ -99,12 +99,14 @@
 	  ((=zero? l1) l2)
 	  ((=zero? l2) l1)
 	  (else
-	   (simplify-addition (append (cdr l1) (cdr l2))))))
+	   (simplify-addition (append l1 l2)))))
   (define (mul-term-lists l1 l2)
-    ;; TODO: use mul-counted
-    (error "not implemented yet"))
+    (cond ((=zero? l1) '())
+	  ((=zero? l2) '())
+	  (else
+	   (simplify-addition (mul-counted l1 l2)))))
   (define (=zero? l)
-    (= (length (filter (lambda (x) (not (= (car x) 0))) (cdr l))) 0))
+    (= (length (filter (lambda (x) (not (= (cadr x) 0))) (cdr l))) 0))
   ;; coercion
   (define (ensure-counted tl) (ensure tl 'counted))
   ;; representation
@@ -161,10 +163,19 @@
 (define c1 ((get 'make 'counted) '((5 3) (4 3) (3 1) (2 2) (1 4) (0 3))))
 (define c2 ((get 'make 'counted) '((4 4) (3 2) (2 1) (1 3) (0 5))))
 ;; (apply-generic 'add c0 c0)
-;; (counted (1 0) (0 0)) TODO: ???
+;; (counted)
 ;; (apply-generic 'add c0 c1)
-;; (counted (4 3) (3 1) (2 2) (1 4) (0 3)) TODO: ???
+;; (counted (5 3) (4 3) (3 1) (2 2) (1 4) (0 3))
+;; (apply-generic 'add c2 c0)
+;; (counted (4 4) (3 2) (2 1) (1 3) (0 5))
+;; (apply-generic 'add c1 c2)
+;; (counted (5 3) (4 7) (3 3) (2 3) (1 7) (0 8))
+;; (apply-generic 'mul c1 c2)
+;; (counted (9 12) (8 18) (7 13) (6 22) (5 45) (4 40) (3 21) (2 25) (1 29) (0 15))
 
 (define ca ((get 'make 'counted) '((3 2) (2 1) (1 3) (0 5))))
-(define cb ((get 'make 'counted) '((2 4) (2 2) (0 5))))
-;; TODO
+(define cb ((get 'make 'counted) '((2 4) (1 2) (0 5))))
+;; (apply-generic 'add ca cb)
+;; (counted (3 2) (2 5) (1 5) (0 10))
+;; (apply-generic 'mul ca cb)
+;; (counted (5 8) (4 8) (3 24) (2 31) (1 25) (0 25))
