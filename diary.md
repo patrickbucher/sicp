@@ -4,6 +4,12 @@ I started implementing the package for the counted term list representation.
 Unfortunately, the addition results are incorrect, which I need to check in
 detail.
 
+In the evening, I was able to figure out the addition issue, and I also
+implemented the multiplication.
+
+Now I can re-write the code for the polynomials package supporting both term
+list implementations.
+
 # 2022-01-15 (Su)
 
 Unfortunately, I got the representation of counted terms lists wrong, so my
