@@ -88,7 +88,7 @@
        (lambda (l1 l2) (tag (mul-term-lists l1 l2))))
   (put 'make 'ordered
        (lambda (l) (tag (make-term-list l))))
-  (put '=zero? 'ordered
+  (put '=zero? '(ordered)
        (lambda (l) (=zero? l)))
   'done)
 
@@ -119,7 +119,7 @@
        (lambda (l1 l2) (tag (mul-term-lists l1 l2))))
   (put 'make 'counted
        (lambda (l) (tag (make-term-list l))))
-  (put '=zero? 'counted
+  (put '=zero? '(counted)
        (lambda (l) (=zero? l)))
   'done)
 
@@ -179,3 +179,64 @@
 ;; (counted (3 2) (2 5) (1 5) (0 10))
 ;; (apply-generic 'mul ca cb)
 ;; (counted (5 8) (4 8) (3 24) (2 31) (1 25) (0 25))
+
+(define (install-polynomial-package)
+  ;; internal procedures
+  (define (=poly-zero? poly)
+    (let ((terms (term-list poly)))
+      (apply-generic '=zero? terms)))
+  ;; representation
+  (define (make-poly variable term-list)
+    (cons variable term-list))
+  (define (variable p) (car p))
+  (define (term-list p) (cdr p))
+  ;; TODO: adjoin-term, etc.
+  ;; operations
+  (define (add-poly p1 p2)
+    (if (same-variable? (variable p1) (variable p2))
+	(make-poly (variable p1)
+		   (add-terms (term-list p1)
+			      (term-list p2)))
+	(error "Polys not in same var -- ADD POLY"
+	       (list p1 p2))))
+  (define (mul-poly p1 p2)
+    (if (same-variable? (variable p1) (variable p2))
+	(make-poly (variable p1)
+		   (mul-terms (term-list p1)
+			      (term-list p2)))
+	(error "Polys not in same var -- MUL-POLY"
+	       (list p1 p2))))
+  ;; procedures from earlier examples
+  (define (attach-tag tag poly)
+    (cons tag poly))
+  (define (same-variable? v1 v2)
+    (and (variable? v1)
+	 (variable? v2)
+	 (eq? v1 v2)))
+  (define (variable? x) (symbol? x))
+  ;; interface to the rest of the system
+  (define (tag p) (attach-tag 'polynomial p))
+  (put 'add '(polynomial polynomial)
+       (lambda (p1 p2) (tag (add-poly p1 p2))))
+  (put 'mul '(polynomial polynomial)
+       (lambda (p1 p2) (tag (mul-poly p1 p2))))
+  (put 'make 'polynomial
+       (lambda (var terms) (tag (make-poly var terms))))
+  (put '=zero? '(polynomial) =poly-zero?)
+  'done)
+
+(install-polynomial-package)
+
+(define t0c ((get 'make 'polynomial) 'x c0))
+(define t0o ((get 'make 'polynomial) 'x o0))
+(define ta ((get 'make 'polynomial) 'x ca)) ;; counted term list
+(define tb ((get 'make 'polynomial) 'x ob)) ;; ordered term list
+
+;; (apply-generic '=zero? t0c)
+;; #t
+;; (apply-generic '=zero? t0o)
+;; #t
+;; (apply-generic '=zero? ta)
+;; #f
+;; (apply-generic '=zero? tb)
+;; #f
