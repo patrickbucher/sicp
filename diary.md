@@ -1,3 +1,9 @@
+# 2022-01-17 (Tu)
+
+I started re-implementing the polynomial package from the example code. The
+tasks seems easy, now that I have two properly tested implementations for the
+term lists.
+
 # 2022-01-16 (Mo)
 
 I started implementing the package for the counted term list representation.
