@@ -1,3 +1,8 @@
+# 2022-01-18 (We)
+
+I finally finished exercise 2.90 by implementing the addition and multiplication
+of polynomials using generic term lists.
+
 # 2022-01-17 (Tu)
 
 I started re-implementing the polynomial package from the example code. The
