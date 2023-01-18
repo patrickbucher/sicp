@@ -185,12 +185,32 @@
   (define (=poly-zero? poly)
     (let ((terms (term-list poly)))
       (apply-generic '=zero? terms)))
+  (define (combine-terms l1 l2 operation)
+    (let ((t1 (car l1))
+	  (t2 (car l2)))
+      (if (eq? t1 t2)
+	  (apply-generic operation l1 l2)
+	  (let ((coerce-t1->t2 (get-coercion t1 t2))
+		(coerce-t2->t1 (get-coercion t2 t1)))
+	    (cond ((not (eq? coerce-t1->t2 #f))
+		   (let ((left (coerce-t1->t2 l1))
+			 (right l2))
+		     (apply-generic operation left right)))
+		  ((not (eq? coerce-t2->t1 #f))
+		   (let ((left l1)
+			 (right (coerce-t2->t1 l2)))
+		     (apply-generic operation left right)))
+		  (else
+		   (error (string "no common coercion for " t1 " and " t2))))))))
+  (define (add-terms l1 l2)
+    (combine-terms l1 l2 'add))
+  (define (mul-terms l1 l2)
+    (combine-terms l1 l2 'mul))
   ;; representation
   (define (make-poly variable term-list)
     (cons variable term-list))
   (define (variable p) (car p))
   (define (term-list p) (cdr p))
-  ;; TODO: adjoin-term, etc.
   ;; operations
   (define (add-poly p1 p2)
     (if (same-variable? (variable p1) (variable p2))
@@ -229,14 +249,37 @@
 
 (define t0c ((get 'make 'polynomial) 'x c0))
 (define t0o ((get 'make 'polynomial) 'x o0))
-(define ta ((get 'make 'polynomial) 'x ca)) ;; counted term list
-(define tb ((get 'make 'polynomial) 'x ob)) ;; ordered term list
+(define tac ((get 'make 'polynomial) 'x ca)) ;; counted term list
+(define tbo ((get 'make 'polynomial) 'x ob)) ;; ordered term list
 
 ;; (apply-generic '=zero? t0c)
 ;; #t
 ;; (apply-generic '=zero? t0o)
 ;; #t
-;; (apply-generic '=zero? ta)
+;; (apply-generic '=zero? tac)
 ;; #f
-;; (apply-generic '=zero? tb)
+;; (apply-generic '=zero? tbo)
 ;; #f
+
+;; (apply-generic 'add t0c t0o)
+;; (polynomial x ordered)
+;; (apply-generic 'add t0c tac)
+;; (polynomial x counted (3 2) (2 1) (1 3) (0 5))
+;; (apply-generic 'add t0o tbo)
+;; (polynomial x ordered 4 2 5)
+;; (apply-generic 'add tac tbo)
+;; (polynomial x ordered 2 5 5 10)
+;; (apply-generic 'add tbo tac)
+;; (polynomial x counted (3 2) (2 5) (1 5) (0 10))
+
+;; (apply-generic 'mul t0c t0o)
+;; (polynomial x ordered)
+;; (apply-generic 'mul t0c tac)
+;; (polynomial x counted)
+;; (apply-generic 'mul t0o tbo)
+;; (polynomial x ordered)
+;; (apply-generic 'mul tac tbo)
+;; (polynomial x ordered 8 8 24 31 25 25)
+;; (apply-generic 'mul tbo tac)
+;; (polynomial x counted (5 8) (4 8) (3 24) (2 31) (1 25) (0 25))
+
