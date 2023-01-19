@@ -1,3 +1,8 @@
+# 2022-01-19 (Th)
+
+I read exercise 2.91, then performed a manual polynomial division on paper, just
+to make sure that I understand it. Then I typed in the given code.
+
 # 2022-01-18 (We)
 
 I finally finished exercise 2.90 by implementing the addition and multiplication
