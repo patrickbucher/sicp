@@ -1,3 +1,9 @@
+# 2022-01-20 (Fr)
+
+I re-implemented the negation of counted terms lists, which is needed to compute
+the rest terms for exercise 2.91. I just need to write a wrapper for
+multiplication, and to put together the pieces, then I'm done.
+
 # 2022-01-19 (Th)
 
 I read exercise 2.91, then performed a manual polynomial division on paper, just
