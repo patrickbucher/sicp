@@ -1,4 +1,4 @@
-(define (empty-termlist? l) #f)
+(load "exercises/ex-2-90.scm") ;; simplify-addition; mul-counted
 
 (define (div-terms L1 L2)
   (if (empty-termlist? L1)
@@ -8,9 +8,39 @@
 	    (t2 (first-term L2)))
 	(if (> (order t2) (order t1))
 	    (list (the-empty-termlist) L1)
-	    (let ((new-c (div (coeff t1)
-			      (coeff t2)))
+	    (let ((new-c (/ (coeff t1)
+			    (coeff t2)))
 		  (new-o (- (order t1)
 			    (order t2))))
-	      (let ((rest-of-result #f))
-		'()))))))
+	      (let ((rest-of-result 'TODO)
+		    (partial-result (list new-o new-c)))
+		;; TODO: (mul-counted (new-o new-c) L2)
+		;; TODO: (subtract L1 [above result])
+	      (cons partial-result (div-terms rest-of-result L2))))))))
+
+(define (empty-termlist? l) (null? l))
+(define the-empty-termlist '())
+(define (first-term l) (car l))
+(define (rest-terms l) (cdr l))
+(define (order t) (car t))
+(define (coeff t) (cadr t))
+
+(define (subtract L1 L2)
+  (let ((addend L1)
+	(augend (negate L2)))
+    (simplify-addition (append addend augend))))
+
+(define (negate tl)
+  (if (null? tl)
+      '()
+      (let ((first-term (car tl))
+	    (rest-terms (cdr tl)))
+	(let ((order (car first-term))
+	      (coeff (cadr first-term)))
+	  (cons (list order (* coeff -1)) (negate rest-terms))))))
+
+(define a '((5 2) (4 3) (3 1) (2 4) (1 3) (0 5)))
+(define b '((2 2) (0 1)))
+
+;; (div-terms a b)
+;; 
