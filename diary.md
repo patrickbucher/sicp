@@ -1,3 +1,10 @@
+# 2022-01-21 (Sa)
+
+After some struggles with the result data structure, I was able to finish
+exercise 2.91. I also figured out a weakness of the current implementation of
+the subtraction of counted term lists: Elements with order 0 are retained, and
+must be filtered out; otherwise the polynomial division won't come to an end.
+
 # 2022-01-20 (Fr)
 
 I re-implemented the negation of counted terms lists, which is needed to compute
