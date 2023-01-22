@@ -1,3 +1,13 @@
+# 2023-01-22 (Su)
+
+I read the next section in chapter two, which leads to exercise 2.92 that ends
+with the comment "This is not easy!". I read the rest of the chapter, and I'm
+glad to see, that the further examples and exercises do not depend on the
+completion of exercise 2.92.
+
+So I have to face a tough decision: Skipping exercise 2.92 (after some initial
+thinking) and finishing the chapter, or giving up at this point.
+
 # 2023-01-21 (Sa)
 
 After some struggles with the result data structure, I was able to finish
