@@ -8,6 +8,20 @@ completion of exercise 2.92.
 So I have to face a tough decision: Skipping exercise 2.92 (after some initial
 thinking) and finishing the chapter, or giving up at this point.
 
+Having written down my notes on exercise 2.92, I came to the conclusion that it
+is too hard for me now, because I have no idea how to implement factorization of
+terms. So I skip exercise 2.92 and attempt the rest of the chapter.
+
+Having glanced at chapter 3, I came to the conclusion that continuing with
+chapter 3 is way more important for acquiring functional programming skills than
+sitting over a generic arithmetic system for much longer. So I'll try to do the
+rest of chapter 2, but shortcut the exercises if they focus too much on maths
+rather than programming.
+
+I also glanced at chapter 4 and 5, in which compilers and computer architecture
+are the main topics. Those are interesting, but I'll consider a break after
+chapter 3.
+
 # 2023-01-21 (Sa)
 
 After some struggles with the result data structure, I was able to finish
