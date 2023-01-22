@@ -1,33 +1,33 @@
-# 2022-01-21 (Sa)
+# 2023-01-21 (Sa)
 
 After some struggles with the result data structure, I was able to finish
 exercise 2.91. I also figured out a weakness of the current implementation of
 the subtraction of counted term lists: Elements with order 0 are retained, and
 must be filtered out; otherwise the polynomial division won't come to an end.
 
-# 2022-01-20 (Fr)
+# 2023-01-20 (Fr)
 
 I re-implemented the negation of counted terms lists, which is needed to compute
 the rest terms for exercise 2.91. I just need to write a wrapper for
 multiplication, and to put together the pieces, then I'm done.
 
-# 2022-01-19 (Th)
+# 2023-01-19 (Th)
 
 I read exercise 2.91, then performed a manual polynomial division on paper, just
 to make sure that I understand it. Then I typed in the given code.
 
-# 2022-01-18 (We)
+# 2023-01-18 (We)
 
 I finally finished exercise 2.90 by implementing the addition and multiplication
 of polynomials using generic term lists.
 
-# 2022-01-17 (Tu)
+# 2023-01-17 (Tu)
 
 I started re-implementing the polynomial package from the example code. The
 tasks seems easy, now that I have two properly tested implementations for the
 term lists.
 
-# 2022-01-16 (Mo)
+# 2023-01-16 (Mo)
 
 I started implementing the package for the counted term list representation.
 Unfortunately, the addition results are incorrect, which I need to check in
@@ -39,7 +39,7 @@ implemented the multiplication.
 Now I can re-write the code for the polynomials package supporting both term
 list implementations.
 
-# 2022-01-15 (Su)
+# 2023-01-15 (Su)
 
 Unfortunately, I got the representation of counted terms lists wrong, so my
 multiplication didn't really work. Having fixed that, I also introduced a proper
@@ -51,19 +51,19 @@ I got most of the procedures ready.
 The third part would be to re-engineer the algebraic package to use both term
 lists implementations.
 
-# 2022-01-14 (Sa)
+# 2023-01-14 (Sa)
 
 After some issues to get started, I implemented the higher-order functions
 `reduce` and `partition`, which the I used to simplify the term list by
 addition, which I still need to integrate.
 
-# 2022-01-13 (Fr)
+# 2023-01-13 (Fr)
 
 I implemented the multiplication of counted term lists, which was rather easy to
 do. However, the result is not satisfying yet, because products with the same
 exponent aren't added up yet. I should approach this as the next task.
 
-# 2022-01-12 (Th)
+# 2023-01-12 (Th)
 
 I tried to figure out how to multiply ordered representations of term lists, but
 gave up on it. The problem is not the multiplication process itself, but the
@@ -71,43 +71,43 @@ interpretation of its result. So I'm going to implement it for counted
 representations only, which is then used for ordered representations using a
 coercion.
 
-# 2022-01-11 (We)
+# 2023-01-11 (We)
 
 I continued working on exercise 2.90 in the train. I implemented the `=zero?`
 predicate for ordered term lists, and used it to simplify the addition
 implementation. I also started with the multiplication, but the train ride was
 to short to get deep into it.
 
-# 2022-01-10 (Tu)
+# 2023-01-10 (Tu)
 
 I continued working on exercise 2.90, for which I managed to complete the
 addition of ordered terms lists. Next up: multiplication.
 
-# 2022-01-09 (Mo)
+# 2023-01-09 (Mo)
 
 I started with the major exercise 2.90, for which I already have a plan.
 Implementing the addition/multiplication procedures for different
 representations, however, will be quite hard.
 
-# 2022-01-08 (Su)
+# 2023-01-08 (Su)
 
 I worked through exercise 2.89, which is exactly the kind of work that keeps me
 going in SICP. Those kinds of exercises provide a good mix of rather general
 higher-order functions (such as `zip` and `enumerate`; however, with slight
 adjustments) and recursive thinking.
 
-# 2022-01-07 (Sa)
+# 2023-01-07 (Sa)
 
 After some problems with untagged and tagged data, I was able to implement
 exercise 2.88 using a `negate` procedure.
 
-# 2022-01-06 (Fr)
+# 2023-01-06 (Fr)
 
 I'm back on track after having finished exercise 2.87. I incorporated the code
 into the polynomials example, which now works (having written some procedures
 for plain numbers that do not expect them to be tagged as `'scheme-number`).
 
-# 2022-01-05 (Th)
+# 2023-01-05 (Th)
 
 The symbolic algebra example starts to annoy me, because there's not a single
 example of how the system is supposed to be used. Instead, I have to figure out
@@ -119,18 +119,18 @@ Using `apply-generic`, I'm now able to call the example code. However, it fails
 exactly where exercise 2.87 picks up. So I'll give the entire thing one more
 chance.
 
-# 2022-01-04 (We)
+# 2023-01-04 (We)
 
 I re-read the section on symbolic algebra and started writing down the example
 code. I still don't understand the code, but I hope that the exercises will
 enlighten me.
 
-# 2022-01-03 (Tu)
+# 2023-01-03 (Tu)
 
 I gave the section on the symbolic algebra example a first read. I'll go over it
 in more detail tomorrow, and let the problem sink in until then.
 
-# 2022-01-02 (Mo)
+# 2023-01-02 (Mo)
 
 For exercise 2.86, I implemented the real part for different types (integer,
 reational, and real). I re-implemented the type coercions and equality
@@ -142,7 +142,7 @@ representations.
 Now I hope that I'm done with complex numbers and their various implementations
 for the moment; the whole thing got quite convoluted over time.
 
-# 2022-01-01 (Su)
+# 2023-01-01 (Su)
 
 I started the year by finishing exercise 2.85. All the work of the last two days
 has finally paid off, and the implementation of `drop` fell in place almost
