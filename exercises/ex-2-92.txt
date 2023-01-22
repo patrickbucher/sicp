@@ -1,0 +1,25 @@
+A polynomial in x can have coefficients that are aither numbers, polynomials
+(in x or in another variable), are a mix thereof:
+
+Numbers:
+
+    2x^3 + 4x^2 + 3x + 1
+
+Polynomials in x:
+
+    (x+3)x^3 + (2x^2+x)x^2 + (x^3+5)x + (x^2+1)
+
+Polynomials in y:
+
+    (y+3)x^3 + (2y^2+y)x^2 + (y^3+5)x + (y^2+1)
+
+Polynomials in both x and y:
+
+    (x+3)x^3 + (2y^2+y)x^2 + (x^3+5)x + (y^2+1)
+
+Multiplying such a polynomial with a polynomial in another variable requires to
+convert one of the polynomials so that it becomes a polynomial in the other
+variable. This requires multiplying all the terms and factorizing them to the
+other variable.
+
+In order to solve this problem, the problem of factorization needs to be solved.
