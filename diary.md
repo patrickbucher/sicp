@@ -1,3 +1,7 @@
+# 2023-01-23 (Mo)
+
+I started working on exercise 2.93, which appears to be solvable.
+
 # 2023-01-22 (Su)
 
 I read the next section in chapter two, which leads to exercise 2.92 that ends
