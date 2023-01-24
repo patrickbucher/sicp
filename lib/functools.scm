@@ -35,3 +35,11 @@
   (if (not (= (length l1) (length l2)))
       (error "l1 and l2 have different lengths")
       (next l1 l2 '())))
+
+(define (all-eq? xs)
+  (if (null? xs)
+      #t
+      (let ((first (car xs))
+	    (rest (cdr xs)))
+	(= (length rest)
+	   (length (filter (lambda (x) (eq? x first)) rest))))))
