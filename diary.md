@@ -1,3 +1,8 @@
+# 2023-01-24 (Tu)
+
+I implemented the addition of rationals, but haven't yet figured out how to
+build up the resulting expression with the correct type tags.
+
 # 2023-01-23 (Mo)
 
 I started working on exercise 2.93, which appears to be solvable.
