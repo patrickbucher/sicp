@@ -1,3 +1,13 @@
+# 2023-01-25 (We)
+
+Since there's a lot of boilerplate code involved when dealing with the
+dividends, divisors, and variables of the rational functions, I wrote a generic
+combine procedure that deals with all the unwrapping and wrapping. I got the
+resulting type right, now I can further compute with the results of my
+procedure.
+
+Implementing the other three operations will be an easy task.
+
 # 2023-01-24 (Tu)
 
 I implemented the addition of rationals, but haven't yet figured out how to
