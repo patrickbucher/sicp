@@ -1,32 +1,41 @@
 (load "exercises/ex-2-90.scm")
 (load "lib/functools.scm") ;; all-eq?
 
+(define (combine-rationals rf1 rf2 op)
+  (define (to-rf var rfs)
+    (let ((rf1 (car rfs))
+	  (rf2 (cadr rfs)))
+      (let ((new-rf1 (cons 'polynomial (cons var rf1)))
+	    (new-rf2 (cons 'polynomial (cons var rf2))))
+      (cons 'ratfunc (list new-rf1 new-rf2)))))
+  (let ((dividend1 (car rf1))
+	(dividend2 (car rf2))
+	(divisor1 (cadr rf1))
+	(divisor2 (cadr rf2)))
+    (let ((var-dividend1 (cadr dividend1))
+	  (var-dividend2 (cadr dividend2))
+	  (var-divisor1 (cadr divisor1))
+	  (var-divisor2 (cadr divisor2)))
+      (if (not (all-eq? (list var-dividend1 var-dividend2 var-divisor1 var-divisor2)))
+	  (error "cannot add rationals of different variables")
+	  (let ((tl-dividend1 (cddr dividend1))
+		(tl-dividend2 (cddr dividend2))
+		(tl-divisor1 (cddr divisor1))
+		(tl-divisor2 (cddr divisor2)))
+	    (to-rf var-dividend1 (op tl-dividend1 tl-divisor1 tl-dividend2 tl-divisor2)))))))
+
 (define (install-rational-package)
   ;; internal procedures
   (define (make-rational dividend divisor)
     (tag (list dividend divisor)))
   (define (add-rf rf1 rf2)
-    (let ((dividend1 (car rf1))
-	  (dividend2 (car rf2))
-	  (divisor1 (cadr rf1))
-	  (divisor2 (cadr rf2)))
-      (let ((var-dividend1 (cadr dividend1))
-	    (var-dividend2 (cadr dividend2))
-	    (var-divisor1 (cadr divisor1))
-	    (var-divisor2 (cadr divisor2)))
-	(if (not (all-eq? (list var-dividend1 var-dividend2 var-divisor1 var-divisor2)))
-	    (error "cannot add rationals of different variables")
-	    (let ((tl-dividend1 (cddr dividend1))
-		  (tl-dividend2 (cddr dividend2))
-		  (tl-divisor1 (cddr divisor1))
-		  (tl-divisor2 (cddr divisor2)))
-	      (let ((new-divisor (apply-generic 'mul tl-divisor1 tl-divisor2)))
-		(let ((new-dividend
-		       (apply-generic 'add
-				      (apply-generic 'mul new-divisor tl-dividend1)
-				      (apply-generic 'mul new-divisor tl-dividend2))))
-		  ;; TODO: properly tag as polynomial
-		  (make-rational new-dividend new-divisor))))))))
+    (combine-rationals rf1
+		       rf2
+		       (lambda (dvd1 dvs1 dvd2 dvs2)
+			 (list (apply-generic 'add
+					      (apply-generic 'mul dvd1 dvs2)
+					      (apply-generic 'mul dvd2 dvs1))
+			       (apply-generic 'mul dvs1 dvs2)))))
   ;; type system
   (define (tag data)
     (cons 'ratfunc data))
