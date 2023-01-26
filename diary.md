@@ -1,3 +1,13 @@
+# 2023-01-26 (Th)
+
+Finally, I finished exercise 2.93. It took be a bit longer than expected,
+because the generic operations for polynomials and term lists are all scattered
+around the exercises, and many procedures are never properly installed.
+
+The remaining four exercises in the chapter look rather independent of those
+generic procedures, so I hope I can finish up chapter 2 until the 31st of
+January, which would exactly mark six months since the beginning of my effort.
+
 # 2023-01-25 (We)
 
 Since there's a lot of boilerplate code involved when dealing with the
