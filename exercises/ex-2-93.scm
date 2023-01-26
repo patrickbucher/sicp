@@ -50,6 +50,12 @@
 		       (lambda (dvd1 dvs1 dvd2 dvs2)
 			 (list (apply-generic 'mul dvd1 dvd2)
 			       (apply-generic 'mul dvs1 dvs2)))))
+  (define (div-rf rf1 rf2)
+    (combine-rationals rf1
+		       rf2
+		       (lambda (dvd1 dvs1 dvd2 dvs2)
+			 (list (apply-generic 'mul dvd1 dvs2)
+			       (apply-generic 'mul dvd2 dvs1)))))
     ;; type system
   (define (tag data)
     (cons 'ratfunc data))
@@ -85,3 +91,6 @@
 
 ;; (apply-generic 'mul rf1 rf1)
 ;; (ratfunc (polynomial x counted (4 1) (2 2) (0 1)) (polynomial x counted (6 1) (3 2) (0 1)))
+
+;; (apply-generic 'div rf1 rf1)
+;; (ratfunc (polynomial x counted (5 1) (3 1) (2 1) (0 1)) (polynomial x counted (5 1) (3 1) (2 1) (0 1)))
