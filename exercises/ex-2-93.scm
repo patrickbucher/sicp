@@ -1,5 +1,4 @@
 (load "exercises/ex-2-90.scm")
-(load "exercises/ex-2-91.scm")
 (load "lib/functools.scm") ;; all-eq?
 
 (define (combine-rationals rf1 rf2 op)
@@ -41,10 +40,9 @@
     (combine-rationals rf1
 		       rf2
 		       (lambda (dvd1 dvs1 dvd2 dvs2)
-			 (list (apply-generic 'add
+			 (list (apply-generic 'sub
 					      (apply-generic 'mul dvd1 dvs2)
-					      (cons 'counted
-						    (negate (cdr (apply-generic 'mul dvd2 dvs1)))))
+					      (apply-generic 'mul dvd2 dvs1))
 			       (apply-generic 'mul dvs2 dvs2)))))
     ;; type system
   (define (tag data)
@@ -57,6 +55,8 @@
   (put 'sub '(ratfunc ratfunc) (lambda (rf1 rf2) (sub-rf rf1 rf2)))
   (put 'mul '(ratfunc ratfunc) (lambda (rf1 rf2) (mul-rf rf1 rf2)))
   (put 'div '(ratfunc ratfunc) (lambda (rf1 rf2) (div-rf rf1 rf2)))
+  ;; missing generic procedures
+  (put 'sub '(counted counted) (lambda (c1 c2) (subtract c1 c2)))
   'done)
 
 (install-rational-package)
@@ -73,4 +73,5 @@
 ;; (apply-generic 'add rf1 rf1)
 ;; (ratfunc (polynomial x counted (5 2) (3 2) (2 2) (0 2)) (polynomial x counted (6 1) (3 2) (0 1)))
 
-;; (apply-generic 'sub (apply-generic 'add rf1 rf1) rf1))
+;; (apply-generic 'sub rf1 rf1)
+;; (ratfunc (polynomial x) (polynomial x counted (6 1) (3 2) (0 1)))
