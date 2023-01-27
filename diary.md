@@ -1,3 +1,11 @@
+# 2023-01-27 (Fr)
+
+I did exercise 2.94, which was rather easy. However, I did not install the
+procedure in the overall system; I'll re-use the code directly if needed in
+further exercises.
+
+So three full days left for three more exercises; I'm on track.
+
 # 2023-01-26 (Th)
 
 Finally, I finished exercise 2.93. It took be a bit longer than expected,
