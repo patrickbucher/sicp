@@ -8,6 +8,13 @@ mentioned in the exercise.
 After some struggles with the integerizing factor and the application of GCD to
 a list, I also managed to do exercise 2.96. One exercise and two pages are left.
 
+I also worked through exercise 2.97. The main struggle was—again—the type
+system, which always got in the way in this last part of the chapter.
+
+This concludes chapter 3; and I'm glad that I no longer have to deal with the
+generic operations table and all those incompatible operations defined over the
+last couple of weeks.
+
 # 2023-01-27 (Fr)
 
 I did exercise 2.94, which was rather easy. However, I did not install the
