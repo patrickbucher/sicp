@@ -15,6 +15,9 @@ This concludes chapter 3; and I'm glad that I no longer have to deal with the
 generic operations table and all those incompatible operations defined over the
 last couple of weeks.
 
+In the evening, I wrote about my (almost) six months of SICP. I also started
+reading chapter 3 and typed in the first examples.
+
 # 2023-01-27 (Fr)
 
 I did exercise 2.94, which was rather easy. However, I did not install the
