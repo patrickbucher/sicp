@@ -5,6 +5,9 @@ from previous exercises. I didn't bother to perform the entire division by hand
 afterwards, or to trace the function calls; but I noticed the problem that is
 mentioned in the exercise.
 
+After some struggles with the integerizing factor and the application of GCD to
+a list, I also managed to do exercise 2.96. One exercise and two pages are left.
+
 # 2023-01-27 (Fr)
 
 I did exercise 2.94, which was rather easy. However, I did not install the
