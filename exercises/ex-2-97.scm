@@ -1,17 +1,37 @@
 (load "lib/functools.scm") ;; reduce
 (load "lib/math.scm") ;; pow
+(load "examples/op-type-table.scm") ;; put, get, apply-generic
 (load "exercises/ex-2-91.scm") ;; div-terms
 (load "exercises/ex-2-94.scm") ;; gcd-terms
 (load "exercises/ex-2-95.scm") ;; Q1, Q2
 
+(define (reduce-generic-gcd a b)
+  (apply-generic 'reduce-gcd a b))
+
+(define (reduce-integers n d)
+  (let ((g (gcd n d)))
+    (list (/ n g) (/ d g))))
+
 (define (reduce-poly P Q)
-  (let ((vP (cadr P))
-	(vQ (cadr Q)))
+  (let ((vP (car P))
+	(vQ (car Q)))
     (if (not (eq? vP vQ))
 	(error (string "different variables " vP " and " vQ))
-	(let ((tlP (cddr P))
-	      (tlQ (cddr Q)))
-	  (cons 'polynomial (cons vP (reduce-terms tlP tlQ)))))))
+	(let ((tlP (cdr P))
+	      (tlQ (cdr Q)))
+	  (cons vP (reduce-terms tlP tlQ))))))
+
+(define (install-reduce-gcd)
+  (put 'reduce-gcd '(polynomial polynomial)
+       (lambda (p q) (reduce-poly p q)))
+  (put 'reduce-gcd '(scheme-number scheme-number)
+       (lambda (x y) (reduce-integers x y)))
+  'done)
+
+;; (reduce-generic-gcd (cons 'scheme-number 18) (cons 'scheme-number 27))
+;; (2 3)
+;; (reduce-generic-gcd Q1 Q2)
+;; (x ((2 11) (0 7)) ((1 13) (0 5)))
 
 (define (reduce-terms n d)
   (let ((gcd-n-d (gcd-numer-denom n d)))
@@ -67,13 +87,4 @@
 (define (make-rational numer denom)
   (cons 'rational (list numer denom)))
 
-(define p1 (make-polynomial 'x '((1 1) (0 1))))
-(define p2 (make-polynomial 'x '((3 1) (0 -1))))
-(define p3 (make-polynomial 'x '((1 1))))
-(define p4 (make-polynomial 'x '((2 1) (0 -1))))
-
-(define rf1 (make-rational p1 p2))
-(define rf2 (make-rational p3 p4))
-
-;; (add rf1 rf2)
-;; 
+(install-reduce-gcd)
