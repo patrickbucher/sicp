@@ -10,7 +10,16 @@
     (if (not (eq? Pv Qv))
 	(error "different variables not supported")
 	(let ((Pc (cons 'polynomial (cons Pv (multiply (term-list P) c)))))
-	  (greatest-common-divisor Pc Q)))))
+	  (simplify-coeffs (greatest-common-divisor Pc Q))))))
+
+(define (simplify-coeffs P)
+  (let ((var (cadr P))
+	(tl (cddr P)))
+    (let ((coeff-gcd (reduce (lambda (acc x) (gcd acc x))
+			     (map (lambda (t) (cadr t)) tl)
+			     (cadar tl))))
+      (let ((new-tl (map (lambda (t) (list (car t) (/ (cadr t) coeff-gcd))) tl)))
+	(cons 'polynomial (cons var new-tl))))))
 
 (define (multiply tl c)
   (map (lambda (t) (list (car t) (* c (cadr t)))) tl))
@@ -31,3 +40,5 @@
 (define (order t) (car t))
 (define (coeff t) (cadr t))
 
+;; (pseudoremainder-terms Q1 Q2)
+;; (polynomial x (2 1) (1 -2) (0 1))
