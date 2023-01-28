@@ -1,10 +1,10 @@
 (load "lib/functools.scm") ;; reduce
 (load "lib/math.scm") ;; pow
-(load "exercises/ex-2-94.scm") ;; greatest-common-divisor
+(load "exercises/ex-2-91.scm") ;; div-terms
 (load "exercises/ex-2-95.scm") ;; Q1, Q2
 
 (define (pseudoremainder-terms P Q)
-  (let ((c (integerizing-factor P1 P2))
+  (let ((c (integerizing-factor P Q))
 	(Pv (cadr P))
 	(Qv (cadr Q)))
     (if (not (eq? Pv Qv))
