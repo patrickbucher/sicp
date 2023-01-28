@@ -1,3 +1,10 @@
+# 2023-01-28 (Sa)
+
+For exercise 2.95, I performed the multiplications manually, and then using code
+from previous exercises. I didn't bother to perform the entire division by hand
+afterwards, or to trace the function calls; but I noticed the problem that is
+mentioned in the exercise.
+
 # 2023-01-27 (Fr)
 
 I did exercise 2.94, which was rather easy. However, I did not install the
