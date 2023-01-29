@@ -1,3 +1,9 @@
+# 2023-01-29 (Su)
+
+I went through the various bank account examples and did exercise 3.1. It is
+very easy to imitate some object-oriented programming style with functions
+alone.
+
 # 2023-01-28 (Sa)
 
 For exercise 2.95, I performed the multiplications manually, and then using code
