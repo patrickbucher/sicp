@@ -1,3 +1,8 @@
+# 2023-01-30 (Mo)
+
+I worked through exercises 3.2 and 3.3. The last one already gave me a glimpse
+on the perils of state.
+
 # 2023-01-29 (Su)
 
 I went through the various bank account examples and did exercise 3.1. It is
