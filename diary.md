@@ -1,3 +1,8 @@
+# 2023-01-31 (Tu)
+
+I worked through the examples about Monte Carlo experimants to find Pi using the
+Cesaro method. Next up: exercise 3.5.
+
 # 2023-01-30 (Mo)
 
 I worked through exercises 3.2 and 3.3. The last one already gave me a glimpse
