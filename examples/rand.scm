@@ -1,7 +1,7 @@
-(define random-init 13)
-(define a 3)
-(define b 7)
-(define m 100)
+(define a 75)
+(define b 74)
+(define m 1e3)
+(define random-init 37)
 
 (define rand
   (let ((x random-init))
