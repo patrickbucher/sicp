@@ -1,6 +1,9 @@
-(define random-init (random 50))
+(define lower-bound 0)
+(define upper-bound 99)
 
-(define (rand-update x) (random 100))
+(define (rand-update x) (+ (random (+ (- upper-bound lower-bound) 1)) lower-bound))
+
+(define random-init (rand-update -1))
 
 (define rand
   (let ((x random-init))
