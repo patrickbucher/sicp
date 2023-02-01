@@ -1,3 +1,14 @@
+# 2023-02-01 (We)
+
+I worked on exercise 3.5, which I first thought was about calculus, but it
+looked [quite similar](https://paedubucher.ch/simpi/) to me after I've
+completely read it.
+
+I had some issues with generating random numbers: the given procedure behaves
+differently when invoked with integers and decimals. The exclusion of the upper
+bound of 4, for example, never yields a bigger value than 3, but could be up to
+3.999 for decimals, which makes some difference.
+
 # 2023-01-31 (Tu)
 
 I worked through the examples about Monte Carlo experimants to find Pi using the
