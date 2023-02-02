@@ -1,3 +1,8 @@
+# 2023-02-02 (Th)
+
+I worked through exercise 3.6, which I solved by storing all the numbers with
+top-level `define`s. This is easy, but pollutes the namespace.
+
 # 2023-02-01 (We)
 
 I worked on exercise 3.5, which I first thought was about calculus, but it
