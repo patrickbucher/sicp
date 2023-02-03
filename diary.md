@@ -1,3 +1,8 @@
+# 2023-02-03 (Fr)
+
+I started reading the section about the costs of introducing assignments, and
+tried to make sense of the examples.
+
 # 2023-02-02 (Th)
 
 I worked through exercise 3.6, which I solved by storing all the numbers with
