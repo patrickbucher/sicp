@@ -1,3 +1,16 @@
+# 2023-02-04 (Sa)
+
+Having read the two exercise instructions yesterday, I was already able to think
+about possible solutions. The exercises seemed rather hard yesterday, but I was
+able to solve them quickly today.
+
+For exercise 3.7, I first re-implemented exercise 3.3 to gain more clarity. I
+think the code was simpler afterwards, however, I did not check the original
+code of exercise 3.3, to keep my head clear.
+
+Exercise 3.8 was surprisingly simple and demonstrated the perils of state very
+well.
+
 # 2023-02-03 (Fr)
 
 I started reading the section about the costs of introducing assignments, and
