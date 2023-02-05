@@ -5,6 +5,10 @@ the rules of evaluation in such an environment. Exercise 3.9 requires me to draw
 such environment diagrams, which is rather easy on paper, but hard on the
 computer. So I'll give [PSTricks](https://tug.org/PSTricks/main.cgi/) a try.
 
+Having tried PSTricks, I came to the conclusion that doing exercises 3.9, 3.10,
+and 3.11 _properly_ with drawings is a lot of work. So I'll just draw them on
+paper and write my conclusions in a text file for every exercise.
+
 # 2023-02-04 (Sa)
 
 Having read the two exercise instructions yesterday, I was already able to think
