@@ -1,3 +1,10 @@
+# 2023-02-05 (Su)
+
+I read (and re-read) the section about the environment model of evaluation and
+the rules of evaluation in such an environment. Exercise 3.9 requires me to draw
+such environment diagrams, which is rather easy on paper, but hard on the
+computer. So I'll give [PSTricks](https://tug.org/PSTricks/main.cgi/) a try.
+
 # 2023-02-04 (Sa)
 
 Having read the two exercise instructions yesterday, I was already able to think
