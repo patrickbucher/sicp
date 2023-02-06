@@ -1,0 +1,5 @@
+The local state of `acc` is kept in the parameter `balance`. The code
+for the procedure `make-account` is shared in the global environment;
+the code of the internal procedures could be shared, but doesn't need
+to be (implementation detail). The internal variables are in their own
+environment upon execution.

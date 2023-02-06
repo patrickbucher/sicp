@@ -1,0 +1,3 @@
+The environment structure is almost the same; however, the additional
+`let` or `lambda` creates yet another frame on top of the existing
+one.
