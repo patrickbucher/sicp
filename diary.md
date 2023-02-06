@@ -1,3 +1,20 @@
+# 2023-02-06 (Mo)
+
+I quickly read the final part of section 3.2 and took some notes for the
+exercises. I did _not_ draw the diagrams. It is important to me to keep going,
+and having programmed for almost 20 years, a lot of it in object-oriented
+programming languages, I understand the principles of environments, namespaces,
+and the like.
+
+The upcoming topics look very interesting to me:
+
+- mutable list structures (with shared parts), queues, and tables
+- a digital circuit simulator
+- concurrency and shared state
+- streams (lazy and infinite ones)
+
+So I _must_ keep going.
+
 # 2023-02-05 (Su)
 
 I read (and re-read) the section about the environment model of evaluation and
