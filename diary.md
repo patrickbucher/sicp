@@ -1,3 +1,10 @@
+# 2023-02-07 (Tu)
+
+I read the section about mutable list structures and worked through exercise
+3.12. However, I only drew the box and pointers diagrams on paper, and put the
+code with my textual interpretation into the repo. This pragmatic approach cuts
+out lot of the busywork.
+
 # 2023-02-06 (Mo)
 
 I quickly read the final part of section 3.2 and took some notes for the
