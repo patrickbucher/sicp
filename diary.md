@@ -1,3 +1,9 @@
+# 2023-02-08 (We)
+
+I worked thorugh exercises 3.13 and 3.14. Again, I only drew diagrams on paper,
+and wrote down the steps using the substitution model, which, of course, doesn't
+cover everything that happens when using `set-cdr!` and the like.
+
 # 2023-02-07 (Tu)
 
 I read the section about mutable list structures and worked through exercise
