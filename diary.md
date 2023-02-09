@@ -1,3 +1,10 @@
+# 2023-02-09 (Th)
+
+I worked through exercises 3.15, which was rather easy, and exercise 3.16, which
+took me quite some time. For the latter, I only made progress when I used
+mutations; the procedure works fine for structures created with `list` and
+`cons` alone.
+
 # 2023-02-08 (We)
 
 I worked thorugh exercises 3.13 and 3.14. Again, I only drew diagrams on paper,
