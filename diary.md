@@ -1,3 +1,21 @@
+# 2023-02-10 (Fr)
+
+Exercise 3.17 was quite challenging—and rewarding! First, the cache mechanism
+didn't work, so I thought that I still had major misconceptions about the
+scoping rules. However, the problem was not my implementation of the caching
+mechanism, but the way I used it: The recursive `count-pairs` procedure created
+a new cache for every call; so I had to add an internal procedure that re-uses
+the cache.
+
+The failing examples of exercise 3.16 worked correctly with my new
+implementation, except for the example that lead the old `count-pairs` procedure
+into an infinite loop. However, the problem was not my implementation, but the
+debug messages that tried to print this infinite structure, which of course
+didn't work.
+
+So I'm glad that I understood the mechanics—and learned more about problematic
+list structures.
+
 # 2023-02-09 (Th)
 
 I worked through exercises 3.15, which was rather easy, and exercise 3.16, which
