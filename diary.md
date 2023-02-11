@@ -1,3 +1,10 @@
+# 2023-02-11 (Sa)
+
+After a late start, I managed to work through exercise 3.18 fairly quickly. The
+next exercise, 3.19, requires to re-implement the same algorithm in constant
+space. I'll think about it for a moment, hoping a solution might pop up
+spontaneously.
+
 # 2023-02-10 (Fr)
 
 Exercise 3.17 was quite challenging—and rewarding! First, the cache mechanism
