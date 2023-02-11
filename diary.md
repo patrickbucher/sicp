@@ -5,6 +5,13 @@ next exercise, 3.19, requires to re-implement the same algorithm in constant
 space. I'll think about it for a moment, hoping a solution might pop up
 spontaneously.
 
+In the afternoon, I had an idea on how to solve exercise 3.19. I sketched a plan
+for a tail-recursive procedure that operates in two modes: advance mode, to move
+to the next cell in the list (the lead cell), and check mode, to test the former
+cells for equality against the lead cell.
+
+I implemented the procedure in the evening, and I got it to work rather quickly.
+
 # 2023-02-10 (Fr)
 
 Exercise 3.17 was quite challenging—and rewarding! First, the cache mechanism
