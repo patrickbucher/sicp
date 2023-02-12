@@ -1,3 +1,13 @@
+# 2023-02-12 (Su)
+
+I read the section about mutation and assignment. For exercise 3.20, I didn't
+draw the diagram, but tried out the code.
+
+I read the section about queues and implemented the example. I first struggled a
+bit with exercise 3.21, but then figured out that the subsequent call to the
+print procedure requires a pseudo-front pair made up ad hoc, after which
+everything fell into place.
+
 # 2023-02-11 (Sa)
 
 After a late start, I managed to work through exercise 3.18 fairly quickly. The
