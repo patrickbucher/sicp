@@ -1,3 +1,7 @@
+# 2023-02-13 (Mo)
+
+I worked through exercise 3.22, which I finished rather quickly.
+
 # 2023-02-12 (Su)
 
 I read the section about mutation and assignment. For exercise 3.20, I didn't
