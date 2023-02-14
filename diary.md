@@ -1,3 +1,8 @@
+# 2023-02-14 (Tu)
+
+I started with exercise 3.23, for which I implemented the selectors and insert
+procedures; the delete procedures still need to be done.
+
 # 2023-02-13 (Mo)
 
 I worked through exercise 3.22, which I finished rather quickly.
