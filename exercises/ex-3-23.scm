@@ -14,7 +14,7 @@
 
 (define (rear-deque q)
   (if (empty-deque? q)
-      (error "emptu deque")
+      (error "empty deque")
       (car (rear-ptr q))))
 
 (define (front-insert-deque! q v)
