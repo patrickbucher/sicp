@@ -1,3 +1,18 @@
+# 2023-02-15 (We)
+
+I finished exercise 3.23, but only noticed upon finishing the
+`rear-delete-deque!` procedure, that an O(1) implementation is not possible with
+the current design; it would require a double-linked list, which could be
+designed with two pairs per entry:
+
+1. The first pair contains the actual value in the `car` cell and a pointer to
+   the other pair in the `cdr` cell.
+2. The second pair contains the pointer to the previous pair in the `car` cell,
+   and the pointer to the next pair in the `cdr` cell.
+
+This, of course, requires more pointer management for each step. I'll attempt it
+as an additional exercise.
+
 # 2023-02-14 (Tu)
 
 I started with exercise 3.23, for which I implemented the selectors and insert
