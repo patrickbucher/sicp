@@ -13,6 +13,9 @@ designed with two pairs per entry:
 This, of course, requires more pointer management for each step. I'll attempt it
 as an additional exercise.
 
+I began this implementation on the train ride in the morning, and finished it on
+my way back in the evening.
+
 # 2023-02-14 (Tu)
 
 I started with exercise 3.23, for which I implemented the selectors and insert
