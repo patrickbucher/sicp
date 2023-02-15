@@ -2,8 +2,8 @@
 (define (cell-val c) (car c))
 (define (cell-prev c) (cadr c))
 (define (cell-next c) (cddr c))
-(define (cell-set-prev c p) (set-car! (cdr c) p))
-(define (cell-set-next c n) (set-cdr! (cdr c) n))
+(define (cell-set-prev! c p) (set-car! (cdr c) p))
+(define (cell-set-next! c n) (set-cdr! (cdr c) n))
 
 (define (make-deque) (cons '() '()))
 (define (front-ptr q) (car q))
@@ -37,8 +37,35 @@
 	(set-cdr! q e)
 	q)
       (let ((e (make-cell v (rear-ptr q) '())))
-	;; TODO
-	)))
+	(cell-set-next! (rear-ptr q) e)
+	(set-cdr! q e)
+	q)))
+
+(define (front-delete-deque! q)
+  (cond ((empty-deque? q)
+	 (error "empty deque"))
+	((eq? (front-ptr q) (rear-ptr q))
+	 (begin
+	   (set-car! q '())
+	   (set-cdr! q '())
+	   q))
+	(else
+	 (set-car! q (cell-next (front-ptr q)))
+	 (cell-set-prev! (front-ptr q) '())
+	 q)))
+
+(define (rear-delete-deque! q)
+  (cond ((empty-deque? q)
+	 (error "empty deque"))
+	((eq? (front-ptr q) (rear-ptr q))
+	 (begin
+	   (set-car! q '())
+	   (set-cdr! q '())
+	   q))
+	(else
+	 (set-cdr! q (cell-prev (rear-ptr q)))
+	 (cell-set-next! (rear-ptr q) '())
+	 q)))
 
 (define (unroll q)
   (define (next front-ptr acc)
@@ -46,10 +73,3 @@
 	acc
 	(next (cell-next front-ptr) (cons (cell-val front-ptr) acc))))
   (reverse (next (front-ptr q) '())))
-
-;; TODO
-;; front-insert-deque!
-;; rear-insert-deque!
-;; front-delete-deque!
-;; rear-delete-deque!
-;; unroll
