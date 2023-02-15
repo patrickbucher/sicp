@@ -73,3 +73,16 @@
 	acc
 	(next (cell-next front-ptr) (cons (cell-val front-ptr) acc))))
   (reverse (next (front-ptr q) '())))
+
+;; (define numbers (make-deque))
+;; (front-insert-deque! numbers 5)
+;; (front-insert-deque! numbers 4)
+;; (front-insert-deque! numbers 2)
+;; (front-delete-deque! numbers)
+;; (front-insert-deque! numbers 3)
+;; (3 4 5)
+;; (rear-insert-deque! numbers 6)
+;; (rear-insert-deque! numbers 8)
+;; (rear-delete-deque! numbers)
+;; (rear-insert-deque! numbers 7)
+;; (3 4 5 6 7)
