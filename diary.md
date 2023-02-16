@@ -1,3 +1,7 @@
+# 2023-02-16 (Th)
+
+I started reading the section about tables, but didn't implement anything yet.
+
 # 2023-02-15 (We)
 
 I finished exercise 3.23, but only noticed upon finishing the
