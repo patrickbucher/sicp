@@ -2,6 +2,9 @@
 
 I started reading the section about tables, but didn't implement anything yet.
 
+In the eveing, I typed in the code for the one-dimensional table and tried it
+out.
+
 # 2023-02-15 (We)
 
 I finished exercise 3.23, but only noticed upon finishing the
