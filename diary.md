@@ -1,3 +1,8 @@
+# 2023-02-17 (Fr)
+
+I worked through the examples with two-dimensional tables and did exercise 3.24,
+which was rather easy.
+
 # 2023-02-16 (Th)
 
 I started reading the section about tables, but didn't implement anything yet.
