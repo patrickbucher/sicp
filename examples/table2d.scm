@@ -26,3 +26,6 @@
 			      (cons key-2 value))
 			(cdr table)))))
   'ok)
+
+(define (make-table)
+  (list '*table*))
