@@ -5,6 +5,10 @@ became easier when I figured it out that a recursive implementation supporting
 arbitrary layer requires _less_ code than an implementation with a fixed number
 of multiple layers.
 
+I also worked through exercise 3.26, for which I first wanted to use multiple
+cons cells. But then I realized that I actually was creating a list, so I
+implemented the nodes directly as a list, with some accessor procedures.
+
 # 2023-02-17 (Fr)
 
 I worked through the examples with two-dimensional tables and did exercise 3.24,
