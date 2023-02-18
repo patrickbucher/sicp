@@ -9,6 +9,28 @@ I also worked through exercise 3.26, for which I first wanted to use multiple
 cons cells. But then I realized that I actually was creating a list, so I
 implemented the nodes directly as a list, with some accessor procedures.
 
+Exercise 3.27 is the last one of the section about tables. So I did that quickly
+without drawing any diagrams. (I already knew the concept of memoization.)
+
+## Hiatus
+
+The next section is about a simulator for digital circuits, and it is quite
+long. I'm going on a holiday tomorrow (for the first time since summer 2021).
+This is the perfect time for a hiatus.
+
+In the winter of 2020/2021, I did a lot of Coursera MOOCs, mostly about machine
+learning. However, I also started the Course "Programming Languages, Part A".
+Having been exhausted from watching videos the whole time, I quit the course
+after the first major exercise.
+
+Now it's the perfect time to get back into it. The course uses ML as a teaching
+language. I wonder how much easier that will be for me now that I worked on SICP
+every day for half a year.
+
+I'll redo the first homework with some extra tasks during my holiday. When I
+come back next week, I'll decide how to proceed. SICP, "Programming Languages,
+Part A", neither, both, or something totally different.
+
 # 2023-02-17 (Fr)
 
 I worked through the examples with two-dimensional tables and did exercise 3.24,
