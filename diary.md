@@ -1,3 +1,10 @@
+# 2023-02-18 (Sa)
+
+I worked through exercise 3.25, which looked quite hard at the beginning, but
+became easier when I figured it out that a recursive implementation supporting
+arbitrary layer requires _less_ code than an implementation with a fixed number
+of multiple layers.
+
 # 2023-02-17 (Fr)
 
 I worked through the examples with two-dimensional tables and did exercise 3.24,
