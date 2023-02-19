@@ -1,3 +1,27 @@
+# 2023-02-19 (Su)
+
+Despite my planned hiatus, I started reading _A Simulator for Digital Circuits_
+yesterday. The code needed to run the examples and exercises is scattered
+throughout the entire section. So I read through it and extracted the code,
+which is stored in `lib/circuits.scm`.
+
+Here's my plan: After my hiatus, I'll try to work through the section
+aforementioned. If the code provided actually allows me to work through the
+examples and exercises, I'll work through that section as usually. If the
+provided code is incomplete and requires me to do additional research on the
+Internet, I skip to the next section: _Propagation of Constraings_.
+
+Here, I'll do the same: In a first step, I read through the section and extract
+the code.  If this code provides everything to do the examples and exercises,
+I'll work through it carefully. Otherwise I step over to the next sub-chapter
+_Concurrency: Time Is of the Essence_.
+
+That particular section, and the ones titled _Streams_, is what I really want to
+get out of SICP. Chapters 4 and 5 are interesting from a computer science
+perspective. But after chapter 3, I have under my belt what I need to be
+productive using a functional programming language, be it Scheme, Racket,
+Clojure, Erlang, Elixir, Haskell, OCaml, Elm, or whatever.
+
 # 2023-02-18 (Sa)
 
 I worked through exercise 3.25, which looked quite hard at the beginning, but
