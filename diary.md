@@ -1,3 +1,11 @@
+# 2023-02-20 (Mo)
+
+So I obviously didn't even start my hiatus. Quite to the contrary: I worked
+through exercise 3.28 and 3.29. The digital logic and computation (3.29) was
+rather easy. However, the implementation doesn't work yet, probably because the
+provided example code is incomplete, or because I did a mistake when I typed it
+in. I'll dig deeper into it tomorrow.
+
 # 2023-02-19 (Su)
 
 Despite my planned hiatus, I started reading _A Simulator for Digital Circuits_
