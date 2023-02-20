@@ -14,7 +14,7 @@
 	    ((eq? m 'set-signal!) set-my-signal!)
 	    ((eq? m 'add-action!) accept-action-procedure!)
 	    (else (error "Unknown operation -- WIRE" m))))
-    disptach))
+    dispatch))
 
 (define  (call-each procedures)
   (if (null? procedures)
