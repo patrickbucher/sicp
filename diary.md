@@ -1,3 +1,10 @@
+# 2023-02-21 (Tu)
+
+Today, I started with exercise 3.30. I wrote down the code for both the half
+adder and the full adder, and have a rough idea on how to combine multiple full
+adders to a rippele carry adder. I also computed the delay for the adder, based
+on its components.
+
 # 2023-02-20 (Mo)
 
 So I obviously didn't even start my hiatus. Quite to the contrary: I worked
