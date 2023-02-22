@@ -1,3 +1,16 @@
+# 2023-02-22 (We)
+
+I, once again, looked into the code for digital circuits, and noticed that
+there's a global `the-agenda` variable, which I'll need to introduce into the
+exercise code. My motivation for this part of the book is rather low, and so it
+will be for the next one. The reason I'm working through SICP is that I want to
+learn functional programming. The entire chapter is rather about imperative
+programming, i.e. programming with side effects.
+
+So I'll try to summon all my remaining motivation for those two sections when
+I'm back home. I just need to make it through to the concurrency section. I
+really want to finish chapter 3. Then I'll consider doing something else.
+
 # 2023-02-21 (Tu)
 
 Today, I started with exercise 3.30. I wrote down the code for both the half
