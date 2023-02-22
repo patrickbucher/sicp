@@ -1,10 +1,13 @@
+;; wire
+
 (define (make-wire)
   (let ((signal-value 0)
 	(action-procedures '()))
     (define (set-my-signal! new-value)
       (if (not (= signal-value new-value))
-	  (begin (set! signal-value new-value)
-		 (call-each action-procedures))
+	  (begin
+	    (set! signal-value new-value)
+	    (call-each action-procedures))
 	  'done))
     (define (accept-action-procedure! proc)
       (set! action-procedures (cons proc action-procedures))
@@ -31,6 +34,9 @@
 
 (define (add-action! wire action-procedure)
   ((wire 'add-action!) action-procedure))
+
+
+;; agenda
 
 (define (after-delay delay action)
   (add-to-agenda! (+ delay (current-time the-agenda))

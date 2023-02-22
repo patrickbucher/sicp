@@ -11,6 +11,11 @@
   (add-action! a2 or-action-procedure)
   'ok)
 
+(define (logical-or a b)
+  (cond ((or (= a 1) (= b 1)) 1)
+	((and (= a 0) (= b 0)) 0)
+	(else (error "invalid signal a" a "b" b))))
+
 ;; (define a (make-wire))
 ;; (define b (make-wire))
 ;; (define o (make-wire))
