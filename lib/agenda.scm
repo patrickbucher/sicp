@@ -1,4 +1,4 @@
-(load "examples/queue.scm")
+(load "lib/queue.scm")
 
 (define (after-delay delay action)
   (add-to-agenda! (+ delay (current-time the-agenda))
