@@ -11,6 +11,13 @@ testable manner.
 
 Then exercises 3.31 and 3.32 are only some questions to be answered.
 
+## Hiatus
+
+Now that my motivation for SICP is depleted for the moment, and that I mostly
+got out of it what I wanted, I'll start a hiatus of unknown length. Here's what
+I'll do instead: Learning Ruby, Puppet, and Podman. That'll bring me ahead
+professionally. Erlang, Clojure, and Haskell—I'd like to learn those later.
+
 # 2023-02-22 (We)
 
 I, once again, looked into the code for digital circuits, and noticed that
