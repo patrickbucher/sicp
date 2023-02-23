@@ -1,3 +1,16 @@
+# 2023-02-23 (Th)
+
+I re-structured the given code and filled in some missing pieces. Unfortunately,
+the example `examples/simulation.scm` causes an out of memory error.
+
+I'll try to test the two exercise 3.28 and 3.29 in a similar manner, hoping that
+no out of memory error will be caused.
+
+For exercise 3.30, I'll try to implement the ripple carry adder; hopefully in a
+testable manner.
+
+Then exercises 3.31 and 3.32 are only some questions to be answered.
+
 # 2023-02-22 (We)
 
 I, once again, looked into the code for digital circuits, and noticed that
