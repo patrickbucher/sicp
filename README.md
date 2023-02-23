@@ -4,8 +4,6 @@ Working through [SICP](https://mitpress.mit.edu/9780262510875/structure-and-inte
 
 ## TODO
 
-- [ ] Exercise 3.28: test (see `examples/simulation.scm`)
-- [ ] Exercise 3.29: test
 - [ ] Exercise 3.30: implement and test
 - [ ] Exercise 3.31: answer question
 - [ ] Exercise 3.32: answer question

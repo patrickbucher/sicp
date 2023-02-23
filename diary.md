@@ -18,6 +18,16 @@ got out of it what I wanted, I'll start a hiatus of unknown length. Here's what
 I'll do instead: Learning Ruby, Puppet, and Podman. That'll bring me ahead
 professionally. Erlang, Clojure, and Haskell—I'd like to learn those later.
 
+## No Hiatus
+
+I just couldn't let go, so I once again tried to get the simulation to run.
+Having struggled with infinite loops for a long time, I copied the sample
+code(!) from a solution website. I still don't know what I did wrong, but with
+the new version, I got everything to run.
+
+Afterwards, I was able to finish exercises 3.28 and 3.29, and for exercise 3.30,
+I'm finally able to _program_ again!
+
 # 2023-02-22 (We)
 
 I, once again, looked into the code for digital circuits, and noticed that
