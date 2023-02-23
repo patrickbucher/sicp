@@ -1,15 +1,4 @@
-(load "lib/circuits.scm")
-
-(define (probe name wire)
-  (add-action!
-   wire
-   (lambda ()
-     (display (string name " " (current-time the-agenda) ", new-value: " (get-signal wire))))))
-
-(define the-agenda (make-agenda))
-(define inverter-delay 2)
-(define and-gate-delay 3)
-(define or-gate-delay 5)
+(load "lib/digital-circuits.scm")
 
 (define input-1 (make-wire))
 (define input-2 (make-wire))

@@ -31,4 +31,8 @@
 	 (error "DELETE! called on an empty queue" queue))
 	(else
 	 (set-front-ptr! queue (cdr (front-ptr queue)))
-	 queue)))
+	 (if (empty-queue? queue)
+	     (begin
+	       (set-rear-ptr! queue '())
+	       queue)
+	     queue))))
