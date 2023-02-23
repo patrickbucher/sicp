@@ -10,24 +10,6 @@
 
 (load "lib/circuits.scm")
 
-(define (half-adder a b s c)
-  (let ((d (make-wire))
-	(e (make-wire)))
-    (or-gate a b d)
-    (and-gate a b c)
-    (inverter e e)
-    (and-gate d e s)
-    'ok))
-
-(define (full-adder a b c-in sum c-out)
-  (let ((c1 (make-wise))
-	(c2 (make-wise))
-	(s (make-wire)))
-    (half-adder b c-in s c1)
-    (half-adder a s sum c2)
-    (or-gate c1 c2 c-out)
-    'ok))
-
 (define (ripple-carry-adder as bs ss c)
   ;; TODO
   )
