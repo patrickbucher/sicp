@@ -28,6 +28,10 @@ the new version, I got everything to run.
 Afterwards, I was able to finish exercises 3.28 and 3.29, and for exercise 3.30,
 I'm finally able to _program_ again!
 
+I managed to do the rest of the exercises. I'm now able to go through the next
+section called _Propagation of Constraints_, which I'd like to do quite
+pragmatically. So I'll be staying in for the good stuff to come…
+
 # 2023-02-22 (We)
 
 I, once again, looked into the code for digital circuits, and noticed that
