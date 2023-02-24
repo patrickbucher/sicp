@@ -6,6 +6,8 @@ typed in the example code today. Fortunately, I got it to run quite quickly.
 Now I'd like to push through the next five exercises, so that I can finally get
 started with the section about concurrency, which is one of my major interests.
 
+Having rushed through those exercises, I'm now ready for the concurrency part.
+
 # 2023-02-23 (Th)
 
 I re-structured the given code and filled in some missing pieces. Unfortunately,
