@@ -1,3 +1,11 @@
+# 2023-02-24 (Fr)
+
+Having read most of the section about _Propagation of Constraints_ yesterday, I
+typed in the example code today. Fortunately, I got it to run quite quickly.
+
+Now I'd like to push through the next five exercises, so that I can finally get
+started with the section about concurrency, which is one of my major interests.
+
 # 2023-02-23 (Th)
 
 I re-structured the given code and filled in some missing pieces. Unfortunately,
