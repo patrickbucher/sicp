@@ -1,3 +1,5 @@
+(load "lib/permutation.scm")
+
 (define balance 100)
 
 (define (peter balance) (+ balance 10))
@@ -9,22 +11,17 @@
       balance
       (apply (cdr transactions) ((car transactions) balance))))
 
-(define (permutations elements)
-  (define (each-to-front elems included acc)
-    (if (null? included)
-	acc
-	(let ((front (car included)))
-	  (let ((rest (filter (lambda (e) (not (equal? front e))) elems)))
-	    (each-to-front elems
-			   (cdr included)
-			   (cons (cons front rest) acc))))))
-  (cond ((null? elements) '())
-	((= (length elements) 1) elements)
-	(else
-	 (let ((headed (each-to-front elements elements '())))
-	   (map (lambda (p)
-		  (let ((first (car p))
-			(rest (cdr p)))
-		    ;; TODO: cons first to each of the permutations...
-		    (cons first (permutations rest))))
-		headed)))))
+(define (pipeline procs acc)
+  (if (null? procs)
+      acc
+      (pipeline (cdr procs) ((car procs) acc))))
+
+(define all-proc-orders (permutate (list peter paul mary)))
+(define all-outcomes (map (lambda (procs) (pipeline procs balance)) all-proc-orders))
+
+;; a)
+;; all-outcomes
+;; (45 35 45 50 40 40)
+
+;; b) The implementation above is referentially transparent, so
+;; interleaving should not create any further outcomes.
