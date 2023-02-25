@@ -6,6 +6,19 @@ original balance.
 
 Building the permutations was harder than I thought, but I'm almost there…
 
+I re-discovered the `accumulate` procedure from chapter 2. It behaves almost
+like `map`, but appends all results to the same data structure. This allowed me
+to finish the permutation procedure.
+
+I also implemented a `pipeline` procedure, which applies a series of procedures
+to a value.
+
+With all those things combined, I was able to compute all the possible outcomes
+of the functions being run in different orders.
+
+This exercise was quite enlightening—but only because I solved it
+programmatically.
+
 # 2023-02-24 (Fr)
 
 Having read most of the section about _Propagation of Constraints_ yesterday, I
