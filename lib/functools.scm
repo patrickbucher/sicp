@@ -36,6 +36,18 @@
       (error "l1 and l2 have different lengths")
       (next l1 l2 '())))
 
+(define (flatten elements)
+  (define (next remainder acc)
+    (if (null? remainder)
+	acc
+	(let ((head (car remainder)))
+	  (next (cdr remainder)
+		(append acc
+			(if (list? head)
+			    (flatten head)
+			    (list head)))))))
+  (next elements '()))
+
 (define (all-eq? xs)
   (if (null? xs)
       #t
