@@ -1,3 +1,11 @@
+# 2023-02-25 (Sa)
+
+I started with exercise 3.38. However, I didn't just want to reason, but
+actually run all the possible _permutations_ of the three procedures against the
+original balance.
+
+Building the permutations was harder than I thought, but I'm almost there…
+
 # 2023-02-24 (Fr)
 
 Having read most of the section about _Propagation of Constraints_ yesterday, I
