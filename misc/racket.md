@@ -1,7 +1,8 @@
 # Racket
 
 Notes on Racket, mostly on what is needed in order to work through the picture
-language exercises of section 2.2.4
+language exercises of section 2.2.4, and the concurrency examples in section
+3.4.
 
 As a start, `racket` is installed on Arch Linux:
 
