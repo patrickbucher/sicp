@@ -1,3 +1,15 @@
+# 2023-02-26 (Su)
+
+I use Racket again for the concurrency examples. Unfortunately, MIT Scheme does
+not provide the concurrency primitives needed. However, with Racket, I need to
+resort to some alternative implementations (e.g. `mlist` instead of `list`) for
+the serializer code.
+
+Having [done this](https://stackoverflow.com/a/75570962/6763074), I was able to
+solve exercise 3.39, for which the permutation function from yesterday was
+rather helpful. (I just needed to eliminate the permutations describing a
+succession that is not permitted by the serialization.)
+
 # 2023-02-25 (Sa)
 
 I started with exercise 3.38. However, I didn't just want to reason, but
