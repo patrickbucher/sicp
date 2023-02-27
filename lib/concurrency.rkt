@@ -1,6 +1,11 @@
 (require rnrs/mutable-pairs-6)
 (require compatibility/mlist)
 
+(define (parallel-execute . procs)
+  (map thread-wait
+       (map (lambda (p) (thread p))
+	    procs)))
+
 (define (make-serializer)
   (let ((mutex (make-mutex)))
     (lambda (p)
