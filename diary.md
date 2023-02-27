@@ -1,3 +1,15 @@
+# 2023-02-27 (Mo)
+
+I first put the two files containing Racket concurrency procedures into the same
+file, which will require less import code in the exercises.
+
+I started with exercise 3.40, for which I built the permutations of the events.
+Since some events can only happen after certain other events, I needed to filter
+those permutations by some constraints, for which I introduced the `before?`
+predicate. That helped me to eliminate a lot of impossible execution orders (a
+`set! x` operation can only happen after `x` has been computed). The rest of the
+exercise then wasn't that hard.
+
 # 2023-02-26 (Su)
 
 I use Racket again for the concurrency examples. Unfortunately, MIT Scheme does
