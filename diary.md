@@ -1,3 +1,8 @@
+# 2023-02-28 (Tu)
+
+I worked through exercises 3.41 and 3.42 by reasoning rather than by running
+lots of experiments.
+
 # 2023-02-27 (Mo)
 
 I first put the two files containing Racket concurrency procedures into the same
