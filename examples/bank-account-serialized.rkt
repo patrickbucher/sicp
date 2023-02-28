@@ -10,7 +10,7 @@
     (set! balance (+ balance amount))
     balance)
   ((let ((protected (make-serializer)))
-     (define (dispath m)
+     (define (dispatch m)
        (cond ((eq? m 'withdraw) (protected withdraw))
 	     ((eq? m 'deposit) (protected deposit))
 	     ((eq? m 'balance) balance)
