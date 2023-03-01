@@ -1,3 +1,8 @@
+# 2023-03-01 (We)
+
+After a bad night, I just read the section about complexity of using multiple
+shared resources.
+
 # 2023-02-28 (Tu)
 
 I worked through exercises 3.41 and 3.42 by reasoning rather than by running
