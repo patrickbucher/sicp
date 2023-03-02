@@ -1,3 +1,8 @@
+# 2023-03-02 (Th)
+
+I re-read the passage from yesterday, worked through the example, and managed to
+do exercise 3.43.
+
 # 2023-03-01 (We)
 
 After a bad night, I just read the section about complexity of using multiple
