@@ -1,3 +1,8 @@
+# 2023-03-03 (Fr)
+
+I worked through exercise 3.44, which looks fairly similar to exercise 3.43, but
+has an interesting little difference with large consequences.
+
 # 2023-03-02 (Th)
 
 I re-read the passage from yesterday, worked through the example, and managed to
