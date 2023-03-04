@@ -1,3 +1,8 @@
+# 2023-03-04 (Sa)
+
+I worked through exercise 3.45, which creates a deadlock by trying to acquire
+the same mutexes mutex twice.
+
 # 2023-03-03 (Fr)
 
 I worked through exercise 3.44, which looks fairly similar to exercise 3.43, but
