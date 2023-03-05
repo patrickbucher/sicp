@@ -9,6 +9,10 @@ For exercise 3.47, I started to implement a sempahore. This is not so easy, and
 I think that I'll try out a hash table (provided by Racket) for it. But first, I
 need to think about it.
 
+I also had an idea how to simplify my implementation of permutations last
+Thursday night. Today, I implemented it: it worked perfectly! I'm now down from
+almost 30 to 11 lines.
+
 # 2023-03-04 (Sa)
 
 I worked through exercise 3.45, which creates a deadlock by trying to acquire
