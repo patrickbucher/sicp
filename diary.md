@@ -1,3 +1,14 @@
+# 2023-03-05 (Su)
+
+I read further about concurrency, and tried to demonstrate the issue with the
+non-atomic `test-and-set!` procedure for exercise 3.46, but failed to do so.
+However, the issue is quite clear, so I explained how a race condition can
+happen.
+
+For exercise 3.47, I started to implement a sempahore. This is not so easy, and
+I think that I'll try out a hash table (provided by Racket) for it. But first, I
+need to think about it.
+
 # 2023-03-04 (Sa)
 
 I worked through exercise 3.45, which creates a deadlock by trying to acquire
