@@ -1,3 +1,9 @@
+# 2023-03-06 (Mo)
+
+My idea for exercise 3.47 is to manage stacks using a semaphore. However, I
+first need to figure out how to manage those mutexes together with the stacks in
+a data structure.
+
 # 2023-03-05 (Su)
 
 I read further about concurrency, and tried to demonstrate the issue with the
