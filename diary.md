@@ -1,3 +1,9 @@
+# 2023-03-07 (Tu)
+
+I continued with exercise 3.47, for which I now store the created mutexes in a
+hash table. I'll need another procedure for the mutex, which tells me, whether
+or not it is already acquired.
+
 # 2023-03-06 (Mo)
 
 My idea for exercise 3.47 is to manage stacks using a semaphore. However, I
