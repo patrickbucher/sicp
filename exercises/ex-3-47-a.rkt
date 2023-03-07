@@ -7,14 +7,24 @@
 	(next (- i 1) (cons i acc))))
   (next n '()))
 
-(define (mutex-semaphore n)
+(define (to-hash paired)
+  (define (next rest acc)
+    (cond ((null? rest) acc)
+	  ((null? (cdr rest)) (error "remainder is not a pair"))
+	  (else
+	   (let ((key (car rest))
+		 (value (cadr rest))
+		 (rest (cddr rest)))
+	     (next rest (hash-set acc key value))))))
+  (next paired (make-immutable-hash)))
+
+(define (make-semaphore n)
   (if (< n 1)
       (error "cannot create semaphore of size" n)
-      ;; TODO: mutexes to hash
-      (let ((mutexes ((foldl (lambda (x acc)
-			      (append acc (list x (make-mutex))))
-			    '()
-			    (enumerate n)))))
+      (let ((mutexes (to-hash
+		      (foldl (lambda (x acc) (append acc (list x (make-mutex))))
+			     '()
+			     (enumerate n)))))
 	(define (dispatch message)
 	  (cond ((eq? message 'acquire) false)
 		((eq? message 'relese) false)
