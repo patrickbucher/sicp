@@ -24,7 +24,9 @@
 		 (the-mutex 'acquire)
 		 (void)))
 	    ((eq? m 'release)
-	     (clear! cell))))
+	     (clear! cell))
+	    ((eq? m 'free?)
+	     (not (mcar cell)))))
     the-mutex))
 
 (define (clear! cell)

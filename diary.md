@@ -1,3 +1,11 @@
+# 2023-03-08 (We)
+
+I extended the given mutex implementation with a message called `free?`, which
+returns if the mutex is not acquired (`true`) or acquired (`false`).
+
+Trying to implement the `acquire` procedure, I noticed that I got my data
+structure wrong, which I corrected.
+
 # 2023-03-07 (Tu)
 
 I continued with exercise 3.47, for which I now store the created mutexes in a

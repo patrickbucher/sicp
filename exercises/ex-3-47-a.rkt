@@ -21,17 +21,20 @@
 (define (make-semaphore n)
   (if (< n 1)
       (error "cannot create semaphore of size" n)
-      (let ((mutexes (to-hash
-		      (foldl (lambda (x acc) (append acc (list x (make-mutex))))
-			     '()
-			     (enumerate n)))))
+      (let ((pairs (to-hash
+		    (foldl (lambda (x acc) (append acc
+						   (list x
+							 (list (make-mutex)
+							       (make-stack)))))
+			   '()
+			   (enumerate n)))))
 	(define (dispatch message)
 	  (cond ((eq? message 'acquire) false)
-		((eq? message 'relese) false)
+		((eq? message 'release) false)
 		(else (error "unknown message" message))))
 	dispatch)))
 
-(define (new-stack)
+(define (make-stack)
   (let ((stack '()))
     (define (push x)
       (set! stack (cons x stack)))
