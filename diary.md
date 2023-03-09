@@ -1,3 +1,8 @@
+# 2023-03-09 (Th)
+
+I simplified my code for exercise 3.47 by eliminating the hash and the
+application as a stack. Now it just demonstrates the principle, but works.
+
 # 2023-03-08 (We)
 
 I extended the given mutex implementation with a message called `free?`, which
