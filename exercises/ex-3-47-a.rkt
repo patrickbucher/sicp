@@ -2,53 +2,39 @@
 
 (define (enumerate n)
   (define (next i acc)
-    (if (< i 1)
+    (if (< i 0)
 	acc
 	(next (- i 1) (cons i acc))))
   (next n '()))
 
-(define (to-hash paired)
-  (define (next rest acc)
-    (cond ((null? rest) acc)
-	  ((null? (cdr rest)) (error "remainder is not a pair"))
-	  (else
-	   (let ((key (car rest))
-		 (value (cadr rest))
-		 (rest (cddr rest)))
-	     (next rest (hash-set acc key value))))))
-  (next paired (make-immutable-hash)))
-
 (define (make-semaphore n)
   (if (< n 1)
       (error "cannot create semaphore of size" n)
-      (let ((pairs (to-hash
-		    (foldl (lambda (x acc) (append acc
-						   (list x
-							 (list (make-mutex)
-							       (make-stack)))))
-			   '()
-			   (enumerate n)))))
+      (let ((mutexes (foldl (lambda (i acc) (append acc (list (list i (make-mutex)))))
+			    '()
+			    (enumerate (- n 1)))))
 	(define (dispatch message)
-	  (cond ((eq? message 'acquire) false)
-		((eq? message 'release) false)
+	  (cond ((eq? message 'acquire)
+		 (let ((available
+			(filter (lambda (p)
+				  (let ((mux (cadr p)))
+				    (mux 'free?)))
+				mutexes)))
+		   (if (null? available)
+		       #f
+		       (let ((mux (cadar available)))
+			 (mux 'acquire)
+			 (- (length available) 1)))))
+		((eq? message 'release)
+		 (let ((acquired
+			(filter (lambda (p)
+				  (let ((mux (cadr p)))
+				    (not (mux 'free?))))
+				mutexes)))
+		   (if (null? acquired)
+		       #f
+		       (let ((mux (cadar acquired)))
+			 (mux 'release)
+			 (+ (- n (length acquired)) 1)))))
 		(else (error "unknown message" message))))
 	dispatch)))
-
-(define (make-stack)
-  (let ((stack '()))
-    (define (push x)
-      (set! stack (cons x stack)))
-    (define (pop)
-      (if (null? stack)
-	  (error "stack is empty")
-	  (begin
-	    (let ((tip (car stack)))
-	      (set! stack (cdr stack))
-	      tip))))
-    (define (dispatch message)
-      (cond ((eq? message 'push) push)
-	    ((eq? message 'pop) pop)
-	    (else (error "unknown operation" message))))
-    dispatch))
-
-
