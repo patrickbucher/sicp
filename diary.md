@@ -1,3 +1,9 @@
+# 2023-03-10 (Fr)
+
+The day had to come: no SICP today due to a heavy flu that prevented me from
+teaching. I barely could keep a glass of water, but it's already improving. So I
+hope for some SICP tomorrow!
+
 # 2023-03-09 (Th)
 
 I simplified my code for exercise 3.47 by eliminating the hash and the
