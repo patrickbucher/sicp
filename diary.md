@@ -1,3 +1,15 @@
+# 2023-03-11 (Sa)
+
+After the enforced break yesterday, I picked up exercise 3.47, part b. I modeled
+it roughly after part a, but didn't bother to refine it further.
+
+Tomorrow, I plan to do the last two exercises of the _Concurrency_ section. Then I
+leave the next 40 or so pages about _Streams_ for another time. After more than
+seven months of SICP, I feel quite comfortable that I'll be able to do so, if I
+actually want to do so.
+
+I'd like to shift my focus to more practical concerns, for the moment.
+
 # 2023-03-10 (Fr)
 
 The day had to come: no SICP today due to a heavy flu that prevented me from
