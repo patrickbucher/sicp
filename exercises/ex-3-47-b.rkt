@@ -1,0 +1,35 @@
+(load "lib/concurrency.rkt")
+(require compatibility/mlist)
+
+(define (enumerate n)
+  (define (next i acc)
+    (if (< i 0)
+	acc
+	(next (- i 1) (cons i acc))))
+  (next n '()))
+
+(define (make-semaphore n)
+  (if (< n 1)
+      (error "cannot create semaphore of size" n)
+      (let ((locks (map (lambda (i) (list i (mlist false))) (enumerate n))))
+	(define (dispatch message)
+	  (cond ((eq? message 'acquire)
+		 (define (try cells)
+		   (if (null? cells)
+		       #f
+		       (let ((cell (car cells)))
+			 (if (test-and-set! cell)
+			     (try (cdr cells)) ;; was already set
+			     'ok))))
+		 (try (map (lambda (l) (cadr l)) locks)))
+		((eq? message 'release)
+		 (define (try cells)
+		   (if (null? cells)
+		       #f
+		       (let ((cell (car cells)))
+			 (if (mcar cell)
+			     (clear! cell)
+			     (try (cdr cells))))))
+		 (try (map (lambda (l) (cadr l)) locks)))
+		(else (error "unknown message" message))))
+	dispatch)))

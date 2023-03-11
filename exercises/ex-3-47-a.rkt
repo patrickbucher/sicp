@@ -38,3 +38,26 @@
 			 (+ (- n (length acquired)) 1)))))
 		(else (error "unknown message" message))))
 	dispatch)))
+
+
+;; (define sema (make-semaphore 4))
+;; (sema 'acquire)
+;; 3
+;; (sema 'acquire)
+;; 2
+;; (sema 'acquire)
+;; 1
+;; (sema 'acquire)
+;; 0
+;; (sema 'acquire)
+;; #f
+;; (sema 'release)
+;; 1
+;; (sema 'release)
+;; 2
+;; (sema 'release)
+;; 3
+;; (sema 'release)
+;; 4
+;; (sema 'release)
+;; 5
