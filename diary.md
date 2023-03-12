@@ -1,3 +1,12 @@
+# 2023-03-12 (Su)
+
+I worked through exercises 3.48 and 3.49. Now the bookmark ist set to section
+_3.5 Streams_, and it probably will remain there for a couple of weeks of
+months. If I'd like to go into LISP or Clojure anytime soon, I first will work
+through this section. But then I got out of SICP what I wanted.
+
+Time for a break.
+
 # 2023-03-11 (Sa)
 
 After the enforced break yesterday, I picked up exercise 3.47, part b. I modeled
