@@ -1,0 +1,5 @@
+Consider an accounting system, in which each transaction is booked
+twice, once on each side of the ledget. If those transactions are
+settled, there is no well-defined order in which to lock those
+transactions. Such an order needs to be established, or a back-off
+algorithm has to be used.
