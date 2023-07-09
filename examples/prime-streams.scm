@@ -61,7 +61,21 @@
 ;; 103
 
 ;; (timed second-prime-imperative '(10000 20000))
-;; 1.0000000000005116e-2
+;; 3.0000000000000027e-2
 ;; (timed second-prime-functional '(10000 20000))
 ;; 7.719999999999999
 ;; The functional code is more elegant, but also significanlty slower.
+
+(define (second-prime-stream a b)
+  (stream-car (stream-cdr (stream-filter prime? (stream-enumerate-interval a b)))))
+
+(define (stream-enumerate-interval a b)
+  (if (> a b)
+      the-empty-stream
+      (cons-stream
+       a
+       (stream-enumerate-interval (+ a 1) b))))
+
+;; (timed second-prime-stream '(10000 20000))
+;; 3.0000000000000027e-2
+;; The functional code using streams is both elegant and fast.
