@@ -1,3 +1,20 @@
+# 2023-07-09 (Su)
+
+After almost four months, I'd like to come back to SICP. I quit my main job,
+mostly finished the first project of my own company, and I won't be teaching
+classes for six weeks now. This gives me time to pick up functional programming
+again. My plan is to continue with Erlang, Elixir, and Clojure; and Streams are
+a subject that will be useful for those languages, too.
+
+I read the first four pages of section 3.5. Then I re-implemented basic
+operations like `prime?`, `accumulate`, and `enumerate` to get back into the
+matter. I got a bit rusty with Emacs, but I was quickly back into programming in
+Scheme.
+
+The imperative and functional examples of filtering primes demonstrated the
+issue very well that is to be solved with streams. Therefore, I am already happy
+with my decision to get back into SICP in order to finally finish chapter 3.
+
 # 2023-03-12 (Su)
 
 I worked through exercises 3.48 and 3.49. Now the bookmark ist set to section
