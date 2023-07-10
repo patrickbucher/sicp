@@ -1,3 +1,9 @@
+# 2023-07-10 (Mo)
+
+I worked through exercise 3.50. I did not unterstand the purpose of the
+procedure until I started using it, for which I put some helper procedures
+described earlier into a library file for reuse.
+
 # 2023-07-09 (Su)
 
 After almost four months, I'd like to come back to SICP. I quit my main job,
