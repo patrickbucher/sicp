@@ -1,3 +1,8 @@
+# 2023-07-11 (Tu)
+
+I worked through exercise 3.51, which first puzzled me a bit, but then made
+perfect sense after watching closer at the evaluation of the expressions.
+
 # 2023-07-10 (Mo)
 
 I worked through exercise 3.50. I did not unterstand the purpose of the
