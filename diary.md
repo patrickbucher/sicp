@@ -1,3 +1,10 @@
+# 2023-07-12 (We)
+
+I worked through exercise 3.52, but was unable to test the memoized
+implementation described in the paragraphs before. However, the MIT Scheme
+implementation seems to be memoized, otherwise I'd have different results: the
+side effect of accumulating the sum would have occurred multiple times.
+
 # 2023-07-11 (Tu)
 
 I worked through exercise 3.51, which first puzzled me a bit, but then made
