@@ -1,3 +1,12 @@
+# 2023-07-13 (Th)
+
+Today, I was only able to read some pages about infinite streams. The concept is
+very interesting, and especially enlightening was the way in which an infinite
+Fibonacci sequence was created; probably the most elegant implementation I've
+seen so far. The stream as an abstraction provides most of the functionality,
+computing the next item is just a tiny lambda expression. I'm looking forward to
+implement this technique in other languages, too.
+
 # 2023-07-12 (We)
 
 I worked through exercise 3.52, but was unable to test the memoized
