@@ -1,3 +1,8 @@
+# 2023-07-14 (Fr)
+
+I played around with the examples about infinite streams, but didn't have the
+time to look deeper into it, so far.
+
 # 2023-07-13 (Th)
 
 Today, I was only able to read some pages about infinite streams. The concept is
