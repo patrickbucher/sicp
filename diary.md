@@ -1,3 +1,9 @@
+# 2023-07-15 (Sa)
+
+I implemented cons cells and streams in Go, just to get a better understanding
+of it. I still don't fully understand this particular memoization mechanism, but
+I'm getting there.
+
 # 2023-07-14 (Fr)
 
 I played around with the examples about infinite streams, but didn't have the
