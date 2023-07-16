@@ -1,3 +1,10 @@
+# 2023-07-16 (Su)
+
+Having solved the memoization issue last night, I continued with my Go
+implementation of Cells and Streams. In order to implement the map operation for
+streams, I had to slightly change my StreamCdr implementation, which now
+returns a delayed stream instead of a stream. But the framework still holds up.
+
 # 2023-07-15 (Sa)
 
 I implemented cons cells and streams in Go, just to get a better understanding
