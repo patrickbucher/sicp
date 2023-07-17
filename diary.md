@@ -1,3 +1,9 @@
+# 2023-07-17 (Mo)
+
+Back to Scheme, I implemented with the prime sieve example, which was extremely
+enlightening. I'd like to implement it in other languages, too; with or without
+streams.
+
 # 2023-07-16 (Su)
 
 Having solved the memoization issue last night, I continued with my Go
