@@ -1,3 +1,8 @@
+# 2023-07-18 (Tu)
+
+Today, I just read a couple of pages. I had a look at Clojure again, making
+corrections to my old notes.
+
 # 2023-07-17 (Mo)
 
 Back to Scheme, I implemented with the prime sieve example, which was extremely
